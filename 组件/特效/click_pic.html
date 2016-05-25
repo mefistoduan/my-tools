@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>click_pic</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style type="text/css" media="screen">
+.continal{width: 1920px; height: 744px; position: relative;
+    /*background:url(//img13.360buyimg.com/cms/jfs/t2137/310/2080291611/303641/f07108b1/56a189e9Nf5a041cc.jpg) no-repeat;*/
+    background:url(normal.png) no-repeat;
+}
+.China0{position: absolute; opacity: 0;}
+.China0 a{display: block;}
+.joy0{position: absolute; width: 142px; height: 166px; z-index: 10; display: none;}
+.China1{ left: 1156px; top: 162px; width: 193px; height: 258px;}
+.China2{ left: 887px; top: 167px; width: 335px; height: 325px;}
+.China3{ left: 1112px; top: 429px; width: 133px; height: 257px; z-index: 4;}
+.China4{ left: 940px; top: 612px; width: 214px; height: 126px; z-index: 4;}
+.China5{ left: 1019px; top: 455px; width: 155px; height: 193px;}
+.China6{ left: 508px; top: 231px; width: 560px; height: 299px; z-index: 4;}
+.China7{ left: 525px; top: 391px; width: 523px; height: 313px;}
+.joydb{left: 63px; top:7px;}
+.joyhb{left: 163px; top: 85px;}
+.joyhd{left: 22px; top: -14px;}
+.joyhn{left: 52px; top: -56px;}
+.joyhz{left: 32px; top: -12px;}
+.joyxb{left: 245px; top: 80px;}
+.joyxn{left: 374px; top: 82px;}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated1 {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 50deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 50deg);
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
+}
+
+@keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        -webkit-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+    }
+
+    60% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 50deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, 50deg);
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+    }
+}
+
+.flipInX {
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(5,5, 5);
+        transform: scale3d(5,5, 5);
+
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(5,5, 5);
+        transform: scale3d(5,5, 5);
+
+    }
+
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+
+    }
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
+
+@-webkit-keyframes flip {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+        transform: perspective(400px) scale3d(.95, .95, .95);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes flip {
+    0% {
+        -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    80% {
+        -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+        transform: perspective(400px) scale3d(.95, .95, .95);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+}
+
+.animated.flip {
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-animation-name: flip;
+    animation-name: flip;
+}
+.titles{position: absolute; width: 558px; height: 271px; left: 670px;top: 50px;z-index: 2;}
+.liyi{position: absolute; width: 278px; height: 153px; left: 825px; top: 223px;}
+.China1 a{width: 193px; height: 258px;}
+.China2 a{width: 335px; height: 325px;}
+.China3 a{width: 133px; height: 257px;}
+.China4 a{width: 214px; height: 126px;}
+.China5 a{width: 155px; height: 193px;}
+.China6 a{width: 560px; height: 299px;}
+.China7 a{width: 523px; height: 313px;}
+</style>
+<div class="layoutcontainer" isfixed="0" style="margin:0 auto;width:px; background:#dd1314 url()   repeat;">
+    <div class="d-layout-area   ">
+        <div class="d-layout" id="10432180" style="width:100%;">
+            <div class="d-layout-one  ">
+                <div class=" userdefined-153704" instanceid="10432181" style="margin-bottom:0px;" module-name="UserDefine">
+                    <div class="mc" style=";min-height:0px;">
+                        <div class="j-module" module-function="autoCenter,rid" module-param="{}">
+                            <div class="userDefinedArea" style="width: 1920px; margin-left: -248.5px;">
+
+                                <div class="continal">
+                                    <div class="China1 China0" style="opacity: 0;">
+                                        <a href="#lou3" > <span class="joy0 joydb" style="display: none;">  </span><img class="" src="//img13.360buyimg.com/cms/jfs/t2215/19/1997627771/22350/5febd443/568ce732N9af8ce06.png" width="193" height="258" alt=""></a>
+                                    </div>
+                                    <div class="China2 China0" style="opacity: 0;">
+                                        <a href="#lou4" > <span class="joy0 joyhb" style="display: none;"></span><img class="" src="//img10.360buyimg.com/cms/jfs/t1990/224/1935289966/17849/8c3e6aee/568ce7d9Nd9b780a7.png" width="335" height="325" alt=""></a>
+                                    </div>
+                                    <div class="China3 China0" style="opacity: 0;">
+                                        <a href="#lou6" > <span class="joy0 joyhd" style="display: none;"></span><img class="" src="//img11.360buyimg.com/cms/jfs/t2065/167/2019468430/13452/8966b364/568ce49aN12e89cbb.png" width="133" height="257" alt=""></a>
+                                    </div>
+                                    <div class="China4 China0" style="opacity: 0;">
+                                        <a href="#lou7" > <span class="joy0 joyhn" style="display: none;">  </span><img class="" src="//img10.360buyimg.com/cms/jfs/t2245/33/1220431376/10044/d84f073c/568ce4b2N69e6eb79.png" width="214" height="126" alt=""></a>
+                                    </div>
+                                    <div class="China5 China0" style="opacity: 0;">
+                                        <a href="#lou5" > <span class="joy0 joyhz" style="display: none;">  </span><img class="" src="//img14.360buyimg.com/cms/jfs/t1843/269/1821749408/15165/c378d3b4/568ce4d1Ndf681b88.png" width="155" height="193" alt=""></a>
+                                    </div>
+                                    <div class="China6 China0" style="opacity: 0;">
+                                        <a href="#lou8" > <span class="joy0 joyxb" style="display: none;"> </span><img class="" src="//img10.360buyimg.com/cms/jfs/t2383/187/1230675413/23428/8316ab9c/568ce4eeNf2a8b2ad.png" width="560" height="299" alt=""></a>
+                                    </div>
+                                    <div class="China7 China0" style="opacity: 0;">
+                                        <a href="#lou9" > <span class="joy0 joyxn" style="display: none;"> </span><img class="" src="//img14.360buyimg.com/cms/jfs/t2020/349/1976165606/36909/aafe0475/568ce501N0a885c04.png" width="523" height="313" alt=""></a>
+                                    </div>
+                                </div>
+                                <script>$(document).ready(function() {
+                                    $(".titles").addClass('animated1 pulse');
+                                    $(".liyi").addClass('animated flip');
+                                    $(".China0").mouseenter(function(event) {
+                                        /* Act on the event */
+                                        //$(this).css('opacity', '1');
+                                        $(this).animate({opacity: 1}, 1500);
+                                        $(this).find('.joy0').css('display', 'block');
+                                        $(this).find('.joy0').addClass('animated flipInX');
+                                    });
+                                    $(".China0").mouseleave(function(event) {
+                                        /* Act on the event */
+                                        //$(this).css('opacity', '0');
+                                        $(this).animate({opacity: 0}, 200);
+                                        $(this).find('.joy0').css('display', 'none');
+                                        $(this).find('.joy0').removeClass('animated flipInX');
+
+                                    });
+                                });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

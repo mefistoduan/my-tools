@@ -1,0 +1,52 @@
+<html>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<head>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <style>
+        .popup {
+            width: 100%!important;
+            left: 0!important;
+
+        }
+    </style>
+    <script language="JavaScript" src="jquery-1.7.2.js" type="text/javascript"></script>
+    <script language="JavaScript" type="text/JavaScript">
+        /**
+         弹出iframe页面(iframe后面会添加灰色蒙版)
+         **/
+        function showIframe(url){
+            //添加iframe
+            var if_w = $("body").width();
+            var if_h = $("body").height()*0.5;
+            //allowTransparency='true' 设置背景透明
+            $("<iframe class='popup' width='" + if_w + "' height='" + if_h + "' id='YuFrame1' name='YuFrame1' style='position:absolute;z-index:4;'  frameborder=”no” border=”0″ marginwidth=”0″ marginheight=”0″ scrolling=”no” allowtransparency=”yes”></iframe>").prependTo('body');
+            var st=document.documentElement.scrollTop|| document.body.scrollTop;//滚动条距顶部的距离
+            var sl=document.documentElement.scrollLeft|| document.body.scrollLeft;//滚动条距左边的距离
+            var ch=document.documentElement.clientHeight;//屏幕的高度
+            var cw=document.documentElement.clientWidth;//屏幕的宽度
+            var objH=$("#YuFrame1").height();//浮动对象的高度
+            var objW=$("#YuFrame1").width();//浮动对象的宽度
+            var objT=Number(st)+(Number(ch)-Number(objH))/2;
+            var objL=Number(sl)+(Number(cw)-Number(objW))/2;
+            $("#YuFrame1").css('left',objL);
+            $("#YuFrame1").css('bottom',0);
+            $("#YuFrame1").attr("src", url);
+        }
+    </script>
+</head>
+<body>
+<input type="button" onClick="showIframe('popup_iframe.html',460,280)" value="加载"/>
+</body>
+<html>

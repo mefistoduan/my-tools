@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    body {
+        background-color: hsl(120, 40%, 60%);
+        z-index: 1111;
+    }
+    .login {
+        width: 600px;
+        height: 200px;
+        display: block;
+        margin: 100px auto;
+    }
+    .login h2 {
+        font-size: 30px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        line-height: 18px;
+        font-family: "Verdana";
+    }
+    .login span {
+        position: absolute;
+        width: 400px;
+        height: 200px;
+        display: block;
+    }
+    .login span a {
+        position: relative;
+        top: 30px;
+        left: 100px;
+        width: 400px;
+        height: 30px;
+        display: inline-block;
+        background-color: hsl(120, 40%, 30%);
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        line-height: 30px;
+        font-family: "simsun";
+        z-index: 9999;
+    }
+    .login span i {
+        text-decoration: none;
+        font-family: "simsun";
+        font-size: 18px;
+
+    }
+    .login span a:hover {
+        height: 0;
+        transition: 0.5s;
+    }
+
+    .login span a:hover i {
+        display: none;
+
+    }
+    .login span .login_input {
+        position: relative;
+        top: 1px;
+        left: 100px;
+        width: 395px;
+        height: 20px;
+        display: inline-block;
+        outline-color: #00ACF0;
+        z-index: 4444;
+    }
+</style>
+    <div class="login">
+        <h2>login</h2>
+        <span>
+            <a><i>登录</i></a>
+            <input class="login_input">
+        </span>
+    </div>
+<script>
+    $(function(){
+        $("body").click(function(){
+//            var iframeBody = $(this).get(window);
+            var iframeBody = $(this).get(window);
+            console.log(iframeBody);
+//            iframeBody.css('width','200px');
+        })
+    });
+</script>
+</body>
+</html>

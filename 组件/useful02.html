@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+
+    <title>useful</title>
+    <script src="jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    .parts {
+        width: 100%;
+        min-height: 300px;
+        display: block;
+        float: left;
+    }
+</style>
+<div class="parts">
+    <h5>倒数计时，然后变成链接</h5>
+    <div class="sub_title"><i class="red"></i> </div>
+    <script>
+        window.onload =function() {
+            var i = 4;
+            setInterval(function(){
+                if(i == 0) {
+                    $(".sub_title").html('<a href="javascript: window.location.reload()" style="color: #2C86D8">二维码已过期，点击刷新</a>')
+                }
+                $(".sub_title .red").html(i--);
+            },1000);
+        };
+    </script>
+</div>
+<div class="parts">
+    <div id="preview">
+        <div id="goods_big_img" style="position:relative;width:352px;z-index:auto;">
+            <img src="img/big_pic.jpg" alt=" " class="goodsimg magnify" id="goods_bimg" width="350" height="350">
+        </div>
+        <div class="clearfix"> <span class="scrleft" onmouseover="moveLeft()" onmousedown="clickLeft()" onmouseup="moveLeft()" onmouseout="scrollStop()"><i></i></span>
+            <div class="gallery">
+                <div id="demo">
+                    <div id="demo1" >
+                        <ul class="goods_gallery">
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/big_pic.jpg" rel="goodsPic"><img src="img/big_pic.jpg" alt=" " class="curr"></a></div>
+                            </li>
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/1035_P_1450478267110.jpg" rel="goodsPic"><img src="img/1035_P_1450478267110.jpg" alt=" "></a></div>
+                            </li>
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/big_pic.jpg" rel="goodsPic"><img src="img/big_pic.jpg" alt=" "></a></div>
+                            </li>
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/1035_P_1450478267110.jpg" rel="goodsPic"><img src="img/1035_P_1450478267110.jpg" alt=" "></a></div>
+                            </li>
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/big_pic.jpg" rel="goodsPic"><img src="img/big_pic.jpg" alt=" "></a></div>
+                            </li>
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/1035_P_1450478267110.jpg" rel="goodsPic"><img src="img/1035_P_1450478267110.jpg" alt=" "></a></div>
+                            </li>
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/big_pic.jpg" rel="goodsPic"><img src="img/big_pic.jpg" alt=" "></a></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="demo2">
+                        <ul class="goods_gallery">
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/big_pic.jpg" rel="goodsPic"><img src="img/big_pic.jpg" alt=" "></a></div>
+                            </li>
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/1035_P_1450478267110.jpg" rel="goodsPic"><img src="img/1035_P_1450478267110.jpg" alt=" "></a></div>
+                            </li>
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/big_pic.jpg" rel="goodsPic"><img src="img/big_pic.jpg" alt=" "></a></div>
+                            </li>
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/1035_P_1450478267110.jpg" rel="goodsPic"><img src="img/1035_P_1450478267110.jpg" alt=" "></a></div>
+                            </li>
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/big_pic.jpg" rel="goodsPic"><img src="img/big_pic.jpg" alt=" "></a></div>
+                            </li>
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/1035_P_1450478267110.jpg" rel="goodsPic"><img src="img/1035_P_1450478267110.jpg" alt=" "></a></div>
+                            </li>
+                            <li>
+                                <div><a href="javascript:void 0;" rev="img/big_pic.jpg" rel="goodsPic"><img src="img/big_pic.jpg" alt=" "></a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <span class="scrright" onmouseover="moveRight()" onmousedown="clickRight()" onmouseup="moveRight()" onmouseout="scrollStop()"><i></i></span>
+            <script>
+                function $gg(id){
+                    return (document.getElementById) ? document.getElementById(id): document.all[id]
+                }
+
+                var boxwidth=62;//跟图片的实际尺寸相符
+
+                var box=$gg("demo");
+                var obox=$gg("demo1");
+                var dulbox=$gg("demo2");
+                obox.style.width=obox.getElementsByTagName("li").length*boxwidth+'px';
+                dulbox.style.width=obox.getElementsByTagName("li").length*boxwidth+'px';
+                box.style.width=obox.getElementsByTagName("li").length*boxwidth*5+'px';
+                var canroll = false;
+                if (obox.getElementsByTagName("li").length >= 5) {
+                    canroll = true;
+                    dulbox.innerHTML=obox.innerHTML;
+                }
+                var step=5;temp=1;speed=50;
+                var awidth=obox.offsetWidth;
+                var mData=0;
+                var isStop = 1;
+                var dir = 1;
+
+                function s(){
+                    if (!canroll) return;
+                    if (dir) {
+                        if((awidth+mData)>=0)
+                        {
+                            mData=mData-step;
+                        }
+                        else
+                        {
+                            mData=-step;
+                        }
+                    } else {
+                        if(mData>=0)
+                        {
+                            mData=-awidth;
+                        }
+                        else
+                        {
+                            mData+=step;
+                        }
+                    }
+
+                    obox.style.marginLeft=mData+"px";
+
+                    if (isStop) return;
+
+                    setTimeout(s,speed)
+                }
+
+
+                function moveLeft() {
+                    var wasStop = isStop;
+                    dir = 1;
+                    speed = 50;
+                    isStop=0;
+                    if (wasStop) {
+                        setTimeout(s,speed);
+                    }
+                }
+
+                function moveRight() {
+                    var wasStop = isStop;
+                    dir = 0;
+                    speed = 50;
+                    isStop=0;
+                    if (wasStop) {
+                        setTimeout(s,speed);
+                    }
+                }
+
+                function scrollStop() {
+                    isStop=1;
+                }
+
+                function clickLeft() {
+                    var wasStop = isStop;
+                    dir = 1;
+                    speed = 25;
+                    isStop=0;
+                    if (wasStop) {
+                        setTimeout(s,speed);
+                    }
+                }
+
+                function clickRight() {
+                    var wasStop = isStop;
+                    dir = 0;
+                    speed = 25;
+                    isStop=0;
+                    if (wasStop) {
+                        setTimeout(s,speed);
+                    }
+                }
+//                增加点击边框变色
+                $(".gallery li img").click(function(){
+                    $(this).closest('.gallery').find('img').css('border-color','#fff');
+                    $(this).css('border-color','#1A9733');
+                });
+//                点击切换大图
+                $(".gallery li img").click(function(){
+                  var bigPicSrc = $(this).closest("a").attr('rev');
+                    console.log(bigPicSrc);
+                    $("#goods_big_img img").attr('src',bigPicSrc);
+                })
+            </script>
+        </div>
+    </div>
+    <style>
+        #preview {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 352px;
+        }
+        #preview #spec-list a.disabled {
+            cursor:default;
+        }
+        .clearfix {
+            display: block;
+        }
+        span.scrleft {
+            width: 17px;
+            height: 54px;
+
+            float: left;
+        }
+        span.scrleft i {
+            width: 14px;
+            height: 20px;
+            display: block;
+            margin-top: 32px;
+            background: url('img/selectType2.png');
+            background-position:-10px -10px;
+            background-repeat: no-repeat;
+        }
+
+        span.scrright {
+            width: 17px;
+            height: 54px;
+            float: right;
+        }
+        span.scrright i {
+            width: 14px;
+            height: 20px;
+            display: block;
+            margin-top: 32px;
+            background: url('img/selectType2.png');
+            background-position:-10px -100px;
+            background-repeat: no-repeat;
+        }
+        .gallery {
+            width: 300px;
+            height: 80px;
+            float: left;
+            margin-left: 10px;
+            _margin-left: 5px;
+            overflow: hidden;
+        }
+        .gallery ul {
+            width: auto;
+            height: 60px;
+            list-style: none;
+
+        }
+        .gallery li {
+            width: 50px;
+            margin-right: 5px;
+            float: left;
+            list-style: none;
+        }
+        .gallery li img {
+            width: 50px;
+            height: 50px;
+            display: block;
+            border: 2px  solid #fff;
+        }
+        .gallery li img.curr {
+            width: 50px;
+            height: 50px;
+            display: block;
+            border: 2px  solid #1A9733;
+        }
+        .gallery .goods_gallery .curr img{
+            border:1px #CD0000 solid;
+        }
+        .gallery #demo1 {
+            width: 310px;
+            float: left;
+        }
+        .gallery #demo2 {
+            float: left;
+            width: 310px;
+            display: inline;
+            overflow: visible;
+        }
+    </style>
+</div>
+</body>
+</html>

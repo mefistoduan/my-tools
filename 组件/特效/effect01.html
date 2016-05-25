@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>effect01</title>
+</head>
+<body>
+<style>
+    .parts {
+        width: 100%;
+        height: 100px;
+        display: block;
+        float: left;
+    }
+</style>
+<div class="parts">
+    <h4>按钮视效</h4>
+
+    <div class="btn01">
+        <a href="#">前端攻城狮</a>
+    </div>
+    <style>
+        .btn01 a {
+            width: 120px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #222222;
+            background-color: #fff;
+            border: 1px solid #e7e7e7;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-family: "Microsoft YaHei", "微软雅黑";
+        }
+
+        .btn01 a:hover {
+            border: 1px solid #00a1d6;
+            background-color: #00a1d6;
+            color: #fff;
+            transition: 0.5s;
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 15px;
+        }
+
+    </style>
+</div>
+<div class="parts">
+    <h4>金属材质的菜单栏</h4>
+    <ul class="nav_ccat clearfix">
+        <li>
+            <a href="#" target="_blank">html</a>
+        </li>
+        <li>
+            <a href="#" target="_blank">css</a>
+        </li>
+        <li>
+            <a href="#" target="_blank">javascript</a>
+        </li>
+    </ul>
+    <style>
+        .parts .clearfix {
+            zoom: 1;
+            _height: 1%;
+            display: block;
+        }
+       .nav_ccat li {
+            width: 150px;
+            height: 35px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: 0;
+            overflow: hidden;
+            border-top: 1px solid #737171;
+            border-bottom: 1px solid #393939;
+        }
+        .nav_ccat a {
+            font: 14px/35px "微软雅黑";
+            color: #e6e6e6;
+            display: block;
+            padding: 0 10px 0 20px;
+            width: 120px;
+            height: 35px;
+            overflow: hidden;
+            background: #5b5b5b;
+            outline: 0;
+            text-decoration: none;
+        }
+    </style>
+</div>
+<div class="parts">
+    <div class="empty" style="margin-top: 100px"></div>
+    <h4>搜索框</h4>
+    <div class="searchArea" >
+        <div class="jSearchArea">
+            <input type="text"  class="inputMiddle" maxlength="5" size="5">
+            <button type="button"><s></s></button>
+        </div>
+    </div>
+    <style>
+        .searchArea {
+            position: relative;
+            top: 100px;
+            width: 187px;
+            height: 26px;
+            display: block;
+            float: left;
+            background: url(http://img11.360buyimg.com/cms/jfs/t1942/193/346021705/1966/7318b0ec/55ffd5e9Neee7f8c3.png) no-repeat 0 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        .jSearchArea input {
+            float: left;
+            width: 154px;
+            height: 20px;
+            padding: 3px 0 3px 8px;
+            background: none;
+            border: medium none;
+            margin-right: 15px;
+            outline: none;
+        }
+        .jSearchArea button {
+            width: 25px;
+            height: 26px;
+            background: none;
+            border: medium none;
+            cursor: pointer;
+            float: left;
+        }
+    </style>
+</div>
+<div class="parts">
+    <div class="empty" style="margin-top: 200px"></div>
+    <h4>有光泽的进度条</h4>
+    <div class="percent">
+        <dl>
+            <dt>
+                <dd>
+            <div style="width: 96px"></div>
+        </dd>
+            </dt>
+        </dl>
+    </div>
+    <style>
+        .percent dd div {
+            overflow: hidden;
+            height: 10px;
+            width: 0;
+            background-color: #ED0000;
+            background-image: -ms-linear-gradient(top,#ED0000 0,#A50000 100%);
+            background-image: -moz-linear-gradient(top,#ED0000 0,#A50000 100%);
+            background-image: -o-linear-gradient(top,#ED0000 0,#A50000 100%);
+            background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#ED0000),color-stop(1,#A50000));
+            background-image: -webkit-linear-gradient(top,#ED0000 0,#A50000 100%);
+            background-image: linear-gradient(to bottom,#ED0000 0,#A50000 100%);
+        }
+    </style>
+</div>
+</body>
+</html>

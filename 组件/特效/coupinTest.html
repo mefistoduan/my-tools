@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    h5 {
+        display: block;
+        background-color: red;
+    }
+</style>
+<h5>默认加载自动点击</h5>
+<script>
+    function autoClick(){
+        $("h5").click(function(){
+            $(this).css('background-color','green');
+        });
+        $("h5").click();
+    }
+    autoClick();
+</script>
+</body>
+</html>

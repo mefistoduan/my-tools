@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+
+    <link rel="stylesheet" href="style/ui-dialog.css">
+    <link rel="stylesheet" href="style/ui-dialog-plus.css">
+    <script src="js/jquery-1.7.2.js"></script>
+    <script src="js/dialog-min.js"></script>
+    <script src="js/dialog-plus-min.js"></script>
+</head>
+<body>
+<style>
+    .code{
+        width: 20px;
+        height: 20px;
+        background-color: red;
+    }
+
+
+
+</style>
+<div class="code"></div> <span>↑click</span>
+<h5>diaolog—plus自定义样式</h5>
+<p>使用方法：</p>
+<p>在页面引入dialog的“style/ui-dialog.css""style/ui-dialog-plus.css" "js/jquery-1.7.2.js" "js/dialog-min.js""js/dialog-plus-min.js"</p>
+<p>在主页面的JS文件中进行判断所需要的类型页面,代码如下</p>
+<textarea name="" id="" cols="200" rows="20">
+    <script>
+        $(".code").click(function(){
+            var d = dialog({
+                skin:'dialog_plus_information',//皮肤名字
+                title: ' ',//不用也需留空
+                content: '<h4 class="dialog_plus_h4">这里是正确的提示信息标题！</h4>'+'<p class="dialog_plus_p">这里是提示信息的具体详情描述内容，可以很长，行高180%，字体使用宋体&amp;Verdana的复合字体，现在我试验一下换行。</p>',
+                okValue: '确定',//使用了插件原生的按钮修改了样式
+                ok: function () {
+                    d.close().remove();//可放置回调
+                }
+            });
+            d.show();
+        })
+    </script>
+</textarea>
+<script>
+    $(".code").click(function(){
+        var d = dialog({
+            skin:'dialog_plus_information',
+            title: ' ',
+            content: '<h4 class="dialog_plus_h4">这里是正确的提示信息标题！</h4>'+'<p class="dialog_plus_p">这里是提示信息的具体详情描述内容，可以很长，行高180%，字体使用宋体&amp;Verdana的复合字体，现在我试验一下换行。</p>',
+            okValue: '确定',
+            ok: function () {
+                d.close().remove();
+            }
+        });
+        d.show();
+    })
+</script>
+</body>
+</html>

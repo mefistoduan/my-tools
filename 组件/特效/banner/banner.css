@@ -1,0 +1,43 @@
+#banner {
+    width: 500px;
+    height: 350px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#banner .banner_img {
+    width: 900px;
+    height: 350px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+#banner .banner_img li {
+    width: 500px;
+    height: 350px;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#banner .banner_img img {
+    width: 500px;
+    height: 350px;
+}
+ .banner_item {
+    width: 400px;
+    height: 10px;
+    display: block;
+    margin:  20px auto;
+    padding: 0;
+    z-index: 222;
+}
+ .banner_item li {
+    width: 5px;
+    height: 5px;
+    border-radius: 25px;
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #0a8ddf;
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jump</title>
+</head>
+<body>
+<div class="btns" style="margin-top:20px">
+    <a href="javascript:;" id="run">run</a>
+</div>
+<div id="boll" class="boll"></div>
+<div id="target" class="target"></div>
+<style>
+    .btns{text-align:center;}
+    .btns a{
+        color:#fff;padding:5px 10px;font-family:Arial;
+        background-color:#f90;
+        text-decoration:none;
+    }
+    .boll {
+        width: 10px;
+        height: 10px;
+        background-color: #1A9733;
+        position: absolute;
+        top: 380px;
+        left: 100px;
+        -moz-border-radius: 25px;
+        -webkit-border-radius: 25px;
+        border-radius: 25px;
+    }
+
+    .target {
+        width: 50px;
+        height: 50px;
+        background-color: #CDCDCD;
+        position: absolute;
+        top: 180px;
+        left: 600px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+    }
+</style>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+<script type="text/javascript" src="parabola.js"></script>
+<script type="text/javascript">
+    var bool = new Parabola({
+        el: "#boll",
+        offset: [500, 100],
+        curvature: 0.005,
+        duration: 2000,
+        callback:function(){
+            alert("完成后回调")
+        },
+        stepCallback:function(x,y){
+            console.log(x,y);
+//            $("<div>").appendTo("body").css({
+//                "position": "absolute",
+//                "top": this.elOriginalTop + y,
+//                "left":this.elOriginalLeft + x,
+//                "background-color":"#CDCDCD",
+//                "width":"5px",
+//                "height":"5px",
+//                "border-radius": "5px"
+//            });
+        }
+    });
+    $("#run").click(function () {
+        bool.start();
+    });
+</script>
+</body>
+</html>
