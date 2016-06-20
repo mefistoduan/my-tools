@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>下一张，上一张图片</title>
+    <script language="javascript">
+        <!--
+        Img = new Array("http://www.baidu.com/img/baidu_logo.gif", "http://t1.baidu.com/it/u=1275476817,548332440&fm=3&gp=0.jpg", "http://t1.baidu.com/it/u=1008133874,3020088058&fm=3&gp=0.jpg", "http://t1.baidu.com/it/u=3100038537,1877804851&fm=3&gp=0.jpg", "http://t1.baidu.com/it/u=3314825318,2723912588&fm=0&gp=0.jpg");
+        size = Img.length;
+        loadImg = new Array();
+        for (i = 0; i < size; i++) {
+            loadImg[i] = new Image();
+            loadImg[i].src = Img[i];
+        }
+        i = 0;
+        function nextImg() {
+            i++;
+            if (i >= size) i = 0;
+            picID.src = Img[i];
+        }
+        function preImg() {
+            i--;
+            if (i <= -1) i = size - 1;
+            picID.src = Img[i];
+        }
+        //-->
+    </script>
+</head>
+<body>
+<img src="pic1.jpg" id="picID"><br>
+<input type="button" value="上一张" onClick="preImg()">
+<input type="button" value="下一张" onClick="nextImg()">
+</body>
+</html>
