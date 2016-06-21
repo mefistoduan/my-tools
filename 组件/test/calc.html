@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calc</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<div id="calc">
+    <input type="number" id="a">
+    <input type="number" id="b">
+    <br>
+    <input type="button" id="mulit" class="click" value="x">
+    <input type="button" id="division" class="click" value="/">
+    <input type="button" id="add" class="click" value="+">
+    <input type="button" id="cut" class="click" value="-">
+    <span id="sum">0</span>
+</div>
+<script>
+    $(function(){
+        $('.click').click(function(){
+            var a = parseFloat($('#a').val());
+            var b = parseFloat($('#b').val());
+            var c;
+            var state = $(this).val();
+            state=='x'?c=a*b:state=='/'?c=a/b:state=='+'?c=a+b:c=a-b;
+            var d = parseFloat(c);
+            $('#sum').html(d);
+        });
+
+
+    })
+</script>
+</body>
+</html>
