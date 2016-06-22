@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>push and delete</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<h5>delete只删除元素，不删除length</h5>
+<script>
+    $(function(){
+      a =[];
+        a[0]='zero';
+        a[1]='one';
+        a.push('two');
+        console.log(a);
+        delete a[1];
+        console.log(a);
+    })
+</script>
+</body>
+</html>
