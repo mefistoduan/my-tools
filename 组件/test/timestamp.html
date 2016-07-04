@@ -20,7 +20,6 @@
             Date.now = function() { return new Date().getTime(); };
         }
         var nowTime = parseFloat( $.now()/1000);
-
         var getEnd = $('.time_content').attr('jstime');
         var delta_T =getEnd-nowTime ;//时间间隔
         if(delta_T < 0){
