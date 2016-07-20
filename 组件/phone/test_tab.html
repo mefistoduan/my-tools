@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Title</title>
+</head>
+<body>
+<script src="js/zepto.js"></script>
+<script src="js/touch.js"></script>
+<style>.delete { display: none; }</style>
+<h5>
+    模拟器不支持滑动事件的zepto
+</h5>
+<ul id=items>
+    <li>List item 1 <span class=delete>DELETE</span></li>
+    <li>List item 2 <span class=delete>DELETE</span></li>
+    <li>List item 2 <span class=delete>DELETE</span></li>
+    <li>List item 2 <span class=delete>DELETE</span></li>
+    <li>List item 2 <span class=delete>DELETE</span></li>
+    <li>List item 2 <span class=delete>DELETE</span></li>
+    <li>List item 2 <span class=delete>DELETE</span></li>
+    <li>List item 2 <span class=delete>DELETE</span></li>
+</ul>
+
+<script>
+    // show delete buttons on swipe
+    $('#items').on('swipe',function(e){
+        alert("right");
+    });
+
+    // delete row on tapping delete button
+    $('#items').tap(function(){
+        $(this).parent('li').remove()
+    })
+</script>
+</body>
+</html>

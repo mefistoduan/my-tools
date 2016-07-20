@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calc</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    #a {
+        width: 30px;
+        float: left;
+    }
+    #cut {
+        float: left;
+    }
+     #add {
+            float: left;
+    }
+
+</style>
+<ul>
+    <li class="goods_li jinan_little">
+        <div id="calc" class="">
+            <input type="button" id="cut" class="btn_reduce" value="-">
+            <input type="text" id="a" value="1" class="text">
+            <input type="button" id="add" class="btn_add" value="+">
+            <span id="sum">0</span>
+        </div>
+    </li>
+    <li class="jinan_big"></li>
+    <li class="qingdao_little"></li>
+    <li class="jinan_big"></li>
+</ul>
+
+
+<script>
+//设计模式
+//需要有 个API
+//分别是产品默认数值，产品最大购买上线，产品最小购买下线
+//该数值全部依靠获取当前产品的ID，然后进行AJAX请求后获取
+//input的框需要检验是否为数值
+//*每次点击是否需要重新请求一次？
+    $(function(){
+//        初始化
+        var thisMin ='0';
+        var thisMax ='0';
+
+        function getBasicInfo($this){
+//            每次点击获取基本信息
+            var thisState = $this.closest('li').attr('class');
+            var a='';
+            thisState=='jinan_little'?calc(jl):thisState=='jinan_big'?calc(jb):thisState=='qingdao_little'?calc(ql)thisState=='qingdao_big'?calc(qb):a;
+            function calc(t){
+                var t= t;
+                $.ajax({
+                    url: update_goods_list_url,
+                    type: 'POST',
+                    data: t,
+                    async: false,
+                    success: function(e){
+                         thisMin = e.min;
+                         thisMax = e.max;
+                    }
+                })
+            }
+        }
+        function addCalc($this){
+//            加法事件
+
+
+        }
+        function reduceCalc(){
+//            减法事件
+        }
+        function onblurCalc(){
+//            blur事件
+        }
+        $('.btn_add').click(function(){
+            $this = $(this);
+            addCalc($this);
+        })
+
+    })
+</script>
+</body>
+</html>
