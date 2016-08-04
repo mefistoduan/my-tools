@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>meixian_detail1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="dist/css/sm.css">
+    <link rel="stylesheet" href="dist/css/sm-extend.min.css">
+    <link rel="stylesheet" href="css/meixian_detail.css">
+    <script src="js/zepto.js"></script>
+<body>
+<!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+<div class="page-group">
+    <!-- 单个page ,第一个.page默认被展示-->
+    <div class="page">
+        <nav class="bar bar-tab foot-nav">
+            <a class=" external tab_item_small" href="#">
+                <img class="icon icon_attention" src="images/detail/shoucang.png">
+                <span class="tab-label">关注</span>
+            </a>
+            <a class=" external tab_item_small" href="#">
+                <img class="icon icon_cart" src="images/detail/gouwuche.png">
+                <span class="tab-label">购物车</span>
+            </a>
+            <a class="tab-item external orange_btn open-about" href="#">
+                <span class="tab-label">立即购买</span>
+            </a>
+            <a class="tab-item external green_btn open-about" href="#">
+                <span class="tab-label">加入购物车</span>
+            </a>
+        </nav>
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <div class="detail_taps">
+                <ul>
+                    <li class="curr">
+                        <a href="#">基本信息</a>
+                    </li>
+                    <li>
+                        <a href="#">图文详情</a>
+                    </li>
+                    <li>
+                        <a href="#">评价<em>(240)</em></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="goods_detail">
+                <div class=" native-scroll">
+                    <div class="swiper-container swiper-container-horizontal" data-space-between="10">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-active" ><img src="images/detail/test_goods1.jpg" alt="" style="width: 100%"></div>
+                            <div class="swiper-slide swiper-slide-next" ><img src="images/detail/test_goods2.jpg" alt="" style="width: 100%"></div>
+                            <div class="swiper-slide"><img src="images/detail/test_goods3.jpg" alt="" style="width: 100%"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="detail_content">
+                    <p class="dc_name">
+                        <em>[ID:05401y] </em>西兰花特等绿菜花青花菜平装 色泽油绿清新
+                        清香脆嫩，口感清爽，营养丰富
+                    </p>
+                    <div class="dc_price">
+                        <span class="red_price">
+                            <s>￥</s>88.88<em>/斤</em>
+                        </span>
+                        <span class="gary_price">
+                             <em> 已售520 </em>
+                        </span>
+                    </div>
+                    <div class="dc_info">
+                        <ul>
+                            <li class="propto_info">
+                                <span>促销信息</span>
+                                <p>
+                                    <em>[秒杀商品]</em>
+                                    <s>剩余时间：<em>3</em>天<em>18</em>时 <em>54</em>分 <em>22</em>秒</s>
+                                </p>
+                            </li>
+                            <li class="stock_info">
+                                <span>库存信息</span>
+                                <p>
+                                    <em>[济南仓]</em>
+                                    <s>1023</s>
+                                    <em>[青岛仓]</em>
+                                    <s>2046</s>
+                                </p>
+                            </li>
+                            <li class="tips_info">
+                                <span>特殊说明</span>
+                                <p>预售商品不支持任何形式的优惠；付款3天后依次发货</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="choice_goods_warp">
+                        <div class="choice_goods">
+                            <a href="#" class="open-about">
+                                <em>请选择规格/仓库</em>
+                                <img src="images/detail/fanyeyou.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="other_info">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td class="info_title">
+                                    <em>简介：</em>
+                                </td>
+                                <td class="info_content">
+                                    <em>
+                                        蓝顿旭美Q82曲薯是一种曲齿形状的薯条，和其他直薯条相比在形状
+                                        上更加独特、新奇。质量标准高，品质优异，香酥可口，回味无穷，
+                                        价廉物美。整箱购买价格更实惠！
+                                    </em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="info_title">
+                                    <em>重量：</em>
+                                </td>
+                                <td class="info_content">
+                                    <em>
+                                        2KG
+                                    </em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="info_title">
+                                    <em>规格：</em>
+                                </td>
+                                <td class="info_content">
+                                    <em>
+                                        2KG/袋   4袋/箱
+                                    </em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="info_title">
+                                    <em>积分：</em>
+                                </td>
+                                <td class="info_content">
+                                    <em>
+                                        30分/袋  120分/箱
+                                    </em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="info_title">
+                                    <em>提示：</em>
+                                </td>
+                                <td class="info_content">
+                                    <em class="green_em">
+                                        该产品可作为样品免费申领
+                                    </em>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <!--footer开始-->
+            <div class="footer">
+                <ul>
+                    <li class="curr">
+                        <a href="#">触屏版</a>
+                    </li>
+                    <li>
+                        <a href="#">电脑版</a>
+                    </li>
+                    <li>
+                        <a href="#">登录</a>
+                    </li>
+                    <li>
+                        <a href="#">注册</a>
+                    </li>
+                    <li>
+                        <a href="#">回顶部</a>
+                    </li>
+                </ul>
+                <p>
+                    Copyright © 2016 Emeixian.com
+                </p>
+            </div>
+            <!--footer 结束-->
+        </div>
+    </div>
+    <div class="popup popup-about" style="display: none;">
+        <div class="content-block">
+            <a href="#" class="close-popup">
+                <img src="images/detail/close.png" alt="">
+            </a>
+            <div class="choice_popup">
+                <h5>选择仓库</h5>
+                <!--价格form表单提交即可-->
+                <ul class="choic_city">
+                    <li class="curr">[济南仓]剩余1024 <input type="hidden" class="jn_city" value="1"></li>
+                    <li>[青岛仓]剩余1024 <input type="hidden" class="qd_city" value="2"></li>
+                </ul>
+                <h5>选择规格</h5>
+                <ul>
+                    <li>[济南仓]剩余1024 <input type="hidden" class="big_unite" value="3"></li>
+                    <li>[青岛仓]剩余1024 <input type="hidden" class="sl_unite" value="4"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="form_submite">
+            <input type="button" value="立即购买" class="immdia">
+            <input type="button" value="加入购物车" class="add_cart">
+        </div>
+    </div>
+    <!-- 其他的单个page内联页（如果有） -->
+</div>
+<script src="dist/js/sm-extend.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="dist/js/sm.js"></script>
+<script src="js/meixian_detail.js"></script>
+<script>
+    $(function(){
+        $.init();
+    })
+</script>
+</body>
+</html>

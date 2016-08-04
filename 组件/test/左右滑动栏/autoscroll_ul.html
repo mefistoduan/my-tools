@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    .hl_main5_content {width:880px; height:170px; border-top:none; margin:0 auto; margin-top:20px;}
+    .hl_main5_content1 {width:800px;margin-top:5px; overflow:hidden; float:left; margin-left:35px;}
+    .hl_main5_content1 ul {width:1600px; overflow:hidden;}
+    .hl_main5_content1 ul li { float:left; width:150px; display:inline; margin-right:10px; text-align:center;}
+    .hl_main5_content1 ul li span { font-size:12px;color:#3f3f3f;}
+    .hl_main5_content1 ul li img { margin-bottom:20px;}
+    .hl_scrool_leftbtn {width:20px; height:32px; background:url(images/arr1_left.png) no-repeat; float:left; margin-top:50px; cursor:pointer;background-color: red;}
+    .hl_scrool_rightbtn {width:20px; height:32px; background:url(images/arr1_right.png) no-repeat;float:right;margin-top:50px; cursor:pointer;background-color: cadetblue;}
+    .hl_scrool_leftbtn:hover { background:url(images/arr_left.png) no-repeat;}
+    .hl_scrool_rightbtn:hover { background:url(images/arr_right.png) no-repeat;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               </div>
+</style>
+
+    <div class="hl_main5_content1">
+        <div class="hl_scrool_leftbtn"></div>
+        <div class="hl_scrool_rightbtn"></div>
+    <ul>
+        <li><a href="#" target="_blank" title="爱薯福1/4薯条"><img src="images/92_thumb_G_1341065405738.jpg" width="120" height="120" /></a><br /><span>￥23.20</span></li>
+        <li><a href="#" target="_blank" title="爱薯福1/4薯条"><img src="images/281_thumb_G_1341604354748.jpg" width="120" height="120" /></a><br /><span>￥23.20</span></li>
+        <li><a href="#" target="_blank" title="爱薯福1/4薯条"><img src="images/705_thumb_G_1395961441410.jpg" width="120" height="120" /></a><br /><span>￥23.20</span></li>
+        <li><a href="#" target="_blank" title="爱薯福1/4薯条"><img src="images/1320_thumb_G_1417029814739.jpg" width="120" height="120" /></a><br /><span>￥23.20</span></li>
+        <li><a href="#" target="_blank" title="爱薯福1/4薯条"><img src="images/123_thumb_G_1395873494075.jpg" width="120" height="120" /></a><br /><span>￥23.20</span></li>
+        <li><a href="#" target="_blank" title="爱薯福1/4薯条"><img src="images/281_thumb_G_1341604354748.jpg" width="120" height="120" /></a><br /><span>￥23.20</span></li>
+
+    </ul>
+</div>
+
+<script type="text/javascript">
+    var flag = "left";
+    function DY_scroll(wraper,prev,next,img,speed,or){
+        var wraper = $(wraper);
+        var prev = $(prev);
+        var next = $(next);
+        var img = $(img).find('ul');
+        var w = img.find('li').outerWidth(true);
+        var s = speed;
+        next.click(function(){
+            img.animate({'margin-left':-w},function(){
+                img.find('li').eq(0).appendTo(img);
+                img.css({'margin-left':0});
+            });
+            flag = "left";
+        });
+        prev.click(function(){
+            img.find('li:last').prependTo(img);
+            img.css({'margin-left':-w});
+            img.animate({'margin-left':0});
+            flag = "right";
+        });
+        if (or == true){
+            ad = setInterval(function() { flag == "left" ? next.click() : prev.click()},s*1000);
+            wraper.hover(function(){clearInterval(ad);},function(){ad = setInterval(function() {flag == "left" ? next.click() : prev.click()},s*1000);});
+        }
+    }
+    DY_scroll('.hl_main5_content','.hl_scrool_leftbtn','.hl_scrool_rightbtn','.hl_main5_content1',3,false);// true为自动播放，不加此参数或false就默认不自动
+</script>
+<script>
+
+</script>
+</body>
+</html>
