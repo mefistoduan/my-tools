@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>carousel</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    .window {
+        width: 400px;
+        height: 400px;
+        float: left;
+        margin-left: 400px;
+        overflow: hidden;
+    }
+   ul{
+       width: 2000px;
+       height: 400px;
+       position:absolute;
+       left:-200px;
+   }
+    li {
+        width: 400px;
+        height: 400px;
+        float: left;
+        list-style: none;
+    }
+    li img {
+        width: 400px;
+        height: 400px;
+    }
+</style>
+<div class="window">
+    <ul>
+        <li><img src='images/3.jpg'></li>
+        <li><img src='images/1.jpg'></li>
+        <li><img src='images/2.jpg'></li>
+        <li><img src='images/3.jpg'></li>
+        <li><img src='images/1.jpg'></li>
+    </ul>
+</div>
+
+<script>
+    $(function(){
+        var liLength = $('.window li').length;
+        console.log(liLength);
+        dt = setInterval(function(){
+
+
+        },3000)
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array</title>
+</head>
+<body>
+<script src="../jquery-1.7.2.js"></script>
+<script>
+    $(function(){
+        function Foo()
+        {
+            getName = function(){return 1;};
+            return this;
+        }
+
+        Foo.getName=function(){return 2;};
+        Foo.prototype.getName=function(){return 3;};
+        var getName=function(){return 4;};
+        function getName(){return 5;}
+
+//以下内容会输出什么？
+        console.log(Foo.getName()); //2
+        console.log(getName()); //4
+        console.log(Foo().getName()); //1
+        console.log(getName()); //1
+        console.log(new Foo.getName()); //{}
+        console.log(new Foo().getName()); //3
+        console.log(new new Foo().getName()); //{}
+    })
+</script>
+</body>
+</html>
