@@ -17,5 +17,8 @@ $(function(){
         $(this).closest('ul').find('li input').removeAttr('checked','checked');
         $(this).addClass('curr');
         $(this).find('input').attr('checked','checked');
-    })
+    });
+
+
+
 });
