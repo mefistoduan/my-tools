@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加载后增加数字</title>
+</head>
+<body>
+<style>
+
+</style>
+    <div class="add_num" num="300">
+        0
+    </div>
+<script src="../jquery-1.7.2.js"></script>
+<script>
+$(function(){
+    var i = 0;
+    var endNum = parseInt($('.add_num').attr('num'));
+
+    function addNum(){
+        i = parseInt(++i);
+        endNum<i?$(".add_num").html(endNum):$(".add_num").html(i);
+    }
+
+    setInterval(function(){
+        addNum();
+    },10);
+
+
+})
+</script>
+</body>
+</html>
