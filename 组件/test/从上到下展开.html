@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>从上到下展开</title>
+    <script src="js/jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    #test {
+        width: 200px;
+        height: 0;
+        background-color: #00acac;
+        color: #fff;
+        display: block;
+    }
+    #test li {
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        list-style: none;
+    }
+</style>
+    <div id="test" mx-height="300">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+<script>
+    $(function(){
+        var i = 0;
+        var defaultHeight = parseInt($("#test").attr('mx-height'));
+
+            function addNum(){
+                i = parseInt(++i);
+                if(i>defaultHeight){
+                    i = defaultHeight;
+                    return false
+                }
+                $("#test").css('height',i+'px');
+            }
+
+            setInterval(function(){
+                addNum();
+            },10);
+
+
+
+    })
+</script>
+</body>
+</html>
