@@ -9,7 +9,16 @@ $(function(){
         $("#category7 li").each(function(i){
             $(this).click(function(){
                 $("#category7 li").removeClass("cur").eq(i).addClass("cur");
-                $('.mx_category_div ').removeClass("cur").eq(i).addClass("cur");
+                var pageNum = i ;
+                var content ='';
+                $.ajax({
+                    url:'xxx.php',
+                    data:pageNum,
+                    success: function(result){
+                        content=
+                        $('.mx_category_div.cur').html(result);
+                    }
+                })
             })
         })
 
