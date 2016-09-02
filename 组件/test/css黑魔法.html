@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<div id="box1">
+    <h5>渐变颜色的边框</h5>
+</div>
+<style>
+    #box1 {
+        margin: 80px 30px;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        background: #fff;
+        float: left;
+    }
+    #box1:before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        top: -10px;
+        left: -10px;
+        background-image: linear-gradient(90deg, yellow, gold);
+    }
+</style>
+
+<h5>checkBOX样式</h5>
+<small>优雅兼容</small>
+<input type="checkbox" id="check" name="check" />
+<label for="check">Checkbox</label>
+<style>
+    input[type=checkbox] {display: none;}
+
+    input[type=checkbox] + label:before {
+        content: "";
+        border: 1px solid #000;
+        font-size: 11px;
+        line-height: 10px;
+        margin: 0 5px 0 0;
+        height: 10px;
+        width: 10px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    input[type=checkbox]:checked + label:before {
+        content: "\2713";
+    }
+</style>
+
+<ol class="list">
+    <li>CSS计算器</li>
+    <li>b</li>
+    <li>c</li>
+</ol>
+<style>
+    .list {
+        counter-reset: i; //reset conunter
+    }
+    .list > li {
+        counter-increment: i; //counter ID
+    }
+    .list li:after {
+        content: "[" counter(i) "]"; //print the result
+    }
+</style>
+
+<div class="shadow-icon"></div>
+<style>
+    .shadow-icon {
+        position: relative;
+    }
+    .shadow-icon:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -50px;e
+        height: 100%;
+        width: 100%;
+        box-shadow: 0 5px 0 #000, 0 15px 0 #fff, 0 25px 0 #000, 0 35px 0 #fff, 0 45px 0 #000;
+    }
+</style>
+<p>
+    Block Scroll on Touch Devices
+    触摸设备上的块元素滚动
+    <br>
+    If you have some blocks with inner scroll in them then you have to add not only overflow: scroll / auto but this line also:
+    <br>
+    在触摸设备上，如果你有一些块元素在内部有滚动，则你不仅需要添加 overflow: scroll / auto，还要添加：
+    <br>
+    -webkit-overflow-scrolling: touch;
+    The thing is that mobile browser sometimes don't work with overflow: scroll property correctly and scroll all the page instead of the needed block. -webkit-overflow-scrolling fix this issue. You can see it by adding this to your own project.
+    <br>
+    这种情况是有时设置了 overflow: scroll，移动端的浏览器会滚动整个页面而不是在需要的块元素中滚动。-webkit-overflow-scrolling 修复了这个问题。你可以把它添加到你的项目中看看效果。
+</p>
+
+<h5>
+    兼容ie7的hack
+</h5>
+<div class="fuckIE7"></div>
+<style>
+    .fuckIE7 {
+        width: 60px;
+        height: 60px;
+    :)background-color: #0a6aa1;
+    }
+</style>
+</body>
+</html>
