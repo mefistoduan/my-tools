@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<script>
+$(function(){
+    function add(a,b)
+    {
+        console.log(a+b);
+    }
+    function sub(a,b)
+    {
+        console.log(a-b);
+    }
+
+    add.call(sub,3,1);
+
+
+//    方法二
+    function Class1()
+    {
+        this.showTxt = function(txt)
+        {
+            alert(txt);
+        }
+    }
+
+    function Class2()
+    {
+        Class1.call(this);
+    }
+
+    var c2 = new Class2();
+
+    c2.showTxt("cc");
+})
+</script>
+</body>
+</html>
