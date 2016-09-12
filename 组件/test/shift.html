@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<script>
+$(function(){
+    var arrayLi = new Array('job','lili','yuanyuan');
+    console.log(arrayLi);
+
+//    shift 取出第一个
+    var shiftLI = arrayLi.shift();
+    console.log(shiftLI);
+
+//    join 给每一个数组添加一个
+    var arrayLi2 = new Array('job','lili','yuanyuan');
+    var joinLi2 = arrayLi2.join(':');
+    console.log(joinLi2);
+
+//    pop 返回最后一个
+    var arrayLi3 = new Array('job','lili','yuanyuan');
+    var popLi = arrayLi3.pop();
+    console.log(popLi);
+})
+</script>
+</body>
+</html>
