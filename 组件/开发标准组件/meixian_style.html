@@ -1254,9 +1254,60 @@
 
     <div class="parts">
     <h5>checkbox 全选单选 和 优雅兼容的样式</h5>
+        <ul>
+            <li>
+                <input type="checkbox" class="shoppting-checkbox shopping-allcheckbox" name="allchoosse" id="allchoose" />
+                <label class="shoppting-lable" for="allchoose">全选</label>
+            </li>
+            <li>
+                <input type="checkbox" class="shoppting-checkbox" checked name="choosse" />
+            </li>
+            <li>
+                <input type="checkbox" class="shoppting-checkbox" name="choosse" onclick="chooseProduct(this)">
+            </li>
+        </ul>
     </div>
-    <style></style>
-    <script></script>
+    <style>
+        .shoppting-checkbox {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            outline: none;
+            border: none;
+            width: 13px;
+            height: 20px;
+            cursor: pointer;
+            background: url(images/checkbox.gif) no-repeat;
+            vertical-align: middle;
+            background: none\9;
+            background: none\0;
+        }
+
+        .shoppting-checkbox:checked {
+            width: 12px;
+            background: url(images/checkboxed.gif) no-repeat;
+            background: none\9;
+            background: none\0;
+        }
+    </style>
+    <script>
+        //选择商品
+        //全选
+        $(".shopping-allcheckbox").click(function(){
+            $(".shopping-allcheckbox").attr("checked",this.checked);
+            $('input[name="choosse"]').attr("checked",this.checked);
+        });
+        function chooseProduct(obj){
+            var allproductNumber = $('input[name="choosse"]').length; //获取购物车产品的品种数量
+            //判断用户选择了所有的产品 全选按钮被选中
+            if($('input[name="choosse"]:checked').length>=allproductNumber){
+                $(".shopping-allcheckbox").attr("checked",true);
+            }else{
+                $(".shopping-allcheckbox:checked").attr("checked",false);
+            }
+        }
+
+    </script>
 
     <!--model-->
     <!--<div class="parts">-->
