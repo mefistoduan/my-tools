@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
     <!--<meta name="renderer" content="webkit">-->
     <script src="js/jquery-1.7.2.js"></script>
-    <script src="js/live.js"></script>
     <script src="js/dialog-min.js"></script>
     <script src="js/dialog-plus-min.js"></script>
     <link rel="stylesheet" href="css/ui-dialog.css">
@@ -20,6 +19,7 @@
         overflow: auto;
         background-color: #d0cece;
     }
+
     .parts {
         width: 960px;
         min-height: 150px;
@@ -29,36 +29,50 @@
         display: block;
         overflow: hidden;
     }
+
     ul {
         list-style: none;
         margin: 0;
         padding: 0;
     }
+
     li {
         list-style: none;
         margin: 0;
         padding: 0;
     }
-    h1,h2,h3,h4,h5 {
+
+    h1, h2, h3, h4, h5 {
         font-family: simsun;
         margin-top: 10px;
     }
+
     .web_title {
         display: block;
-        margin:0 auto;
+        margin: 0 auto;
         text-align: center;
         font-family: simsun;
     }
 </style>
-<h2 class="web_title">美鲜标准组件</h2>
+<h2 class="web_title">web开发标准组件</h2>
 <div class="parts">
     <h5>主色</h5>
     <ul class="basic_color">
-        <li><span id="color1"></span><p class="color_num">#1A9733</p><p class="subtext">常用作高亮部分，链接hover</p></li>
-        <li><span id="color2"></span><p class="color_num">#FAFAFC</p><p class="subtext">常用作灰色背景</p></li>
-        <li><span id="color3"></span><p class="color_num">#F0A800</p><p class="subtext">互补色</p></li>
-        <li><span id="color4"></span><p class="color_num">#FFFFFF</p><p class="subtext">白色</p></li>
-        <li><span id="color5"></span><p class="color_num">#EEEEEE</p><p class="subtext">常用作边框颜色</p></li>
+        <li><span id="color1"></span>
+            <p class="color_num">#1A9733</p>
+            <p class="subtext">常用作高亮部分，链接hover</p></li>
+        <li><span id="color2"></span>
+            <p class="color_num">#FAFAFC</p>
+            <p class="subtext">常用作灰色背景</p></li>
+        <li><span id="color3"></span>
+            <p class="color_num">#F0A800</p>
+            <p class="subtext">互补色</p></li>
+        <li><span id="color4"></span>
+            <p class="color_num">#FFFFFF</p>
+            <p class="subtext">白色</p></li>
+        <li><span id="color5"></span>
+            <p class="color_num">#EEEEEE</p>
+            <p class="subtext">常用作边框颜色</p></li>
     </ul>
     <style>
         .basic_color {
@@ -67,10 +81,12 @@
             display: block;
             margin: 0 auto;
         }
+
         .basic_color li {
             width: 20%;
             float: left;
         }
+
         .basic_color li span {
             width: 160px;
             height: 50px;
@@ -78,25 +94,32 @@
             display: block;
             border: 1px solid #000000;
         }
+
         .basic_color li span#color1 {
-            background-color:#1A9733 ;
+            background-color: #1A9733;
         }
+
         .basic_color li span#color2 {
-            background-color:#FAFAFC ;
+            background-color: #FAFAFC;
         }
+
         .basic_color li span#color3 {
-            background-color:#F0A800 ;
+            background-color: #F0A800;
         }
+
         .basic_color li span#color4 {
-            background-color:#FFFFFF ;
+            background-color: #FFFFFF;
         }
+
         .basic_color li span#color5 {
-            background-color:#EEEEEE ;
+            background-color: #EEEEEE;
         }
+
         .color_num {
             font-family: Verdana;
             font-size: 12px;
         }
+
         .subtext {
             font-family: simsun;
             font-size: 12px;
@@ -115,7 +138,7 @@
         <li id="font1">默认正文颜色#333333</li>
         <li id="font2">二级文字颜色#666666</li>
         <li id="font3">修饰性文字颜色#999999</li>
-        <li id="font4">链接hover颜色#1A9733 </li>
+        <li id="font4">链接hover颜色#1A9733</li>
         <li id="font5">蓝色超链接颜色#0066CC</li>
     </ul>
     <style>
@@ -123,26 +146,44 @@
             font-family: simsun;
             font-size: 12px;
         }
+
         #verdana {
             text-decoration: none;
             font-family: verdana;
             font-size: 12px;
         }
+
         .font_ul {
             width: 960px;
             display: block;
             margin: 0 auto;
         }
+
         .font_ul li {
             width: 20%;
             float: left;
             font-size: 12px;
         }
-        .font_ul li#font1{  color: #333333;  }
-        .font_ul li#font2{  color: #666666;  }
-        .font_ul li#font3{  color: #999999;  }
-        .font_ul li#font4{  color: #1A9733;  }
-        .font_ul li#font5{  color: #0066CC;  }
+
+        .font_ul li#font1 {
+            color: #333333;
+        }
+
+        .font_ul li#font2 {
+            color: #666666;
+        }
+
+        .font_ul li#font3 {
+            color: #999999;
+        }
+
+        .font_ul li#font4 {
+            color: #1A9733;
+        }
+
+        .font_ul li#font5 {
+            color: #0066CC;
+        }
     </style>
 </div>
 <div class="parts">
@@ -161,34 +202,41 @@
             height: 30px;
             display: block;
         }
+
         .calc_num .btn_reduce {
             width: 24px;
             height: 30px;
             float: left;
             background: url("images/calc_num.png");
             background-repeat: no-repeat;
-            background-position:-10px -170px;
+            background-position: -10px -170px;
         }
+
         .calc_num .btn_reduce_hover {
-            background-position:-10px -130px;
+            background-position: -10px -130px;
         }
+
         .calc_num .btn_reduce_disable {
-            background-position:-10px -210px;
+            background-position: -10px -210px;
         }
+
         .calc_num .btn_add {
             width: 24px;
             height: 30px;
             float: left;
             background: url("images/calc_num.png");
             background-repeat: no-repeat;
-            background-position:-10px -10px;
+            background-position: -10px -10px;
         }
+
         .calc_num .btn_add_hover {
-            background-position:-10px -50px;
+            background-position: -10px -50px;
         }
+
         .calc_num .btn_add_disable {
-            background-position:-10px -90px;
+            background-position: -10px -90px;
         }
+
         .calc_num input.text {
             width: 40px;
             height: 30px;
@@ -205,80 +253,82 @@
 
     </style>
     <script>
-//        需要传入最大值
-$(function(){
-    //最大值默认数量
-    var maxNum = 10;
-    $(".btn_reduce").click(goods_cut);
-    function goods_cut(){
-        $this_num=$(".calc_num input[name=number]").val();
-        var Num = parseInt($this_num);
-        if(Num>1){
-            Num=Num-1;
-            $(this).closest(".calc_num").find(".text").val(Num);
-            if (Num<maxNum){
-                $(this).closest('.calc_num').find('.btn_add').removeClass('btn_add_disable');
+        //        需要传入最大值
+        $(function () {
+            //最大值默认数量
+            var maxNum = 10;
+            $(".btn_reduce").click(goods_cut);
+            function goods_cut() {
+                $this_num = $(".calc_num input[name=number]").val();
+                var Num = parseInt($this_num);
+                if (Num > 1) {
+                    Num = Num - 1;
+                    $(this).closest(".calc_num").find(".text").val(Num);
+                    if (Num < maxNum) {
+                        $(this).closest('.calc_num').find('.btn_add').removeClass('btn_add_disable');
+                    }
+                }
+                else {
+                    $(this).closest('.calc_num').find('.btn_reduce').addClass('btn_reduce_disable');
+                }
             }
-        }
-        else {
-            $(this).closest('.calc_num').find('.btn_reduce').addClass('btn_reduce_disable');
-        }
-    }
-    $(".btn_add").click(goods_add);
-    function goods_add(i){
-        //            设置购买上线
-        $this_num=$(".calc_num input[name=number]").val();
-        var Num = parseInt($this_num);
-        if(Num>0){
-            Num=Num+1;
-            $(this).closest(".calc_num").find(".text").val(Num);
-            $(this).closest('.calc_num').find('.btn_reduce').removeClass('btn_reduce_disable');
-            if(Num>maxNum){
-                $(this).closest('.calc_num').find('.btn_add').addClass('btn_add_disable');
-                $(".calc_num :text").val(maxNum);
+
+            $(".btn_add").click(goods_add);
+            function goods_add(i) {
+                //            设置购买上线
+                $this_num = $(".calc_num input[name=number]").val();
+                var Num = parseInt($this_num);
+                if (Num > 0) {
+                    Num = Num + 1;
+                    $(this).closest(".calc_num").find(".text").val(Num);
+                    $(this).closest('.calc_num').find('.btn_reduce').removeClass('btn_reduce_disable');
+                    if (Num > maxNum) {
+                        $(this).closest('.calc_num').find('.btn_add').addClass('btn_add_disable');
+                        $(".calc_num :text").val(maxNum);
+                    }
+                }
             }
-        }
-    }
-    $(".btn_reduce").hover(function(){
-        $(this).addClass('btn_reduce_hover');
-    },function(){
-        $(this).removeClass('btn_reduce_hover');
-    });
-    $(".btn_add").hover(function(){
-        $(this).addClass('btn_add_hover');
-    },function(){
-        $(this).removeClass('btn_add_hover');
-    });
-    $(".calc_num input[name=number]").blur(function(){
-        $nowNum = $(this).val();
-        if($nowNum<1){
-            var d = dialog({
-                skin: 'calc_dialog',
-                content:  '低于最低购买量',
-                quickClose: true
+
+            $(".btn_reduce").hover(function () {
+                $(this).addClass('btn_reduce_hover');
+            }, function () {
+                $(this).removeClass('btn_reduce_hover');
             });
-            d.show();
-            $(".ui-popup-backdrop").click(function(){
-                d.close().remove();
+            $(".btn_add").hover(function () {
+                $(this).addClass('btn_add_hover');
+            }, function () {
+                $(this).removeClass('btn_add_hover');
             });
-            $(this).closest(".calc_num").find(".text").val("1");
-        }
-        else{
-            if($nowNum>maxNum){
-                var d = dialog({
-                    skin: 'calc_dialog',
-                    content:  '高于最高购买量',
-                    quickClose: true
-                });
-                d.show();
-                $(this).closest(".calc_num").find(".text").val(maxNum);
-                $(".ui-popup-backdrop").click(function(){
-                    d.close().remove();
-                });
-            }
-        }
-    });
-});
+            $(".calc_num input[name=number]").blur(function () {
+                $nowNum = $(this).val();
+                if ($nowNum < 1) {
+                    var d = dialog({
+                        skin: 'calc_dialog',
+                        content: '低于最低购买量',
+                        quickClose: true
+                    });
+                    d.show();
+                    $(".ui-popup-backdrop").click(function () {
+                        d.close().remove();
+                    });
+                    $(this).closest(".calc_num").find(".text").val("1");
+                }
+                else {
+                    if ($nowNum > maxNum) {
+                        var d = dialog({
+                            skin: 'calc_dialog',
+                            content: '高于最高购买量',
+                            quickClose: true
+                        });
+                        d.show();
+                        $(this).closest(".calc_num").find(".text").val(maxNum);
+                        $(".ui-popup-backdrop").click(function () {
+                            d.close().remove();
+                        });
+                    }
+                }
+            });
+        });
     </script>
 </div>
 <div class="parts">
@@ -288,13 +338,14 @@ $(function(){
             <li>
                 <a href="#" title="济南仓库" class="selected">
                     <span>济南仓库</span> <i></i>
-                    <input id="store_value_qingdao" type="radio" name="storehouse" value="jinan_store" checked="checked">
+                    <input id="store_value_qingdao" type="radio" name="storehouse" value="jinan_store"
+                           checked="checked">
                 </a>
             </li>
             <li>
                 <a href="#" title="济南仓库" class="">
                     <span>济南仓库</span> <i></i>
-                    <input id="store_value_jinan" type="radio" name="storehouse" value="qingdao_store" >
+                    <input id="store_value_jinan" type="radio" name="storehouse" value="qingdao_store">
                 </a>
             </li>
         </div>
@@ -303,7 +354,7 @@ $(function(){
             .goods li {
                 width: 140px;
                 height: 30px;
-                display:block;
+                display: block;
                 list-style: none;
                 text-align: center;
                 cursor: pointer;
@@ -324,14 +375,17 @@ $(function(){
                 padding: 1px;
                 text-align: center;
             }
+
             .goods a span {
                 width: 120px;
                 float: left;
                 text-align: center;
             }
+
             .goods a:hover {
                 border: 1px solid #1A9733;
             }
+
             .goods li a.selected {
                 box-sizing: border-box;
                 border: 2px solid #1A9733;
@@ -340,9 +394,10 @@ $(function(){
                 text-align: center;
 
             }
+
             .goods li a.selected i {
                 position: relative;
-                bottom:-9px;
+                bottom: -9px;
                 left: 2px;
                 *left: 4px;
                 width: 15px;
@@ -353,9 +408,11 @@ $(function(){
                 background-position: bottom right;
                 z-index: 2;
             }
+
             .goods li input {
                 display: none;
             }
+
             .calc_dialog {
                 position: relative;
                 float: left;
@@ -372,10 +429,10 @@ $(function(){
             }
         </style>
         <script>
-            $(function(){
-                $(".goods li").click(function(){
+            $(function () {
+                $(".goods li").click(function () {
                     $(this).find("a").addClass('selected').closest('li').siblings().find('a').removeClass('selected');
-                    $(this).find("input").attr('checked','checked');
+                    $(this).find("input").attr('checked', 'checked');
                     $(this).closest(".selected").siblings().find("input").removeAttr('checked');
                     return false;
                 })
@@ -384,13 +441,13 @@ $(function(){
         <script>
             //用法：给需要的div里加value
             // 遍历得到当前curr的value
-            $(".pay_btn").hover(function(){
+            $(".pay_btn").hover(function () {
                 var payType = $(".curr").val();
-                var numPayTYPE =parseInt(payType);
-                if (typeof(payType) == "undefined"){
+                var numPayTYPE = parseInt(payType);
+                if (typeof(payType) == "undefined") {
                     console.log("请选择一种支付方式")
-                }else {
-                    console.log("支付方式是第"+payType+"种")
+                } else {
+                    console.log("支付方式是第" + payType + "种")
                 }
             });
         </script>
@@ -418,22 +475,77 @@ $(function(){
             display: block;
             margin-top: 5px;
         }
+
         .explain li {
             display: inline-block;
             float: left;
             margin-right: 50px;
         }
+
         .room li {
             float: left;
             margin-right: 30px;
         }
 
-        .arrow_default_l { width:14px; height:20px; background:url("images/selectType2.png");background-position: top center; background-position:-10px -10px;background-repeat: no-repeat; cursor: pointer}
-        .arrow_default_r { width:14px; height:20px; background:url("images/selectType2.png");background-position: top center; background-position:-10px -100px;   background-repeat: no-repeat; cursor: pointer }
-        .arrow_hover_l { width:14px; height:20px; background:url("images/selectType2.png");background-position: top center; background-position:-10px -40px;  background-repeat: no-repeat;  cursor: pointer }
-        .arrow_hover_r { width:14px; height:20px; background:url("images/selectType2.png"); background-position: top center;background-position:-10px -130px;   background-repeat: no-repeat; cursor: pointer }
-        .arrow_disable_l { width:14px; height:20px; background:url("images/selectType2.png");background-position: top center; background-position:-10px -70px;  background-repeat: no-repeat;  cursor: pointer}
-        .arrow_disable_r { width:14px; height:20px; background:url("images/selectType2.png");background-position: top center; background-position:-10px -160px;  background-repeat: no-repeat;  cursor: pointer }
+        .arrow_default_l {
+            width: 14px;
+            height: 20px;
+            background: url("images/selectType2.png");
+            background-position: top center;
+            background-position: -10px -10px;
+            background-repeat: no-repeat;
+            cursor: pointer
+        }
+
+        .arrow_default_r {
+            width: 14px;
+            height: 20px;
+            background: url("images/selectType2.png");
+            background-position: top center;
+            background-position: -10px -100px;
+            background-repeat: no-repeat;
+            cursor: pointer
+        }
+
+        .arrow_hover_l {
+            width: 14px;
+            height: 20px;
+            background: url("images/selectType2.png");
+            background-position: top center;
+            background-position: -10px -40px;
+            background-repeat: no-repeat;
+            cursor: pointer
+        }
+
+        .arrow_hover_r {
+            width: 14px;
+            height: 20px;
+            background: url("images/selectType2.png");
+            background-position: top center;
+            background-position: -10px -130px;
+            background-repeat: no-repeat;
+            cursor: pointer
+        }
+
+        .arrow_disable_l {
+            width: 14px;
+            height: 20px;
+            background: url("images/selectType2.png");
+            background-position: top center;
+            background-position: -10px -70px;
+            background-repeat: no-repeat;
+            cursor: pointer
+        }
+
+        .arrow_disable_r {
+            width: 14px;
+            height: 20px;
+            background: url("images/selectType2.png");
+            background-position: top center;
+            background-position: -10px -160px;
+            background-repeat: no-repeat;
+            cursor: pointer
+        }
     </style>
 </div>
 <div class="parts">
@@ -451,12 +563,35 @@ $(function(){
         </div>
     </div>
     <style>
-        ul,li {list-style: none;margin: 0;padding: 0;}
-        .coupon_list ul {height: 40px;;overflow: hidden;display: block;border-bottom: 2px dotted #1eaa39;}
-        .coupon_list ul li {display: block; }
-        .coupon_list .list_turn {cursor: pointer;}
-        .coupon_list .list_turn .arrow_icon {width: 15px;height: 15px;display: inline-block;}
-        .coupon_list .list_turn .arrow_down {position: relative;
+        ul, li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .coupon_list ul {
+            height: 40px;;
+            overflow: hidden;
+            display: block;
+            border-bottom: 2px dotted #1eaa39;
+        }
+
+        .coupon_list ul li {
+            display: block;
+        }
+
+        .coupon_list .list_turn {
+            cursor: pointer;
+        }
+
+        .coupon_list .list_turn .arrow_icon {
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+        }
+
+        .coupon_list .list_turn .arrow_down {
+            position: relative;
             top: 5px;
             background: url("images/up_down.png");
             background-position: top center;
@@ -464,16 +599,20 @@ $(function(){
             background-position: -10px -27px;
             display: inline-block;
         }
-        .coupon_list .list_turn .arrow_up { background-position: -10px -10px;}
+
+        .coupon_list .list_turn .arrow_up {
+            background-position: -10px -10px;
+        }
     </style>
     <script>
-        $(function(){
-            $(".list_turn ").toggle(function(){
-                        $(".coupon_list ul").css("height","auto");
+        $(function () {
+            $(".list_turn ").toggle(function () {
+                        $(".coupon_list ul").css("height", "auto");
                         $(this).children('span').html('收起');
                         $(this).children("i").addClass('arrow_up');
                     },
-                    function(){$(".coupon_list ul").css("height","40px");
+                    function () {
+                        $(".coupon_list ul").css("height", "40px");
                         $(this).children('span').html('展开');
                         $(this).children("i").removeClass('arrow_up');
                     }
@@ -500,6 +639,7 @@ $(function(){
             height: 119px;
             display: block;
         }
+
         .tab .tab_control {
             width: 660px;
             height: 50px;
@@ -507,6 +647,7 @@ $(function(){
             background-color: #FAFAFC;
             border: 1px solid #EEEEEE;
         }
+
         .tab .tab_control li {
             width: 160px;
             height: 50px;
@@ -515,9 +656,10 @@ $(function(){
             text-align: center;
             font-family: "Microsoft Yahei", "微软雅黑";
             font-size: 16px;
-            color:#333333 ;
+            color: #333333;
             line-height: 50px;
         }
+
         .tab_control li a {
             width: 100%;
             height: 100%;
@@ -525,24 +667,27 @@ $(function(){
             border-right: 1px solid #EEEEEE;
             cursor: pointer;
         }
+
         .tab_control li a:hover {
             color: #1A9733;
         }
+
         .tab_control li a.selected {
             background-color: #1A9733;
             color: #fff;
         }
+
         .tab .tabs_content {
             width: 660px;
             height: 40px;
-            background-color:#fff ;
+            background-color: #fff;
             border: 1px solid #eeeeee;
             border-top: none;
         }
     </style>
     <script>
-        $(".tab .tab_control li").each(function(i){
-            $(this).find('a').click(function(){
+        $(".tab .tab_control li").each(function (i) {
+            $(this).find('a').click(function () {
                 $('.tab .tab_control li a').removeClass('selected').eq(i).addClass('selected');
                 $('.tab .tabs_content li').fadeOut().eq(i).fadeIn();
             })
@@ -573,35 +718,74 @@ $(function(){
         overflow: hidden;
         display: block;
     }
+
     .icon_list li {
         width: 50%;
         float: left;
     }
 
-
     .icon {
         width: 71px;
         height: 20px;
         display: inline-block;
-        background:url("images/goods_icon.png");
+        background: url("images/goods_icon.png");
         background-position: top center;
         background-repeat: no-repeat;
     }
-    .icon_kill {  background-position:-10px -190px;  }
-    .icon_prompt {  background-position:-10px -160px;  }
-    .icon_activity {  background-position:-10px -130px;  }
-    .icon_futures {  background-position:-10px -100px;  }
-    .icon_best {  background-position:-10px -70px;  }
-    .icon_group {  background-position:-10px -40px;  }
-    .icon_chaoma {  background-position:-10px -10px;  }
-    .icon_gift {  width: 48px;background-position:-10px -340px;  }
-    .icon_sample {  width: 48px; background-position:-10px -310px;  }
-    .icon_exchange {  background-position:-10px -280px;  }
-    .icon_temp {  background-position:-10px -250px;  }
-    .icon_area {  background-position:-10px -220px;  }
+
+    .icon_kill {
+        background-position: -10px -190px;
+    }
+
+    .icon_prompt {
+        background-position: -10px -160px;
+    }
+
+    .icon_activity {
+        background-position: -10px -130px;
+    }
+
+    .icon_futures {
+        background-position: -10px -100px;
+    }
+
+    .icon_best {
+        background-position: -10px -70px;
+    }
+
+    .icon_group {
+        background-position: -10px -40px;
+    }
+
+    .icon_chaoma {
+        background-position: -10px -10px;
+    }
+
+    .icon_gift {
+        width: 48px;
+        background-position: -10px -340px;
+    }
+
+    .icon_sample {
+        width: 48px;
+        background-position: -10px -310px;
+    }
+
+    .icon_exchange {
+        background-position: -10px -280px;
+    }
+
+    .icon_temp {
+        background-position: -10px -250px;
+    }
+
+    .icon_area {
+        background-position: -10px -220px;
+    }
+
     .icon_free_shipping {
-        width: 83px!important;
-        height: 20px!important;
+        width: 83px !important;
+        height: 20px !important;
         display: block;
         background: url("images/icon_free_shipping.jpg");
         background-position: top center;
@@ -638,18 +822,21 @@ $(function(){
             height: 40px;
             display: block;
         }
+
         .page ul {
             width: 100%;
             height: 100%;
             display: block;
         }
+
         .page ul li {
             width: 37px;
             height: 37px;
             display: inline-block;
             float: left;
-            margin-right:0 ;
+            margin-right: 0;
         }
+
         .page li a {
             width: 35px;
             height: 100%;
@@ -657,7 +844,7 @@ $(function(){
             background-color: #fff;
             font-family: verdana;
             font-size: 14px;
-            color:#333333;
+            color: #333333;
             text-align: center;
             vertical-align: middle;
             line-height: 37px;
@@ -665,30 +852,37 @@ $(function(){
             border: 1px solid #eeeeee;
             border-right: none;
         }
+
         .page li a:hover {
             color: #1A9733;
-            border:1px solid #1A9733;
+            border: 1px solid #1A9733;
         }
+
         .page li.page_prv {
             width: 73px;
             margin-right: 10px;
         }
+
         .page li.page_prv a {
             width: 72px;
             border-right: 1px solid #eeeeee;
         }
+
         .page li.page_prv a:hover {
             border-right: 1px solid #1A9733;
         }
+
         .page li.page_next {
             width: 73px;
             margin-right: 10px;
         }
+
         .page li.page_next a {
             width: 100%;
             border-right: 1px solid #eeeeee;
 
         }
+
         .page li.page_next a:hover {
             border-right: 1px solid #1A9733;
         }
@@ -699,8 +893,9 @@ $(function(){
             border-right: none;
             border-top: none;
         }
+
         .page .page_num {
-            width:150px;
+            width: 150px;
             height: 37px;
             line-height: 37px;
             font-family: "simsun";
@@ -708,8 +903,9 @@ $(function(){
             border-right: 1px solid #fff;
             color: #999999;
         }
+
         #page_content_id {
-            width:37px;
+            width: 37px;
             height: 27px;
             margin-right: 5px;
             border: 1px solid #eeeeee;
@@ -718,10 +914,11 @@ $(function(){
             vertical-align: middle;
             outline-color: #1A9733;
         }
+
         .page li.page_confirm a {
-            width:41px;
-            height:37px;
-            border: none!important;
+            width: 41px;
+            height: 37px;
+            border: none !important;
             font-family: simsun;
             font-size: 12px;
             background: url("images/icon_page.png");
@@ -729,9 +926,11 @@ $(function(){
             background-repeat: no-repeat;
             cursor: pointer;
         }
+
         .page li.page_confirm a:hover {
             color: #333333;
         }
+
         .page .page_icon {
             width: 6px;
             height: 9px;
@@ -740,24 +939,28 @@ $(function(){
             background: url("images/icon_page.png");
             background-position: top center;
         }
+
         .page .page_icon.page_disable_l {
             margin-top: 15px;
             margin-left: 10px;
             vertical-align: middle;
-            background-position:-42px -66px;
+            background-position: -42px -66px;
         }
+
         .page .page_icon.page_default_l {
             margin-top: 15px;
             margin-left: 10px;
             vertical-align: middle;
-            background-position:-26px -66px;
+            background-position: -26px -66px;
         }
+
         .page .page_icon.page_hover_l {
             margin-top: 15px;
             margin-left: 10px;
             vertical-align: middle;
-            background-position:-10px -66px;
+            background-position: -10px -66px;
         }
+
         .page .page_icon.page_disable_r {
             position: relative;
             margin-top: 15px;
@@ -770,60 +973,296 @@ $(function(){
             margin-top: 15px;
             margin-left: 10px;
             vertical-align: middle;
-            background-position:-26px -47px;
+            background-position: -26px -47px;
         }
+
         .page .page_icon.page_default_r {
             position: relative;
             margin-top: 15px;
             margin-right: 5px;
             *margin-top: 0;
-            *margin-right:0;
+            *margin-right: 0;
             *bottom: 23px;
             *right: 5px;
             float: right;
             vertical-align: middle;
-            background-position:-42px -47px;
+            background-position: -42px -47px;
         }
+
         .page .page_icon.page_hover_r {
             position: relative;
             margin-top: 15px;
             margin-right: 5px;
             *margin-top: 0;
-            *margin-right:0;
+            *margin-right: 0;
             *bottom: 23px;
             *right: 5px;
             float: right;
             vertical-align: middle;
-            background-position:-10px -47px;
+            background-position: -10px -47px;
         }
     </style>
     <script>
-        $(function(){
+        $(function () {
 //            hover效果
-            $(".page .page_prv").hover(function(){
+            $(".page .page_prv").hover(function () {
                 $(this).find(".page_icon").removeClass("page_hover_l").addClass("page_hover_l");
-            },function(){
+            }, function () {
                 $(this).find(".page_icon").removeClass("page_hover_l");
             });
-            $(".page .page_next").hover(function(){
+            $(".page .page_next").hover(function () {
                 $(this).find(".page_icon").removeClass("page_hover_r").addClass("page_hover_r");
-            },function(){
+            }, function () {
                 $(this).find(".page_icon").removeClass("page_hover_r");
             });
 //            获取当前页数
-            $(".page input[name='page_content']").blur(function(){
+            $(".page input[name='page_content']").blur(function () {
                 var pageNum = $(this).val();
                 var NumType = parseInt(pageNum);
-                if(!/^\d+$/g.test(NumType)){
+                if (!/^\d+$/g.test(NumType)) {
                     $(this).after("<p>请输入正确的页码</p>")
                 }
-                else{
+                else {
                     //已获取正确的页码
                     console.log(NumType);
                 }
             })
         })
     </script>
-</div>
+
+    <div class="parts">
+        <h5>submit btn</h5>
+        <input type="button" value="立即购买" class="product-detail-btn" id="product-detail-buy">
+    </div>
+    <style>
+        .product-detail-btn {
+            width: 181px;
+            height: 50px;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            text-align: center;
+            font-weight: normal;
+            font-family: "思源黑体 CN Heavy";
+            margin-top: 20px;
+            cursor: pointer;
+            text-shadow: rgb(129, 130, 133) 1px 0px 2px;
+            outline: none;
+            border-width: initial;
+            border-style: none;
+            border-color: initial;
+            border-image: initial;
+            border-radius: 4px;
+        }
+
+        #product-detail-buy {
+            width: 181px;
+            height: 50px;
+            background: url(images/buy_btn.gif);
+            background-position: top center;
+            background-repeat: no-repeat;
+            margin-right: 3px;
+        }
+
+    </style>
+
+    <div class="parts nav_content">
+        <h5>tips</h5>
+        <li class="nav_items">
+            <a href="#">我的好友<i class="icon_toggle"></i></a>
+            <em class="new-friend">有新的好友</em>
+        </li>
+    </div>
+    <style>
+        .nav_content .nav_items {
+            float: left;
+            display: inline;
+            position: relative;
+            height: 30px;
+            line-height: 30px;
+            width: 85px;
+            padding-left: 3px;
+            margin-top: 35px;
+        }
+        .nav_content .nav_items a {
+            font-family: "Microsoft Yahei", "微软雅黑";
+            font-size: 16px;
+            text-decoration: none;
+            color: #333333;
+            display: block;
+            text-align: center;
+        }
+        .new-friend {
+            width: 72px;
+            height: 32px;
+            background: url(images/newFriend.png) no-repeat;
+            position: absolute;
+            z-index: 10;
+            left: 8px;
+            bottom: 30px;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+            line-height: 26px;
+            cursor: pointer;
+            font-family: simsun;
+            font-style: normal;
+        }
+    </style>
+
+    <div class="part">
+    <h5>search</h5>
+        <div class="shop-search-con clearfix">
+            <input type="text" placeholder="输入搜索内容" class="shop-search-input">
+            <input type="button" value="搜索" class="shop-search-btn">
+        </div>
+    </div>
+    <style>
+        .shop-search-con {
+            width: 226px;
+            height: 30px;
+            /*position: absolute;*/
+            z-index: 10;
+            /*top: 9px;*/
+            /*right: 18px;*/
+        }
+        .shop-search-input {
+            width: 158px;
+            height: 28px;
+            border: #dddddd 1px solid;
+            padding: 0px 6px;
+            line-height: 26px;
+            color: #333;
+            border-right: none;
+            display: block;
+            float: left;
+        }
+        .shop-search-btn {
+            width: 54px;
+            display: block;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background: #818285;
+            color: #fff;
+            font-size: 12px;
+            border: none;
+            float: left;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="parts">
+    <h5>uoloading</h5>
+        <li>
+            <div class="add-product-contianer">
+                <input type="text" class="add-product-add-img">
+                <a href="javascript:;" class="a-upload">
+                    <input type="file" class="goods_spec_up" name="goods_img" id="goods_photo_up">选择
+                </a>
+                <button type="button" class="upload_btn" id="goods_photo_btn">上传</button>
+            </div>
+        </li>
+    </div>
+    <style>
+        .add-product-contianer {
+            width: 422px;
+            position: relative;
+            height: 32px;
+            overflow: hidden;
+        }
+        .add-product-add-img, .add-product-url {
+            border: #e1e1e3 1px solid;
+            color: #3b3a3f;
+            font-size: 12px;
+            border-radius: 4px 0px 0px 4px;
+            -webkit-border-radius: 4px 0px 0px 4px;
+            -moz-border-radius: 4px 0px 0px 4px;
+            padding: 8px 6px;
+            width: 292px;
+            float: left;
+        }
+        .a-upload {
+            border: #e1e1e3 1px solid;
+            border-left: none;
+            color: #3b3a3f;
+            font-size: 12px;
+            border-radius: 0px 4px 4px 0px;
+            -webkit-border-radius: 0px 4px 4px 0px;
+            -moz-border-radius: 0px 4px 4px 0px;
+            padding: 8px 6px;
+            width: 40px;
+            height: 14px;
+            line-height: 12px;
+            float: left;
+            text-align: center;
+            background: #fff;
+            cursor: pointer;
+        }
+        .goods_spec_up {
+            position: absolute;
+            width: 67px;
+            height: 30px;
+            font-size: 100px;
+            right: 53px;
+            bottom: 3px;
+            float: left;
+            filter: alpha(opacity=0);
+            -moz-opacity: 0;
+            -khtml-opacity: 0;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 10;
+            cursor: pointer;
+        }
+        .upload_btn {
+            width: 52px;
+            height: 30px;
+            border: 1px solid #1BABF1;
+            color: #1BABF1;
+            font-size: 12px;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            padding: 8px 6px;
+            background: #fff;
+            margin-left: 8px;
+            float: left;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        $(function(){
+            //选择按钮样式修改后修复功能
+            $(".a-upload").on("change","input[type='file']",function(){
+                $this = $(this);
+                var filePath=$(this).val();
+                if(filePath.indexOf("jpg")!=-1 || filePath.indexOf("png")!=-1){
+                    $(".fileerrorTip").html("").hide();
+                    var arr=filePath.split('\\');
+                    var fileName = arr[arr.length-1];
+                    $this.closest("li").find(".add-product-add-img").val(fileName);
+                }else{
+                    //$this.closest("td").find("input[type='text']").html("");
+                    $this.closest("li").find(".add-product-add-img").html("您未上传文件，或者您上传文件类型有误！").show();
+                    return false
+                }
+            });
+
+        });
+    </script>
+
+    <div class="parts">
+    <h5>checkbox 全选单选 和 优雅兼容的样式</h5>
+    </div>
+    <style></style>
+    <script></script>
+
+    <!--model-->
+    <!--<div class="parts">-->
+    <!--<h5>name</h5>-->
+    <!--</div>-->
+    <!--<style></style>-->
+    <!--<script></script>-->
 </body>
 </html>
