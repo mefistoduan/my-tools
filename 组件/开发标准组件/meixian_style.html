@@ -1153,7 +1153,7 @@
     </style>
 
     <div class="parts">
-    <h5>uoloading</h5>
+    <h5>uploading</h5>
         <li>
             <div class="add-product-contianer">
                 <input type="text" class="add-product-add-img">
@@ -1308,6 +1308,58 @@
         }
 
     </script>
+
+    <div class="parts">
+    <h5>带图标的输入框</h5>
+        <div class="select_container">
+            <div class="time_contianer">
+                <input type="text" placeholder="起始时间" id="time_from">
+                <i class="data_icon"></i>
+            </div>
+        </div>
+
+    </div>
+    <style>
+        .select_container .time_contianer {
+            width: 180px;
+            height: 34px;
+            float: left;
+            background-color: #fff;
+            border: 1px solid #dddddd;
+            cursor: pointer;
+        }
+        .select_container .time_contianer input {
+            width: 160px;
+            height: 32px;
+            *height: 30px;
+            border: none;
+            line-height: 30px;
+            text-indent: 10px;
+            *text-indent: 0px;
+            _text-indent: 0px;7
+            outline: none;
+        }
+        .select_container .time_contianer .data_icon {
+            *position: relative;
+            *bottom: 35px;
+            width: 12px;
+            height: 12px;
+            float: right;
+            background: url("images/data_icon.gif");
+            background-repeat: no-repeat;
+            background-position: top center;
+            margin-top: 10px;
+            margin-right: 7px;
+        }
+        .select_container em {
+            width: 17px;
+            height: 100%;
+            float: left;
+            margin-left: 10px;
+            line-height: 30px;
+            color: #999999;
+        }
+    </style>
 
     <!--model-->
     <!--<div class="parts">-->
