@@ -46,6 +46,9 @@ $(function(){
         var endday1 = enddata[8];//十位
         var endday2 = enddata[9];//十位
 
+        var mounthStart = parseInt(startMonth1+startMonth2);//开始月
+        var mounthEnd = parseInt(endMonth1+endMonth2);//结束月
+
         var dayStart = parseInt(startday1+startday2);//开始日
         var dayEnd = parseInt(endday1+endday2);//结束日
 
@@ -80,45 +83,55 @@ $(function(){
 
         }
 
-        //间隔多少天
-        console.log(dataInter);
-       var item_clone ='<ul class="list item">'+
-           '<li>'+
-            '<lable>日期:</lable>'+
-        '<input type="text" class="goal" name="goal" value="">'+
-            '</li>'+
-            '<li>'+
-            '<lable>项目:</lable>'+
-        '<input type="text" class="project" name="project" value="">'+
-            '<lable>目标:</lable>'+
-        '<input type="text" class="goal" name="goal" value="">'+
-            '<em class="add_li">[+]</em>'+
-            '<em class="remove_li">[-]</em>'+
-            '</li>'+
-            '</ul>' ;
         //先重写再添加
 
        $('.item').hide().remove();
         var times = dataInter+1;
        for(var i=0;i<times;i++){
-           $('.title').after(item_clone);
+           var thisData = dayStart++;
+           var displayData = mounthStart+'-'+thisData;
+           $('.title').before('<ul class="list item">'+
+               '<li>'+
+               '<lable>日期:</lable>'+
+               '<input type="text" class="goal" name="goal" value="'+displayData+'">'+
+               '</li>'+
+               '<li>'+
+               '<lable>项目:</lable>'+
+               '<input type="text" class="project" name="project" value="">'+
+               '<lable>目标:</lable>'+
+               '<input type="text" class="goal" name="goal" value="">'+
+               '<em class="add_li">[+]</em>'+
+               '<em class="remove_li">[-]</em>'+
+               '</li>'+
+               '</ul>' );
        }
+        control_li();
     });
 
     //添加记录
-    $('.item .add_li').bind('click',function(){
-       var $this = $(this);
-       var li = $this.closest('li');
-       var li_clone = li.clone();
-       li.after(li_clone);
-       delItem();
-    });
-    //删除记录
-    function  delItem(){
-        $('.item .remove_li').bind('click',function(){
+    function control_li(){
+        $('.item .add_li').bind('click',function(){
             var $this = $(this);
-            $this.closest('li').hide().remove();
+            console.log(123);
+            var li =  '<li>'+
+                        '<lable>项目:</lable>'+
+                        '<input type="text" class="project" name="project" value="">'+
+                            '<lable>目标:</lable>'+
+                        '<input type="text" class="goal" name="goal" value="">'+
+                            '<em class="add_li">[+]</em>'+
+                            '<em class="remove_li">[-]</em>'+
+                        '</li>';
+            $this.after(li);
+            delItem();
         });
+        //删除记录
+        function  delItem(){
+            $('.item .remove_li').bind('click',function(){
+                var $this = $(this);
+                $this.closest('li').hide().remove();
+            });
+        }
     }
+
 
 });
