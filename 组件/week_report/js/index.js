@@ -82,5 +82,43 @@ $(function(){
 
         //间隔多少天
         console.log(dataInter);
+       var item_clone ='<ul class="list item">'+
+           '<li>'+
+            '<lable>日期:</lable>'+
+        '<input type="text" class="goal" name="goal" value="">'+
+            '</li>'+
+            '<li>'+
+            '<lable>项目:</lable>'+
+        '<input type="text" class="project" name="project" value="">'+
+            '<lable>目标:</lable>'+
+        '<input type="text" class="goal" name="goal" value="">'+
+            '<em class="add_li">[+]</em>'+
+            '<em class="remove_li">[-]</em>'+
+            '</li>'+
+            '</ul>' ;
+        //先重写再添加
+
+       $('.item').hide().remove();
+        var times = dataInter+1;
+       for(var i=0;i<times;i++){
+           $('.title').after(item_clone);
+       }
     });
+
+    //添加记录
+    $('.item .add_li').bind('click',function(){
+       var $this = $(this);
+       var li = $this.closest('li');
+       var li_clone = li.clone();
+       li.after(li_clone);
+       delItem();
+    });
+    //删除记录
+    function  delItem(){
+        $('.item .remove_li').bind('click',function(){
+            var $this = $(this);
+            $this.closest('li').hide().remove();
+        });
+    }
+
 });

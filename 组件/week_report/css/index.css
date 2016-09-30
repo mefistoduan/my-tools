@@ -55,6 +55,10 @@
      cursor: pointer;
      color: #00BB00;
  }
+.list .remove_li {
+     cursor: pointer;
+     color: #00BB00;
+ }
 .list .reborn_btn {
      width: 60px!important;
      height: 30px;
