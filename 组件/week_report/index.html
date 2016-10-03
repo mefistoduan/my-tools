@@ -8,22 +8,24 @@
 </head>
 <body>
 <div class="container">
-    <h5>周报生成器</h5>
+    <h5>周报输入</h5>
+    <form action="addrecord.php" method="post" onsubmit="return submitTest();">
+
     <ul class="list title">
         <li>
-            <em>时间:</em>
-            <input type="text" id="start">
-            <em>到</em>
-            <input type="text" id="end">
-            <input type="button" class="reborn_btn" value="生成">
+            <!--<em>时间:</em>-->
+            <!--<input type="text" id="start">-->
+            <!--<em>到</em>-->
+            <!--<input type="text" id="end">-->
+            <!--<input type="button" class="reborn_btn" value="生成">-->
         </li>
         <li>
             <em>姓名:</em>
-            <input type="text" id="name" value="段长鹏">
+            <input type="text" id="name" name="name" value="段长鹏">
         </li>
         <li>
             <em>岗位:</em>
-            <select type="text" id="job">
+            <select type="text" id="job" name="job">
                 <option value="前端">前端</option>
                 <option value="php">php</option>
             </select>
@@ -32,18 +34,20 @@
     <ul class="list item">
         <li>
             <lable>日期:</lable>
-            <input type="text" class="goal" name="goal" value="">
+            <input type="text" id="start" name="data">
         </li>
         <li>
             <lable>项目:</lable>
-            <input type="text" class="project" name="project" value="">
+            <input type="text" class="project" name="project[]" value="">
             <lable>目标:</lable>
-            <input type="text" class="goal" name="goal" value="">
+            <input type="text" class="goal" name="goal[]" value="">
             <em class="add_li">[+]</em>
             <em class="remove_li">[-]</em>
         </li>
     </ul>
-    <input type="button" value="确定" class="submit_btn">
+    <input type="submit" value="确定" class="submit_btn">
+    </form>
+
 </div>
 <script src="js/jquery-1.7.2.js"></script>
 <script src="js/laydate.js"></script>

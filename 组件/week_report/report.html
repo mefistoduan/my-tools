@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/report.css">
+    <script src="js/jquery-1.7.2.js"></script>
+    <script src="js/laydate.js"></script>
+    <script src="js/report.js"></script>
+</head>
+<body>
+<div class="container">
+    <h5>周报生成</h5>
+    <form action="report.php" method="post" onsubmit="return submitChecek();">
+        <ul>
+            <li>
+                <em>开始日：</em>
+                <input type="text" id="start" name="start">
+                <em>结束日：</em>
+                <input type="text" id="end" name="end">
+            </li>
+            <li>
+                <input type="submit" id="report_submit" value="生成excel">
+            </li>
+        </ul>
+    </form>
+</div>
+
+</body>
+</html>
