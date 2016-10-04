@@ -73,3 +73,12 @@
 .item {
     margin-bottom:20px;
 }
+.jump_link {
+    display: block;
+    margin: 0 auto;
+    color: #00aff2;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+
+}
