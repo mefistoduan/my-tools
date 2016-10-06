@@ -8,7 +8,13 @@
 <body>
 <script>
 $(function(){
-        
+        function speak(){
+            var word = 'hello return';
+            return word;
+        }
+    var speakType = typeof(speak());
+    console.log(speak());
+    console.log(speakType);
 })
 </script>
 </body>
