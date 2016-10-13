@@ -2,8 +2,6 @@
  * Created by mefsito on 2016/10/10.
  */
 $(function(){
-    title();
-
     $('.layer1').hide();
     $('.layer2').hide();
     $('.error').hide();
@@ -20,7 +18,7 @@ $(function(){
     } else{
         video.play();
     }
-    video结束
+    //video结束
     video.onended = function() {
         $('#video').fadeOut(200);
         $('.layer1').fadeIn(200);

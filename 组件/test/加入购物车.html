@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<table id="buy">
+    <tr>
+        <td><em>数量</em><input type="text" value="1"></td>
+        <td><input type="button" id="product-detail-car" value="加入购物车" oid="123"></td>
+    </tr>
+</table>
+<script>
+$(function(){
+    //加入购物车
+    $('#product-detail-car').click(function(){
+        var Num = parseInt($("#product-number").val());
+        var id = $('#product-detail-allname').attr('oid');
+        $.ajax({
+            type: 'POST',
+            url: 'buy.php?act=num',
+            data: {Num: Num, id: id},
+            dataType: 'json',
+            success: addToCartResponse
+        });
+    });
+
+/* *
+ * 处理添加商品到购物车的反馈信息
+ */
+function addToCartResponse(result) {
+    if (result.error > 0) {
+        // 如果需要缺货登记，跳转
+        if (result.error == 2) {
+            if (confirm(result.message)) {
+                location.href = 'kefu.php';
+            }
+        }
+        else if (result.error == 11) {
+            location.href = 'user.php?act=login';
+        }
+        else {
+            alert(result.message);
+        }
+    }
+    else {
+        var cart_url = 'mobile_cart.php';
+        if (result.ctype == '1') {
+            alert('已成功加入购物车');
+        } else {
+            location.href = cart_url;
+        }
+
+    }
+}
+});
+</script>
+</body>
+</html>
