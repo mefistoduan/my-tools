@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="apple-mobile-web-app-capable" content="no" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
+    <script src="//wximg.qq.com/wxp/libs/wxmoment/0.0.4/wxmoment.min.js"></script>
+</head>
+<body>
+<style>
+    .clear {
+        clear:both;
+    }
+    #tools a {
+        float:left;
+    }
+    .cube {
+        width:45px;
+        height:45px;
+        float:left;
+        border-radius:50px;
+        -moz-border-radius:50px;
+        -webkit-border-radius:50px;
+        margin-left:10px;
+        margin-top:10px;
+    }
+    #drawing {
+        width:300px;
+        height:300px;
+        border:1px solid #999999;
+        display:block;
+        margin:0 auto;
+        margin-top:10px;
+    }
+</style>
+<div id="tools">
+    <a href="#" data-color="#333333"><span class="cube"></span></a>
+    <a href="#" data-color="#ff0000"><span class="cube"></span></a>
+    <a href="#" data-color="#00ff00"><span class="cube"></span></a>
+    <a href="#" data-color="#0000ff"><span class="cube"></span></a>
+    <a href="#" data-color="#ffff00"><span class="cube"></span></a>
+    <a href="#" data-color="#00ffff"><span class="cube"></span></a>
+    <a href="#" data-color="#e74c3c"><span class="cube"></span></a>
+    <a href="#" data-color="#2ecc71"><span class="cube"></span></a>
+    <a href="#" data-color="#3498db"><span class="cube"></span></a>
+    <a href="#" data-color="#9b59b6"><span class="cube"></span></a>
+</div>
+<div class="clear"></div>
+<canvas id="drawing" width="300px" height="300px"></canvas>
+
+<script>
+    $(function(){
+//      color setting
+        $('#tools a').each(function(){
+            var color = $(this).attr('data-color');
+            $(this).find('span').css('background-color',color);
+        });
+
+    })
+</script>
+</body>
+</html>

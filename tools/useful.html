@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>常用组件</title>
+    <script src="jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    body {
+        width: 1200px;
+        margin: 0 auto;
+        display: block;
+    }
+   .parts {
+       width: 1200px;
+       display: block;
+       float: left;
+   }
+</style>
+
+<div class="parts">
+    <style>
+        .banner_position {
+            width: 1200px;
+            height: 494px;
+            display: block;
+            margin: 0 auto;
+        }
+        .meixian_banner {
+            position: relative;
+            width: 960px;
+            height: 494px;
+            display: inline;
+            margin: 0 auto;
+            padding-left: 241px;
+            float: left;
+            overflow: hidden;
+        }
+        #focus {
+            width:960px;
+            height:489px;
+            overflow:hidden;
+            position:relative;
+        }
+        #focus ul {
+            height:489px;
+            position:absolute;
+        }
+        #focus ul li {
+            float:left;
+            width:960px;
+            height:489px;
+            overflow:hidden;
+            position:relative;
+            background:#000;
+        }
+        #focus ul li div {
+            position:absolute;
+            overflow:hidden;
+        }
+        #focus .btnBg {
+            position:absolute;
+            width:960px;
+            height:30px;
+            left:0;
+            bottom:0;
+            background:#000;
+        }
+        #focus .btn {
+            position:absolute;
+            width:960px;
+            height:20px;
+            padding:5px 20px;
+            right:0;
+            bottom:0;
+            text-align:right;
+        }
+        #focus .btn span {
+            display:inline-block;
+            _display:inline;
+            _zoom:1;
+            width:25px;
+            height:10px;
+            _font-size:0;
+            margin-left:5px;
+            cursor:pointer;
+            background:#fff;
+        }
+        #focus .btn span.on {
+            background:#fff;
+        }
+    </style>
+    <!--轮播的banner-->
+    <div class="banner_position ">
+        <div class="meixian_banner ">
+            <div id="focus">
+                <ul>
+                    <li><a href="#" target="_blank"><img src="img/banner1.jpg" width="960px" height="488px" alt="文字1"></a></li>
+                    <li><a href="#" target="_blank"><img src="img/banner2.jpg" width="960px" height="488px" alt="文字2"></a></li>
+                    <li><a href="#" target="_blank"><img src="img/banner3.jpg" width="960px" height="488px" alt="文字3"></a></li>
+                    <li><a href="#" target="_blank"><img src="img/banner1.jpg" width="960px" height="488px" alt="文字4"></a></li>
+                    <li><a href="#" target="_blank"><img src="img/banner2.jpg" width="960px" height="488px" alt="文字5"></a></li>
+                    <li><a href="#" target="_blank"><img src="img/banner3.jpg" width="960px" height="488px" alt="文字6"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--banner轮播-->
+    <script>
+        $(function() {
+            var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+            var len = $("#focus ul li").length; //获取焦点图个数
+            var index = 0;
+            var picTimer;
+            var focusimgalt;//焦点图alt值
+            //以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+            var btn = "<div class='btnBg'></div><div class='btn'>";
+            for(var i=0; i < len; i++) {
+                focusimgalt=$("#focus ul li").eq(i).find("a img").attr('alt');
+                btn += "<span>"+focusimgalt+"</span>";
+            }
+            btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+            $("#focus").append(btn);
+            $("#focus .btnBg").css("opacity",0.5);
+
+            //为小按钮添加鼠标滑入事件，以显示相应的内容
+            $("#focus .btn span").css("opacity",0.4).mouseenter(function() {
+                index = $("#focus .btn span").index(this);
+                showPics(index);
+            }).eq(0).trigger("mouseenter");
+
+            //上一页、下一页按钮透明度处理
+            $("#focus .preNext").css("opacity",0.2).hover(function() {
+                $(this).stop(true,false).animate({"opacity":"0.5"},300);
+            },function() {
+                $(this).stop(true,false).animate({"opacity":"0.2"},300);
+            });
+
+            //上一页按钮
+            $("#focus .pre").click(function() {
+                index -= 1;
+                if(index == -1) {index = len - 1;}
+                showPics(index);
+            });
+
+            //下一页按钮
+            $("#focus .next").click(function() {
+                index += 1;
+                if(index == len) {index = 0;}
+                showPics(index);
+            });
+
+            //本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+            $("#focus ul").css("width",sWidth * (len));
+
+            //鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+            $("#focus").hover(function() {
+                clearInterval(picTimer);
+            },function() {
+                picTimer = setInterval(function() {
+                    showPics(index);
+                    index++;
+                    if(index == len) {index = 0;}
+                },4000); //此4000代表自动播放的间隔，单位：毫秒
+            }).trigger("mouseleave");
+
+            //显示图片函数，根据接收的index值显示相应的内容
+            function showPics(index) { //普通切换
+                var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+                $("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
+                //$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+                $("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
+            }
+        });
+    </script>
+</div>
+
+<div class="parts">
+    <div class="logo">
+        <p>放大头像</p>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <style>
+        .logo ul li {width: 60px;height: 60px;border-radius: 200px;background-color: #1eaa39;display: inline-block;margin-bottom: 5px;}
+    </style>
+    <script>
+        $(function(){
+            var time = 3000;
+            $(".logo ul li").hover(function(){
+                        $(this).stop(true).animate({height:"300px",width:"300px"}).animate({height:"60",width:"60px"});
+                    }
+                    ,time)
+        })
+    </script>
+</div>
+<div class="parts">
+    <div class="goods">
+        <p>带下标的radio</p>
+        <li style="border:0px;" >
+            <a href="#" title="济南仓库" class="selected">
+                济南仓库<span style="color:green;"> (库存20)</span>
+                <input id="store_value_qingdao" type="radio" name="storehouse" value="jinan_store" checked="checked">
+            </a>
+            <a href="#"  title="济南仓库" class="">
+                青岛仓库<span style="color:green"> (库存0)</span>
+                <input id="store_value_jinan" type="radio" name="storehouse" value="qingdao_store" checked="">
+            </a>
+        </li>
+    </div>
+    <style>
+        .goods {
+            width: 600px;
+            height: 100px;
+            display: block;
+        }
+
+        .goods li {
+            list-style: none;
+        }
+
+        .goods a {
+            text-decoration: none;
+        }
+
+        .goods li {
+            width: 400px;
+            height: 20px;
+            margin: 0 4px 4px 0;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .goods li a.selected {
+            border: 2px solid #1eaa39;
+            box-sizing: border-box;
+            background: url("coldX_22.jpg") bottom right no-repeat;
+        }
+
+        .goods li a {
+            border: 2px solid #c8c9cd;box-sizing: border-box;margin: 2px;padding-right: 8px;;text-align: center;background-color: #fff;color: #000;float: left;display: block;}
+        /*.goods a input {display: none}*/
+    </style>
+    <script>
+        $(function(){
+            $(".goods a").click(function(){
+                $(this).addClass('selected').siblings().removeClass('selected');
+                $(this).find("input").attr('checked','checked');
+                $(this).closest(".selected").siblings().find("input").removeAttr('checked');
+            })
+        })
+    </script>
+    <script>
+        //用法：给需要的div里加value
+        // 遍历得到当前curr的value
+        $(".pay_btn").hover(function(){
+            var payType = $(".curr").val();
+            var numPayTYPE =parseInt(payType);
+
+            if (typeof(payType) == "undefined"){
+                console.log("请选择一种支付方式")
+            }else {
+                console.log("支付方式是第"+payType+"种")
+            }
+        });
+    </script>
+</div>
+
+<div class="parts">
+    <div class="buy_number">
+        <p>购买加减法</p>
+        <div>购买数量：</div>
+        <br/>
+        <div class="buy_number"">
+        <a class="btn_reduce" >减少数量</a> <a class="btn_add">增加数量</a>
+        <input name="number" type="text" class="text"  id="number" value="1"/>
+        <input type="hidden" name="miaosha_attr" id="miaosha_attr" value="" />
+    </div>
+</div>
+<style>
+    .buy_number {width: 600px;height: 150px;display: block;float: left;}
+</style>
+<script >
+    $(".btn_reduce").click(goods_cut);
+    function goods_cut(){
+        $this_num=$(".buy_number input[name=number]").val();
+        var Num = parseInt($this_num);
+        if(Num>1){
+            Num=Num-1;
+            $(".buy_number :text").val(Num);
+        }
+    }
+    $(".btn_add").click(goods_add);
+    function goods_add(){
+        $this_num=$(".buy_number input[name=number]").val();
+        var Num = parseInt($this_num);
+        if(Num>0){
+            Num=Num+1;
+            $(".buy_number :text").val(Num);
+        }
+    }
+</script>
+</div>
+
+<div class="parts">
+    <div class="iframe">
+            <iframe src="#"></iframe>
+        <p>
+            iframe其实就是在外面写一个html然后扔进去咯，不过看样子对原来页面的JQ需要写在JQ里
+            单独的页面我就先不写了，有空再说~科科~
+        </p>
+    </div>
+    <div class="how_to">
+        <p>
+            点击按钮，自己变图标，且下拉菜单进行切换。
+        </p>
+        <div class="coupon_list">
+            <ul>
+                <li>item_01</li>
+                <li>item_02</li>
+                <li>item_03</li>
+                <li>item_04</li>
+                <li>item_05</li>
+            </ul>
+            <div class="list_turn">
+                <span>显示更多</span><i class="arrow_icon arrow_down"></i>
+            </div>
+        </div>
+    </div>
+    <style>
+        ul,li {list-style: none;margin: 0;padding: 0;}
+        .coupon_list ul {height: 40px;;overflow: hidden;display: block;border-bottom: 2px dotted #1eaa39;}
+        .coupon_list ul li {display: block;}
+        .coupon_list .list_turn .arrow_icon {width: 15px;height: 15px;display: inline-block;}
+        .coupon_list .list_turn .arrow_down {background-color: blue!important;}
+        .coupon_list .list_turn .arrow_up {background-color: aqua!important;}
+    </style>
+    <script>
+        $(function(){
+            $(".list_turn ").toggle(function(){
+                        $(".coupon_list ul").css("height","auto");
+                        $(this).children('span').html('收起');
+                        $(this).children("i").addClass('arrow_up');
+                    },
+                    function(){$(".coupon_list ul").css("height","40px");
+                        $(this).children('span').html('显示更多');
+                        $(this).children("i").removeClass('arrow_up');
+                    }
+            );
+        })
+    </script>
+<div class="parts">
+    <p>全兼容的播放视频小插件</p>
+    <p>代码如下</p>
+     <textarea rows="23" cols="100">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" height="480" id="flashfirebug_1344218694579" width="640">
+    <param name="movie" value="player.swf" />
+    <param name="quality" value="high" />
+    <param name="wmode" value="transparent" />
+    <param name="menu" value="false" />
+    <param name="allowFullScreen" value="true" />
+    <param name="FlashVars" value="vcastr_file=tv1.flv&amp;vcastr_title=&amp;IsAutoPlay=0&amp;BarPosition=1&amp;IsShowBar=1&amp;LogoUrl=" />
+    <embed allowfullscreen="true" allownetworking="all" allowscriptaccess="always" flashvars="vcastr_file=tv1.flv&amp;vcastr_title=&amp;IsAutoPlay=0&amp;BarPosition=1&amp;IsShowBar=1&amp;LogoUrl=" height="480" id="flashfirebug_1344218694579" menu="false" name="flashfirebug_1344218694579" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="player.swf" type="application/x-shockwave-flash" width="640">
+    </embed>
+    <param name="AllowNetworking" value="all" />
+    <param name="allowScriptAccess" value="always" />
+    <param name="AllowNetworking" value="all" />
+</object>
+     </textarea>
+</div>
+<div class="parts">
+    <style>
+        .btn2016 {
+            width: 300px;
+            height: 50px;
+        }
+        .btn2016 .button2016 {
+            width: 60px;
+            height: 30px;
+            background-color: #1eaa39;
+            color: #fff;
+            display: block;
+            text-align: center;
+            line-height: 30px;
+        }
+        .btn2016 .button2016  {width: 180px;height: 43px;background: url("btn.png") top center no-repeat;display: inline-block;background-position: 0 0;}
+        .btn2016 a:hover {background-position: -360px 0;cursor: pointer;}
+        .btn2016 .click {background-position: -180px 0!important;}
+
+    </style>
+
+    <p>用图片绘制的动态按钮，需替换为三种图片记性替换</p>
+    <div class="btn2016">
+        <a class="button2016"></a>
+    </div>
+    <script>
+        $(function(){
+            $(".button2016").mousedown(function(){
+                $(this).addClass("click");
+            });
+            $(".button2016").mouseup(function(){
+                $(this).removeClass("click");
+            })
+        });
+
+        //                .delay(1000).attr("href","http://www.emeixian.com")
+
+    </script>
+</div>
+<div class="parts">
+    <p>著作权归作者所有。
+    商业转载请联系作者获得授权，非商业转载请注明出处。
+    作者：郑航
+    链接：https://www.zhihu.com/question/38685128/answer/77604309
+    来源：知乎</p>
+    <script>
+        vargz=function(a,b,c){functiond(a,b){return['著作权归作者所有。','商业转载请联系作者获得授权，非商业转载请注明出处。','作者：'+b,'链接：'+a,'来源：知乎','','']}functionf(a,b,c){return'<div>'+d(b,c).join('<br />')+a+'</div>'}functiong(a){varg=z.Xq(),m=g&&(0,z.ib)(g.Gd());if(m&&!(42>m.length)){if('object'===typeofa.originalEvent.clipboardData&&(a.originalEvent.clipboardData.setData('text/html',f(g.Of(),b,c)),a.originalEvent.clipboardData.setData('text/plain',d(b,c).join('\n')+m),0<a.originalEvent.clipboardData.getData('text/plain').length)){a.preventDefault();return}if(window.getSelection){a=g.Of();varn=(0,window.$)(f(a,b,c)).css({position:'fixed',left:'-9999px'}).appendTo('body');window.getSelection().selectAllChildren(n.get(0));(0,window.setTimeout)(function(){g.select();n.remove()},200)}}}a&&b&&c&&(z.Fa(b,'http')||(b=window.location.protocol+'//'+window.location.host+b),a.on('copy',g))};
+    </script>
+    </div>
+<div class="parts">
+    <style>
+        .container {
+            width: 600px;
+            height: 200px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .container ul {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .container ul li {
+            list-style: none;
+        }
+
+        .container ul li {
+            position: relative;
+            left: 1px;;
+            width: 600px;
+            height: 200px;
+            background: url("danmu.jpg") repeat 0 0;
+            float: left;
+        }
+
+    </style>
+    <div class="container">
+        <p>背景自动播放</p>
+        <ul class="container_scroll">
+            <li></li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            var li = $(".container_scroll li");
+            li.css('backgroundPosition', '0 0');
+            var bgscroll = function () {
+                var current = parseInt(li.css('backgroundPosition').split(' ')[0]),
+                        newBgPos = (current - 1) + 'px 0px';
+                li.css('backgroundPosition', newBgPos);
+            };
+            setInterval(bgscroll, 75);
+        });
+        //tips:split()用于分割数组
+    </script>
+</div>
+    <div class="parts">
+        <style>
+            .phone_see {
+                width: 200px;
+                height: 200px;
+                display: none;
+                background-color: aquamarine;
+            }
+        </style>
+        <p>手机端单独调用</p>
+        <div class="phone_see"></div>
+        <script>
+            function displayHideUI() {
+                $(".phone_see").show();
+            }
+        </script>
+    </div>
+    <div class="parts">
+        <h4>Example 2.11. 逻辑与和逻辑或操作符</h4>
+        <p>
+            var foo = 1;
+            var bar = 0;
+            var baz = 2;
+             <br/>
+            foo || bar;   // 返回1，也就是返回true，判断结果为真。
+            <br/>
+            bar || foo;   // 返回1。
+            <br/>
+            foo && bar;   // 返回0，也就是返回false，判断结果为假。 <br/>
+            foo && baz;   // 返回baz的，返回值为2，判断结果为真。 <br/>
+            baz && foo;   // 返回1，判断结果为真。
+            <br/>
+
+            Example 2.30. 关于数组 <br/>
+            var myArray = [ 'h', 'e', 'l', 'l', 'o' ]; <br/>
+            var myString = myArray.join('');   // 'hello' <br/>
+            var mySplit = myString.split('');  // [ 'h', 'e', 'l', 'l', 'o' ] <br/>
+        </p>
+    </div>
+    <div class="parts">
+        <h4>怎样快速让网站的所有的a链接都在新窗口打开？</h4>
+        <textarea rows="7" cols="60" >
+            $(function(){
+                $('body a').each(function(){
+                    $(this).attr('target','_blank');
+                });
+            });
+        </textarea>
+    </div>
+    <div class="parts">
+        <h4>返回顶部</h4>
+        <a href="javascript:scroll(0,0)">点击返回顶部</a>
+    </div>
+    <div class="parts">
+        <style>
+            .scrollDiv {
+                position: absolute;
+                width: 600px;
+                height: 60px;
+                display: block;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            .scrollDiv ul {
+                position: relative;
+                width: 600px;
+                height: 18px;
+                overflow: hidden;
+                display: block;
+            }
+            .scrollDiv ul li {
+                width: 600px;
+                height: 18px;
+                overflow: hidden;
+                display: block;
+            }
+
+        </style>
+        <h4>向上翻页</h4>
+        <div class="scrollDiv">
+            <ul>
+                <li><a href="#">111 土豆</a><a href="#">111 土豆</a><a href="#">111 土豆</a><a href="#">111 土豆</a><a href="#">111 土豆</a><a href="#">111 土豆</a></li>
+                <li><a href="#">222 马铃薯</a><a href="#">222 马铃薯</a><a href="#">222 马铃薯</a><a href="#">222 马铃薯</a><a href="#">222 马铃薯</a><a href="#">222 马铃薯</a></li>
+                <li><a href="#">333 番薯</a><a href="#">333 番薯</a><a href="#">333 番薯</a><a href="#">333 番薯</a><a href="#">333 番薯</a><a href="#">333 番薯</a><a href="#">333 番薯</a></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+            function AutoScroll(obj){
+                $(obj).find("ul:first").animate({
+                    marginTop:"-25px"
+                },500,function(){
+                    $(this).css({marginTop:"0"}).find("li:first").appendTo(this);
+                });
+            }
+            $(document).ready(function(){
+                setInterval('AutoScroll(".scrollDiv")',1000)
+            });
+        </script>
+    </div>
+    <div class="parts" style="margin-top: 50px">
+        <style>
+            .timer  {
+                width: 706px;
+                min-width: 706px;
+                height: 60px;
+                margin: 0 auto;
+                font-size: 60px;
+                line-height: 60px;
+                position: relative;
+                display: inline;
+            }
+
+            .white {
+                width: 632px;
+                min-width: 632px;
+                color: #fff;;
+                padding-top: 6px;
+                margin: 0 auto;
+            }
+
+            .timer span {
+                width: 66px;
+                height: 67px;
+                position: relative;
+                display: inline-block;
+            }
+
+            #show_total {
+                width: 66px;
+                height: 60px;
+                background-color: #342a2c;
+                vertical-align: middle;
+            }
+
+            #show_hours {
+                width: 66px;
+                height: 60px;
+                background-color: #342a2c;
+                vertical-align: middle;
+            }
+
+            #show_min {
+                width: 66px;
+                height: 60px;
+                background-color: #342a2c;
+                vertical-align: middle;
+            }
+
+            #show_sec {
+                width: 66px;
+                height: 60px;
+                background-color: #342a2c;
+                vertical-align: middle;
+            }
+
+            .red {
+                height: 60px;
+                color: #a40000;
+                line-height: 60px;
+                vertical-align: middle;
+            }
+
+
+        </style>
+            <h4>计时器</h4>
+            <div class="white">
+                <div class="timer">
+                    <span id="show_total"></span><span class="red">天</span>
+                    <span id="show_hours"></span><span class="red">时</span>
+                    <span id="show_min"></span><span class="red">分</span>
+                    <span id="show_sec"></span><span class="red">秒</span>
+                </div>
+            </div>
+        <script>
+            function countdown(){
+                var show_time = document.getElementById("show_time");
+                endtime = new Date("11/28/2016 17:00:00");//结束时间
+                today = new Date();//当前时间
+                delta_T = endtime.getTime() - today.getTime();//时间间隔
+                if(delta_T < 0){
+                    clearInterval(auto);
+                    show_time.innerHTML = "倒计时已经结束";
+                }
+                window.setTimeout(countdown,1000);
+                total_days = delta_T/(24*60*60*1000);//总天数
+                total_show = Math.floor(total_days);//实际显示的天数
+                total_hours = (total_days - total_show)*24;//剩余小时
+                hours_show = Math.floor(total_hours);//实际显示的小时数
+                total_minutes = (total_hours - hours_show)*60;//剩余的分钟数
+                minutes_show = Math.floor(total_minutes);//实际显示的分钟数
+                total_seconds = (total_minutes - minutes_show)*60;//剩余的分钟数
+                seconds_show = Math.floor(total_seconds);//实际显示的秒数
+                show_total.innerHTML =  "0"+total_show ;
+                show_hours.innerHTML =  hours_show ;
+                show_min.innerHTML =  minutes_show ;
+                show_sec.innerHTML =  seconds_show ;
+            }
+            countdown();
+
+
+        </script>
+
+    </div>
+    <div class="parts">
+        <p>分享到朋友圈</p>
+        <s>取消注释即可使用，有空自己写个</s>
+        <!-- JiaThis Button BEGIN -->
+        <div id="ckepop">
+            <span class="jiathis_txt">分享到：</span>
+            <a class="jiathis_button_weixin">微信</a>
+            <a href="http://www.jiathis.com/share"  class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+            <a class="jiathis_counter_style"></a>
+        </div>
+        <!--<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1" charset="utf-8"></script>-->
+    </div> <!-- JiaThis Button END -->
+    </div>
+    <div class="parts">
+        <p id="loft1">兼容IE6IE7的浮动栏</p>
+
+        <div class="floating">
+            <ul>
+                <li>
+                    <a href=".title1"> </a>
+                </li>
+                <li>
+                    <a href=".title2"> </a>
+                </li>
+                <li>
+                    <a href=".title3"> </a>
+                </li>
+                <li>
+                    <a href=".title4"> </a>
+                </li>
+                <li>
+                    <a href=".title5"> </a>
+                </li>
+                <li>
+                    <a href=".title6"> </a>
+                </li>
+                <li>
+                    <a href=".title7"> </a>
+                </li>
+                <li class="return">
+                    <a href="javascript:scroll(0,0)"> </a>
+                </li>
+            </ul>
+            <div class="empty"></div>
+        </div>
+        <style>
+           .floating {
+                z-index: 9999
+            }
+
+         .floating {
+                position: absolute;
+                _position: relative;
+                right: 0;
+                top: 0;
+                _top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,90)||0)-(parseInt(this.currentStyle.marginBottom,20)||0)));
+                width: 42px;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                background-color: #323232;
+            }
+        </style>
+        <!--下滑后显示，到顶后消失-->
+        <script>
+            $(function(){
+                var loft1_height = $("#loft1").offset().top;
+                $(window).scroll(function(){
+                    var this_scrollTop = $(this).scrollTop();
+                    if(this_scrollTop>loft1_height ){
+                        $(".floating").show();
+                    }
+                    else{
+                        $(".floating").hide();
+                    }
+
+                });
+            });
+        </script>
+    </div>
+    <div class="parts">
+        <style>
+            .found {
+                background-color: #ff0;
+            }
+        </style>
+        <h4>js遍历输入</h4>
+        <em>from "js cookbook"</em>
+        <form id="textsearch">
+            <textarea id="incoming" cols="100" rows="10"></textarea>
+            <p>Search pattern:
+                <input id="pattern" type="text"/>
+            </p>
+        </form>
+        <button id="searchSubmit">Search for pattern</button>
+        <div id="searchResult"></div>
+        <script>
+            document.getElementById("searchSubmit").onclick=function() {
+                var pattern=document.getElementById("pattern").value;
+                var re=new RegExp(pattern,"g");
+                var searchString=document.getElementById("incoming").value;
+                var resultString=searchString.replace(re,"<span class='found'>$&</span>");
+                document.getElementById("searchResult").innerHTML=resultString;
+            }
+        </script>
+    </div>
+    <div class="parts">
+        <style>
+            .code {
+                background:lightblue;
+                font-family:Arial;
+                font-style:italic;
+                color:Red;
+                border:0;
+                padding:2px 3px;
+                letter-spacing:3px;
+                font-weight:bolder;
+            }
+            .unchanged {
+                border:0;
+            }
+        </style>
+        <p>js生成的验证码</p>
+        <input  type="text"   onclick="createCode()" id="input1" />
+        <input type="text" readonly  id="checkCode" class="unchanged" style="width: 80px"  /><br />
+        <input id="submit"   onclick="validate();"  type="button" value="确定" />
+        <script>
+
+            var code ; //在全局 定义验证码
+            function createCode()
+            {
+                code = "";
+                var codeLength = 4;//验证码的长度
+                var checkCode = document.getElementById("checkCode");
+                var selectChar =new Array(0,1,2,3,4,5,6,7,8,9,'b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+                        'A','B','C','D','E','F','G','I','J','K','L','M','N','O','冻','Q','R','S','T','U','V','W','X','Y','Z');
+//所有候选组成验证码的字符，当然也可以用中文的
+
+                for(var i=0;i<codeLength;i++)
+                {
+                    var charIndex = Math.floor(Math.random()*36);
+                    code +=selectChar[charIndex];
+                }
+                if(checkCode)
+                {
+                    checkCode.className="code";
+                    checkCode.value = code;
+                }
+            }
+            function validate ()
+            {
+                var inputCode = document.getElementById("input1").value;
+                if(inputCode.length <=0)
+                {
+                    alert("请输入验证码！");
+                }
+                else if(inputCode != code )
+                {
+                    alert("验证码输入错误！");
+                    createCode();//刷新验证码
+                }
+                else
+                {
+                    alert("^-^ OK");
+                }
+            }
+        </script>
+    </div>
+    <div class="parts">
+        <style>
+            .loading {
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                background: #eee
+            }
+
+            .loading-indicator {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -25px;
+                margin-top: -25px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .loading-indicator:before {
+                content: "";
+                display: block;
+                width: 50px;
+                height: 25px;
+                padding-bottom: 0;
+                box-sizing: border-box;
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+                background: -webkit-linear-gradient(0deg, #999, #bbb);
+            }
+
+            .loading-indicator:after {
+                content: "";
+                display: block;
+                width: 50px;
+                height: 25px;
+                padding-top: 0;
+                box-sizing: border-box;
+                border-bottom-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                background: -webkit-linear-gradient(0deg, #eee, #bbb);
+            }
+
+            .loading-indicator>i {
+                display: block;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background: #eee;
+                top: 5px;
+                left: 5px;
+                border-radius: 20px;
+            }
+
+        </style>
+        <h4>渐变色圆圈</h4>
+        <p>原理:利用before和after伪类进行区分</p>
+        <div class="loading"><div class="loading-indicator"><i></i></div>
+    </div>
+        <div class="parts">
+            <style>
+                #tab{width:240px; margin:0 auto; text-align:center;}
+                .menu{height:35px; line-height:32px; padding-top:1px;}
+                .menu a{display:inline-block; height:35px; line-height:35px; width:116px; text-align:center; font-size:20px; color:#999999; font-weight:bold;}
+                .menu a:hover, .menu a.on{color:#d33b55; text-decoration:none;}
+                .cnt{border:1px solid #999999; width:240px; height:100px;}
+            </style>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $(".menu a").each(function(i){
+                        $(this).click(function(){
+                            $(".menu a").removeClass("on").eq(i).addClass("on");
+                            $(".cnt").hide().eq(i).show();
+                            return false;  //防止a跳转；
+                        })
+                    })
+                });
+            </script>
+            <div id="tab">
+                <div class="menu">
+                    <a href="#" class="on">页面A</a>
+                    <a href="#">页面B</a>
+                </div>
+                <div class="cnt">
+                    1
+                </div>
+                <div class="cnt" style="display:none;">
+                    2
+                </div>
+            </div>
+        </div>
+        <div class="parts" style="margin-top: 100px">
+            <style>
+                .hl_main5_content {width:880px; height:170px; border-top:none; margin:0 auto; margin-top:20px;}
+                .hl_main5_content1 {width:800px;margin-top:5px; overflow:hidden; float:left; margin-left:35px;}
+                .hl_main5_content1 ul {width:1600px; overflow:hidden;}
+                .hl_main5_content1 ul li { float:left; width:150px; display:inline; margin-right:10px; text-align:center;}
+                .hl_main5_content1 ul li span { font-size:12px;color:#3f3f3f;}
+                .hl_main5_content1 ul li img { margin-bottom:20px;}
+                .hl_scrool_leftbtn {width:20px; height:32px; background:url(images/arr1_left.png) no-repeat; float:left; margin-top:50px; cursor:pointer;background-color: red;}
+                .hl_scrool_rightbtn {width:20px; height:32px; background:url(images/arr1_right.png) no-repeat;float:right;margin-top:50px; cursor:pointer;background-color: cadetblue;}
+                .hl_scrool_leftbtn:hover { background:url(images/arr_left.png) no-repeat;}
+                .hl_scrool_rightbtn:hover { background:url(images/arr_right.png) no-repeat;}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               </div>
+            </style>
+
+            <div class="hl_main5_content1">
+                <div class="hl_scrool_leftbtn"></div>
+                <div class="hl_scrool_rightbtn"></div>
+                <ul>
+                    <li><a href="#" target="_blank" title="爱薯福1/4薯条"><img src="images/92_thumb_G_1341065405738.jpg" width="120" height="120" /></a><br /><span>￥23.20</span></li>
+                    <li><a href="#" target="_blank" title="爱薯福1/4薯条"><img src="images/281_thumb_G_1341604354748.jpg" width="120" height="120" /></a><br /><span>￥23.20</span></li>
+                    <li><a href="#" target="_blank" title="爱薯福1/4薯条"><img src="images/705_thumb_G_1395961441410.jpg" width="120" height="120" /></a><br /><span>￥23.20</span></li>
+                    <li><a href="#" target="_blank" title="爱薯福1/4薯条"><img src="images/1320_thumb_G_1417029814739.jpg" width="120" height="120" /></a><br /><span>￥23.20</span></li>
+                    <li><a href="#" target="_blank" title="爱薯福1/4薯条"><img src="images/123_thumb_G_1395873494075.jpg" width="120" height="120" /></a><br /><span>￥23.20</span></li>
+                    <li><a href="#" target="_blank" title="爱薯福1/4薯条"><img src="images/281_thumb_G_1341604354748.jpg" width="120" height="120" /></a><br /><span>￥23.20</span></li>
+
+                </ul>
+            </div>
+            <h4>能左右滑动的UL</h4>
+            <script type="text/javascript">
+                var flag = "left";
+                function DY_scroll(wraper,prev,next,img,speed,or){
+                    var wraper = $(wraper);
+                    var prev = $(prev);
+                    var next = $(next);
+                    var img = $(img).find('ul');
+                    var w = img.find('li').outerWidth(true);
+                    var s = speed;
+                    next.click(function(){
+                        img.animate({'margin-left':-w},function(){
+                            img.find('li').eq(0).appendTo(img);
+                            img.css({'margin-left':0});
+                        });
+                        flag = "left";
+                    });
+                    prev.click(function(){
+                        img.find('li:last').prependTo(img);
+                        img.css({'margin-left':-w});
+                        img.animate({'margin-left':0});
+                        flag = "right";
+                    });
+                    if (or == true){
+                        ad = setInterval(function() { flag == "left" ? next.click() : prev.click()},s*1000);
+                        wraper.hover(function(){clearInterval(ad);},function(){ad = setInterval(function() {flag == "left" ? next.click() : prev.click()},s*1000);});
+                    }
+                }
+                DY_scroll('.hl_main5_content','.hl_scrool_leftbtn','.hl_scrool_rightbtn','.hl_main5_content1',3,false);// true为自动播放，不加此参数或false就默认不自动
+            </script>
+        </div>
+    <div class="parts">
+        <h4>hover 弹出商品介绍</h4>
+        <div class="goods_pic">
+            <a class="hover" id="goods_item01">
+                <p>虎！虎！</p>
+                <span>此即菩提之中，观自在行深版若波罗蜜多</span>
+            </a>
+        </div>
+        <style>
+            .goods_pic {
+                width: 600px;
+                height: 300px;
+                display: block;
+                background: url("danmu.jpg")top center no-repeat;
+            }
+            .goods_pic .hover {
+                display: block;
+                cursor: pointer;
+                background-color: #fff;
+            }
+            #goods_item01 {
+                position: relative;
+                top: 10px;
+                left: 20px;
+                width: 60px;
+                height: 30px;
+                display: block;
+            }
+            .goods_pic .hove p {
+                width: 60px;
+                height: 30px;
+                display: block;
+                background-color: #fff;
+
+            }
+            .goods_pic .hover span {
+                position: relative;
+                top: -20px;
+                width: 60px;
+                height: 90px;
+                overflow: hidden;
+                display: none;
+                background-color: #fff;
+            }
+            .goods_pic  a:hover span {
+                display: block;
+            }
+        </style>
+    </div>
+        div class="parts">
+        <h4>按钮视效</h4>
+
+        <div class="btn01">
+            <a href="#">前端攻城狮</a>
+        </div>
+        <style>
+            .btn01 a {
+                width: 120px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #222222;
+                background-color: #fff;
+                border: 1px solid #e7e7e7;
+                text-align: center;
+                text-decoration: none;
+                display: block;
+                font-family: "Microsoft YaHei", "微软雅黑";
+            }
+
+            .btn01 a:hover {
+                border: 1px solid #00a1d6;
+                background-color: #00a1d6;
+                color: #fff;
+                transition: 0.5s;
+                box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 15px;
+            }
+
+        </style>
+    </div>
+<div class="parts">
+    <h4>金属材质的菜单栏</h4>
+    <ul class="nav_ccat clearfix">
+        <li>
+            <a href="#" target="_blank">html</a>
+        </li>
+        <li>
+            <a href="#" target="_blank">css</a>
+        </li>
+        <li>
+            <a href="#" target="_blank">javascript</a>
+        </li>
+    </ul>
+    <style>
+        .parts .clearfix {
+            zoom: 1;
+            _height: 1%;
+            display: block;
+        }
+        .nav_ccat li {
+            width: 150px;
+            height: 35px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border: 0;
+            overflow: hidden;
+            border-top: 1px solid #737171;
+            border-bottom: 1px solid #393939;
+        }
+        .nav_ccat a {
+            font: 14px/35px "微软雅黑";
+            color: #e6e6e6;
+            display: block;
+            padding: 0 10px 0 20px;
+            width: 120px;
+            height: 35px;
+            overflow: hidden;
+            background: #5b5b5b;
+            outline: 0;
+            text-decoration: none;
+        }
+    </style>
+</div>
+<div class="parts">
+    <div class="empty" style="margin-top: 100px"></div>
+    <h4>搜索框</h4>
+    <div class="searchArea" >
+        <div class="jSearchArea">
+            <input type="text"  class="inputMiddle" maxlength="5" size="5">
+            <button type="button"><s></s></button>
+        </div>
+    </div>
+    <style>
+        .searchArea {
+            position: relative;
+            top: 100px;
+            width: 187px;
+            height: 26px;
+            display: block;
+            float: left;
+            background: url(http://img11.360buyimg.com/cms/jfs/t1942/193/346021705/1966/7318b0ec/55ffd5e9Neee7f8c3.png) no-repeat 0 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        .jSearchArea input {
+            float: left;
+            width: 154px;
+            height: 20px;
+            padding: 3px 0 3px 8px;
+            background: none;
+            border: medium none;
+            margin-right: 15px;
+            outline: none;
+        }
+        .jSearchArea button {
+            width: 25px;
+            height: 26px;
+            background: none;
+            border: medium none;
+            cursor: pointer;
+            float: left;
+        }
+    </style>
+</div>
+<div class="parts">
+    <div class="empty" style="margin-top: 200px"></div>
+    <h4>有光泽的进度条</h4>
+    <div class="percent">
+        <dl>
+            <dt>
+            <dd>
+                <div style="width: 96px"></div>
+            </dd>
+            </dt>
+        </dl>
+    </div>
+    <style>
+        .percent dd div {
+            overflow: hidden;
+            height: 10px;
+            width: 0;
+            background-color: #ED0000;
+            background-image: -ms-linear-gradient(top,#ED0000 0,#A50000 100%);
+            background-image: -moz-linear-gradient(top,#ED0000 0,#A50000 100%);
+            background-image: -o-linear-gradient(top,#ED0000 0,#A50000 100%);
+            background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#ED0000),color-stop(1,#A50000));
+            background-image: -webkit-linear-gradient(top,#ED0000 0,#A50000 100%);
+            background-image: linear-gradient(to bottom,#ED0000 0,#A50000 100%);
+        }
+    </style>
+</div>
+<div class="parts">
+
+</div>
+</body>
+</html>

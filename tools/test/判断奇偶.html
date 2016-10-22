@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断奇偶</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<script>
+    $(function(){
+        var colorStyle;
+        var i = 0 ;
+        setInterval(function(){
+            i=i+1;
+            if ( i%2 != 1){
+                console.log('偶数'+i);
+            }else {
+                console.log('奇数');
+            }
+        },300);
+    })
+</script>
+</body>
+</html>

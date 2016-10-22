@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Using turn.js and the new zoom feature</title>
+    <meta name="viewport" content="width = 1050, user-scalable = no">
+    <link href="css/magazine.css" rel="stylesheet" type="text/css">
+    <script src="../jquery-1.7.2.js"></script>
+    <script src="js/turn.js"></script><script src="js/zoom.min.js"></script><script src="js/magazine.js"></script><link href="css/magazine.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="js/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+    <script type="text/javascript" src="js/hash.js"></script>
+    <script type="text/javascript" src="js/turn.js"></script>
+    <script type="text/javascript" src="js/turn.html4.min.js"></script>
+    <script type="text/javascript" src="js/zoom.min.js"></script>
+    <script type="text/javascript" src="js/magazine.js"></script>
+    <script>
+        $(function(){
+            var next_button = $(".next-button");              //初始化左右箭头
+            var previous_button = $(".previous-button");
+            setArrows();
+        });
+    </script>
+</head>
+<body>
+<div id="canvas" style="display: block;">
+
+    <!-- 右上角放大缩小按钮 -->
+
+    <div class="zoom-icon zoom-icon-in">
+
+    </div>
+
+    <div class="magazine-viewport" style="position: relative; overflow: hidden; width: 1440px; height: 496px;">
+
+        <div class="container">
+
+            <div class="magazine animated" style="position: relative; width: 762px; height: 496px; margin-left: -190.5px; top: -248px; left: -381px;">
+
+                <!-- Next button --><div class="page-wrapper" page="1" style="position: absolute; overflow: hidden; width: 381px; height: 496px; top: 0px; right: 0px; left: auto; z-index: 7;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 625px; height: 625px; transform-origin: 0% 100% 0px; transform: translate(114px, -13px) rotate(-45deg);"><div class="page p1 odd" style="float: left; width: 381px; height: 496px; position: absolute; top: auto; left: 0px; bottom: 0px; right: auto; transform-origin: 0% 100% 0px; transform: rotate(45deg) translate(-114px, -116px);"><div class="gradient"></div><img src="pages/1.png" style="width: 100%; height: 100%;"></div></div><div style="top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 381px; height: 496px; background-image: -webkit-gradient(linear, 100% 100%, 76.378% 81.8548%, color-stop(0.6, rgba(0, 0, 0, 0)), color-stop(0.8, rgba(0, 0, 0, 0.298039)), to(rgba(0, 0, 0, 0))); display: block;"></div></div><div style="pointer-events: none; position: absolute; top: 32px; left: 131px; overflow: visible; z-index: auto; display: block;"><div style="position: absolute; top: -32px; left: 250px; overflow: hidden; z-index: 14; width: 625px; height: 625px; transform-origin: 0% 100% 0px; transform: translate(115px, -13px) rotate(-45deg); display: block;"><div style="position: absolute; top: auto; left: 0px; overflow: visible; z-index: auto; cursor: default; width: 381px; height: 496px; right: auto; bottom: 0px; transform-origin: 0% 100% 0px; transform: rotate(45deg) translate(116px, -266px) rotate(90deg);"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 381px; height: 496px; background-image: -webkit-gradient(linear, 0% 100%, 19.685% 84.879%, color-stop(0.057191, rgba(0, 0, 0, 0)), color-stop(0.811438, rgba(0, 0, 0, 0.2)), to(rgba(255, 255, 255, 0.2)));"></div><div class="page p2 even" style="float: left; width: 381px; height: 496px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto; box-shadow: rgba(0, 0, 0, 0.258824) 0px 0px 20px;"><div class="gradient"></div><img src="pages/2.png" style="width: 100%; height: 100%;"></div></div></div><div style="position: absolute; top: -32px; left: -131px; overflow: hidden; z-index: 0; display: none; width: 625px; height: 625px;"><div style="position: absolute; top: 0px; left: 0px; overflow: visible; z-index: auto; cursor: default; width: 381px; height: 496px;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 381px; height: 496px;"></div></div></div><div style="position: absolute; top: -32px; left: 250px; overflow: hidden; z-index: 0; display: none; width: 625px; height: 625px;"><div style="position: absolute; top: 0px; left: 0px; overflow: visible; z-index: auto; cursor: default; width: 381px; height: 496px;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 381px; height: 496px;"></div></div></div><div style="position: absolute; top: -300px; left: -661px; overflow: hidden; z-index: 0; display: none; width: 625px; height: 625px;"><div style="position: absolute; top: 0px; left: 0px; overflow: visible; z-index: auto; cursor: default; width: 381px; height: 496px;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 381px; height: 496px;"></div></div></div><div style="position: absolute; top: -300px; left: -61px; overflow: hidden; z-index: 0; display: none; width: 625px; height: 625px;"><div style="position: absolute; top: 0px; left: 0px; overflow: visible; z-index: auto; cursor: default; width: 381px; height: 496px;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 381px; height: 496px;"></div></div></div><div style="position: absolute; top: -300px; left: -661px; overflow: hidden; z-index: 0; display: none; width: 625px; height: 625px;"><div style="position: absolute; top: 0px; left: 0px; overflow: visible; z-index: auto; cursor: default; width: 381px; height: 496px;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 381px; height: 496px;"></div></div></div></div><div class="page-wrapper" page="2" style="position: absolute; overflow: hidden; width: 381px; height: 496px; top: 0px; left: 0px; right: auto; z-index: 0;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 625px; height: 625px;"></div></div><div class="page-wrapper" page="3" style="position: absolute; overflow: hidden; width: 381px; height: 496px; top: 0px; right: 0px; left: auto; z-index: 0;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 625px; height: 625px;"><div class="page p3 odd" style="float: left; width: 381px; height: 496px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto;"><div class="gradient"></div><img src="pages/3.png" style="width: 100%; height: 100%;"></div></div><div style="top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 381px; height: 496px;"></div></div><div class="page-wrapper" page="4" style="position: absolute; overflow: hidden; width: 381px; height: 496px; top: 0px; left: 0px; right: auto; z-index: 0; display: none;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 625px; height: 625px;"><div class="page p4 even" style="float: left; width: 381px; height: 496px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto;"><div class="gradient"></div><img src="pages/4.png" style="width: 100%; height: 100%;"></div></div><div style="top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 381px; height: 496px;"></div></div><div class="page-wrapper" page="5" style="position: absolute; overflow: hidden; width: 381px; height: 496px; top: 0px; right: 0px; left: auto; z-index: 0; display: none;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 625px; height: 625px;"><div class="page p5 odd" style="float: left; width: 381px; height: 496px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto;"><div class="gradient"></div><img src="pages/5.png" style="width: 100%; height: 100%;"></div></div><div style="top: 0px; left: 0px; overflow: hidden; z-index: 1; width: 381px; height: 496px;"></div></div><div class="page-wrapper" page="6" style="position: absolute; overflow: hidden; width: 381px; height: 496px; top: 0px; left: 0px; right: auto; z-index: 0; display: none;"><div style="position: absolute; top: 0px; left: 0px; overflow: hidden; z-index: auto; width: 625px; height: 625px;"><div class="page p6 even" style="float: left; width: 381px; height: 496px; position: absolute; top: 0px; left: 0px; bottom: auto; right: auto;"><div class="gradient"></div><img src="pages/6.png" style="width: 100%; height: 100%;"></div></div></div><div class="shadow" style="position: absolute; top: 0px; left: 381px; overflow: hidden; z-index: auto; width: 381px; height: 496px;"></div></div>
+
+        </div>
+
+        <div ignore="1" class="next-button" style="right: 234.75px;">
+
+        </div>
+
+        <!-- Previous button -->
+
+        <div ignore="1" class="previous-button" style="left: 234.75px; display: none;">
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+        function loadApp() {
+
+            $('#canvas').fadeIn(1000);
+
+            var flipbook = $('.magazine');
+
+            // Check if the CSS was already loaded
+
+            if (flipbook.width()==0 || flipbook.height()==0) {
+
+                setTimeout(loadApp, 10);
+
+                return;
+
+            }
+
+            // 创建flipbook
+
+            flipbook.turn({
+
+                width: 1200,
+
+                height: 781,
+
+                duration: 1000,   //翻页速度，值越小越快
+
+                // Hardware acceleration
+
+                acceleration: !isChrome(),
+
+                // Enables gradients
+
+                gradients: true,
+
+                // Auto center this flipbook
+
+                autoCenter: true,
+
+                // Elevation from the edge of the flipbook when turning a page
+
+                elevation: 50,
+
+                // The number of pages
+
+                pages: 7,
+
+                // Events
+
+                when: {
+
+                    turning: function(event, page, view) {
+
+                        var book = $(this),
+
+                                currentPage = book.turn('page'),
+
+                                pages = book.turn('pages');
+
+                        // Update the current URI
+
+                        Hash.go('page/' + page).update();
+
+                        // Show and hide navigation buttons
+
+                        disableControls(page);
+
+                    },
+
+                    turned: function(event, page, view) {
+
+                        disableControls(page);
+
+                        $(this).turn('center');
+
+                        if (page==1) {
+
+                            $(this).turn('peel', 'br');
+
+                        }
+
+                    },
+
+                    missing: function (event, pages) {
+
+                        // Add pages that aren't in the magazine
+
+                        for (var i = 0; i < pages.length; i++)
+
+                            addPage(pages[i], $(this));
+
+                    }
+
+                }
+
+            });
+
+
+
+            // Zoom.js
+
+            $('.magazine-viewport').zoom({
+
+                flipbook: $('.magazine'),
+
+                max: function() {
+
+                    return largeMagazineWidth()/$('.magazine').width();
+
+                },
+
+                when: {
+
+                    swipeLeft: function() {
+
+                        $(this).zoom('flipbook').turn('next');
+
+                    },
+
+                    swipeRight: function() {
+
+                        $(this).zoom('flipbook').turn('previous');
+
+                    },
+
+
+
+                    resize: function(event, scale, page, pageElement) {
+
+                        if (scale==1)
+
+                            loadSmallPage(page, pageElement);
+
+                        else
+
+                            loadLargePage(page, pageElement);
+
+                    },
+
+                    zoomIn: function () {
+
+                        $('.made').hide();
+
+                        $('.magazine').removeClass('animated').addClass('zoom-in');
+
+                        $('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
+
+                        if (!window.escTip && !$.isTouch) {
+
+                            escTip = true;
+
+                            $('<div />', {'class': 'exit-message'}).
+
+                            html('<div>Press ESC to exit</div>').
+
+                            appendTo($('body')).
+
+                            delay(2000).
+
+                            animate({opacity:0}, 500, function() {
+
+                                $(this).remove();
+
+                            });
+
+                        }
+
+                    },
+
+                    zoomOut: function () {
+
+                        $('.exit-message').hide();
+
+                        $('.thumbnails').fadeIn();
+
+                        $('.made').fadeIn();
+
+                        $('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
+
+                        setTimeout(function(){
+
+                            $('.magazine').addClass('animated').removeClass('zoom-in');
+
+                            resizeViewport();
+
+                        }, 0);
+
+                    }
+
+                }
+
+            });
+
+
+
+            // Zoom event
+
+            if ($.isTouch)
+
+                $('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
+
+            else
+
+                $('.magazine-viewport').bind('zoom.tap', zoomTo);
+
+            // Using arrow keys to turn the page
+
+            $(document).keydown(function(e){
+
+                var previous = 37, next = 39, esc = 27;
+
+                switch (e.keyCode) {
+
+                    case previous:
+
+                        // left arrow
+
+                        $('.magazine').turn('previous');
+
+                        e.preventDefault();
+
+                        break;
+
+                    case next:
+
+                        //right arrow
+
+                        $('.magazine').turn('next');
+
+                        e.preventDefault();
+
+                        break;
+
+                    case esc:
+
+                        $('.magazine-viewport').zoom('zoomOut');
+
+                        e.preventDefault();
+
+                        break;
+
+                }
+
+            });
+
+
+
+            // URIs - Format #/page/1
+
+            Hash.on('^page\/([0-9]*)$', {
+
+                yep: function(path, parts) {
+
+                    var page = parts[1];
+
+                    if (page!==undefined) {
+
+                        if ($('.magazine').turn('is'))
+
+                            $('.magazine').turn('page', page);
+
+                    }
+
+                },
+
+                nop: function(path) {
+
+                    if ($('.magazine').turn('is'))
+
+                        $('.magazine').turn('page', 1);
+
+                }
+
+            });
+
+            $(window).resize(function() {
+
+                resizeViewport();
+
+            }).bind('orientationchange', function() {
+
+                resizeViewport();
+
+            });
+
+
+
+            // Events for thumbnails
+
+            $('.thumbnails').click(function(event) {
+
+                var page;
+
+                if (event.target && (page=/page-([0-9]+)/.exec($(event.target).attr('class'))) ) {
+
+                    $('.magazine').turn('page', page[1]);
+
+                }
+
+            });
+
+            $('.thumbnails li').
+
+            bind($.mouseEvents.over, function() {
+
+                $(this).addClass('thumb-hover');
+
+
+
+            }).bind($.mouseEvents.out, function() {
+
+
+
+                $(this).removeClass('thumb-hover');
+
+
+
+            });
+
+
+
+            if ($.isTouch) {
+
+                $('.thumbnails').
+
+                addClass('thumbanils-touch').
+
+                bind($.mouseEvents.move, function(event) {
+
+                    event.preventDefault();
+
+                });
+
+            } else {
+
+                $('.thumbnails ul').mouseover(function() {
+
+                    $('.thumbnails').addClass('thumbnails-hover');
+
+                }).mousedown(function() {
+
+                    return false;
+
+                }).mouseout(function() {
+
+                    $('.thumbnails').removeClass('thumbnails-hover');
+
+                });
+
+            }
+
+
+
+            // Regions
+
+            if ($.isTouch) {
+
+                $('.magazine').bind('touchstart', regionClick);
+
+            } else {
+
+                $('.magazine').click(regionClick);
+
+            }
+
+
+
+            // Events for the next button
+
+            $('.next-button').bind($.mouseEvents.over, function() {
+
+                $(this).addClass('next-button-hover');
+
+            }).bind($.mouseEvents.out, function() {
+
+                $(this).removeClass('next-button-hover');
+
+            }).bind($.mouseEvents.down, function() {
+
+                $(this).addClass('next-button-down');
+
+            }).bind($.mouseEvents.up, function() {
+
+                $(this).removeClass('next-button-down');
+
+            }).click(function() {
+
+                $('.magazine').turn('next');
+
+                setTimeout(function(){
+
+                    setArrows() ;
+
+                },300);
+
+            });
+
+
+
+            // Events for the next button
+
+            $('.previous-button').bind($.mouseEvents.over, function() {
+
+                $(this).addClass('previous-button-hover');
+
+            }).bind($.mouseEvents.out, function() {
+
+                $(this).removeClass('previous-button-hover');
+
+            }).bind($.mouseEvents.down, function() {
+
+                $(this).addClass('previous-button-down');
+
+            }).bind($.mouseEvents.up, function() {
+
+                $(this).removeClass('previous-button-down');
+
+            }).click(function() {
+
+                $('.magazine').turn('previous');
+
+                setTimeout(function(){
+
+                    setArrows() ;
+
+                },300);
+
+
+
+            });
+
+            resizeViewport();
+
+            $('.magazine').addClass('animated');
+
+        }
+
+
+
+        // Zoom icon
+
+        $('.zoom-icon').bind('mouseover', function() {
+
+            if ($(this).hasClass('zoom-icon-in'))
+
+                $(this).addClass('zoom-icon-in-hover');
+
+            if ($(this).hasClass('zoom-icon-out'))
+
+                $(this).addClass('zoom-icon-out-hover');
+
+        }).bind('mouseout', function() {
+
+            if ($(this).hasClass('zoom-icon-in'))
+
+                $(this).removeClass('zoom-icon-in-hover');
+
+            if ($(this).hasClass('zoom-icon-out'))
+
+                $(this).removeClass('zoom-icon-out-hover');
+
+        }).bind('click', function() {
+
+            if ($(this).hasClass('zoom-icon-in'))
+
+                $('.magazine-viewport').zoom('zoomIn');
+
+            else if ($(this).hasClass('zoom-icon-out'))
+
+                $('.magazine-viewport').zoom('zoomOut');
+
+        });
+
+        $('#canvas').hide();
+
+
+
+        // Load the HTML4 version if there's not CSS transform
+
+        yepnope({
+
+            test : Modernizr.csstransforms,
+
+            yep: ['js/turn.js'],
+
+            nope: ['js/turn.html4.min.js'],
+
+            both: ['js/zoom.min.js', 'js/magazine.js', 'css/magazine.css'],
+
+            complete: loadApp
+
+        });
+
+
+
+    </script>
+
+    <!--[endif]----></div>
+
+
+</body>
+</html>

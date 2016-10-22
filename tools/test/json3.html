@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array</title>
+</head>
+<body>
+<style>
+</style>
+<div class="container">
+    <div id="list"></div>
+</div>
+
+<script src="../jquery-1.7.2.js"></script>
+<script>
+    $(function(){
+        var list  = '{ "name":"michael","age":"23","title":"CEO","gender":"male" }';
+        var listToJson = JSON.parse(list);
+        $('#list').text(listToJson);
+        console.log(listToJson);
+        console.log(listToJson.name);
+    })
+</script>
+</body>
+</html>

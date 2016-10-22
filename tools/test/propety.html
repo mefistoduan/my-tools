@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>propety</title>
+</head>
+<body>
+<script src="../jquery-1.7.2.js"></script>
+<script>
+    $(function(){
+       function  Set(){
+           this.values = {};
+           this.n = 0;
+//           alert(n)
+       }
+        Set();
+    })
+</script>
+<!--方法二-->
+<script>
+    function Person(firstName,lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        console.log( this.firstName);
+    }
+    var saad = new Person('sasd','niccla');
+</script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    .wj_table .wj_title {
+        height: 40px;
+    }
+    .wj_table .wj_title li {
+        list-style: none;
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+        color: #818185!important;
+    }
+    .wj_table .category01 {
+        height: 40px;
+        background-color: #fff;
+        list-style: none;
+
+    }
+    .wj_table .wj_td01 {
+        width: 100px;
+        height: 40px;
+        padding-left: 20px;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        line-height: 40px;
+        font-family: Verdana;
+    }
+    .wj_table  .wj_td02 {
+        width:420px;
+    }
+    .wj_table  .wj_td02 em {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0 auto;
+        line-height: 40px;
+        text-indent: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .wj_table  .wj_td03 {
+        width:70px;
+    }
+    .wj_table  .wj_td03 em {
+        display: block;
+        margin: 0 auto;
+        line-height: 40px;
+        text-align: center;
+    }
+    .wj_table  .wj_td04 {
+        width:120px;
+
+    }
+    .wj_table  .wj_td04 em {
+        display: block;
+        margin: 0 auto;
+        line-height: 40px;
+        text-align: center;
+    }
+    .wj_table  .wj_td04 input {
+        width: 78px;
+        height: 25px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 5px;
+        border: none;
+        border: 1px solid #dddddd;
+        text-align: center;
+        line-height: 25px;
+    }
+    .wj_table  .wj_td05 {
+        width:100px;
+    }
+    .wj_table  .wj_td06 {
+        width:100px;
+    }
+    .wj_table  .wj_td05 em {
+        display: block;
+        text-align: center;
+    }
+    .wj_content li {
+        height: 40px;
+        float: left;
+    }
+    .wj_content  .wj_td02 em {
+    }
+    .wj_content  .wj_td03 em {
+        color: #333333;
+    }
+    .wj_content .wj_td05 {
+    }
+
+    .wj_content .wj_td05 em {
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+        text-align: center;
+        line-height: 40px;
+    }
+    .wj_content .wj_td06 em {
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+        text-align: center;
+        line-height: 40px;
+    }
+    .wj_td02 .top {
+        width: 36px;
+        height: 20px;
+        float: left;
+        margin-top: 10px;
+        margin-left: 20px;
+        background-color: #EB1121;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+        text-indent: 0!important;
+    }
+</style>
+<div class="wj_table">
+    <ul class="wj_title">
+        <li class="wj_td01">
+            <em>日期</em>
+        </li>
+        <li class="wj_td02">
+            <em>标题</em>
+        </li>
+        <li class="wj_td03">
+            <em>文章状态</em>
+        </li>
+        <li class="wj_td04">
+            <em>发布者</em>
+        </li>
+    </ul>
+    <div class="wj_content ">
+        <ul class="category01">
+            <li class="wj_td01">
+                <em>2016-08-28</em>
+            </li>
+            <li class="wj_td02">
+                <em class="red_line"><i class="top">置顶</i>典发 香酥牛肉汉堡 2.2kg/袋(40片)</em>
+            </li>
+            <li class="wj_td03">
+                <em class="unread">未审核</em>
+            </li>
+            <li class="wj_td04">
+                <em>mefisto</em>
+            </li>
+        </ul>
+        <ul class="category01">
+            <li class="wj_td01">
+                <em>2016-08-28</em>
+            </li>
+            <li class="wj_td02">
+                <em class="orange_line">典发 香酥牛肉汉堡 2.2kg/袋(40片)</em>
+            </li>
+            <li class="wj_td03">
+                <em class="push">已推送</em>
+            </li>
+            <li class="wj_td04">
+                <em>mefisto</em>
+            </li>
+        </ul>
+        <ul class="category01">
+            <li class="wj_td01">
+                <em>2016-08-28</em>
+            </li>
+            <li class="wj_td02">
+                <em class="blue_line">典发 香酥牛肉汉堡 2.2kg/袋(40片)</em>
+            </li>
+            <li class="wj_td03">
+                <em class="unread">未审核</em>
+            </li>
+            <li class="wj_td04">
+                <em>mefisto</em>
+            </li>
+        </ul>
+        <ul class="category01">
+            <li class="wj_td01">
+                <em>2016-08-28</em>
+            </li>
+            <li class="wj_td02">
+                <em class="blake_line">典发 香酥牛肉汉堡 2.2kg/袋(40片)</em>
+            </li>
+            <li class="wj_td03">
+                <em class="unread">未审核</em>
+            </li>
+            <li class="wj_td04">
+                <em>mefisto</em>
+            </li>
+        </ul>
+        <!--以下为重复行-->
+        <ul class="category01">
+            <li class="wj_td01">
+                <em>2016-08-28</em>
+            </li>
+            <li class="wj_td02">
+                <em class="blake_line">典发 香酥牛肉汉堡 2.2kg/袋(40片)</em>
+            </li>
+            <li class="wj_td03">
+                <em class="unread">未审核</em>
+            </li>
+            <li class="wj_td04">
+                <em>mefisto</em>
+            </li>
+        </ul>
+        <ul class="category01">
+            <li class="wj_td01">
+                <em>2016-08-28</em>
+            </li>
+            <li class="wj_td02">
+                <em class="blake_line">典发 香酥牛肉汉堡 2.2kg/袋(40片)</em>
+            </li>
+            <li class="wj_td03">
+                <em class="unread">未审核</em>
+            </li>
+            <li class="wj_td04">
+                <em>mefisto</em>
+            </li>
+        </ul>
+        <ul class="category01">
+            <li class="wj_td01">
+                <em>2016-08-28</em>
+            </li>
+            <li class="wj_td02">
+                <em class="blake_line">典发 香酥牛肉汉堡 2.2kg/袋(40片)</em>
+            </li>
+            <li class="wj_td03">
+                <em class="unread">未审核</em>
+            </li>
+            <li class="wj_td04">
+                <em>mefisto</em>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+<script>
+$(function(){
+    //table单行变色
+    function color(){
+        $('.category01:odd').each(function(){
+            $(this).css('background-color','#F9F9FB');
+        });
+        $('.category01:even').each(function(){
+            $(this).css('background-color','#fff');
+        });
+    }
+    color();
+})
+</script>
+</body>
+</html>

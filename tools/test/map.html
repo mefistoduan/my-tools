@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<h5>map</h5>
+<p id="a">1</p>
+<p id="b">1</p>
+<p id="c">1</p>
+<script>
+    $(function(){
+       var d =  $('p').map(function(){
+            return this.id
+        }).toArray().sort();
+        console.log(d);
+    });
+
+</script>
+</body>
+</html>

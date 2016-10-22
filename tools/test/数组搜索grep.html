@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<script>
+$(function(){
+
+    var arr = [ 1, 9, 3, 8, 6, 1, 5, 9, 4, 7, 3, 8, 6, 9, 1 ];
+    var grepRuest = $.grep(arr,function( a){
+
+//        检索内容库  检索条件
+        return (a !== 9);
+    });
+    console.log(grepRuest);
+})
+</script>
+
+</body>
+</html>

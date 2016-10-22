@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>周报生成器</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="container">
+    <h5>周报输入</h5>
+    <form action="addrecord.php" method="post" onsubmit="return submitTest();">
+
+    <ul class="list title">
+        <li>
+            <!--<em>时间:</em>-->
+            <!--<input type="text" id="start">-->
+            <!--<em>到</em>-->
+            <!--<input type="text" id="end">-->
+            <!--<input type="button" class="reborn_btn" value="生成">-->
+        </li>
+        <li>
+            <em>姓名:</em>
+            <input type="text" id="name" name="name" value="段长鹏">
+        </li>
+        <li>
+            <em>岗位:</em>
+            <select type="text" id="job" name="job">
+                <option value="前端">前端</option>
+                <option value="php">php</option>
+            </select>
+        </li>
+    </ul>
+    <ul class="list item">
+        <li>
+            <lable>日期:</lable>
+            <input type="text" id="start" name="data">
+        </li>
+        <li>
+            <lable>项目:</lable>
+            <input type="text" class="project" name="project[]" value="">
+            <lable>目标:</lable>
+            <input type="text" class="goal" name="goal[]" value="">
+            <em class="add_li">[+]</em>
+            <em class="remove_li">[-]</em>
+        </li>
+    </ul>
+    <input type="submit" value="确定" class="submit_btn">
+    </form>
+    <a href="report.html" class="jump_link">前往生成excel</a>
+</div>
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/laydate.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

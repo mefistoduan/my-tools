@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历table</title>
+    <script src="js/jquery-1.7.2.js"></script>
+</head>
+<body>
+    <div id="test">
+        <table>
+            <tr>
+                <td>w</td>
+                <td>s</td>
+                <td>g</td>
+                <td>s</td>
+                <td>g</td>
+            </tr>
+            <tr>
+                <td>w</td>
+                <td>x</td>
+                <td>l</td>
+                <td>g</td>
+                <td>n</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+      $(function(){
+              var tableData=new Array();
+              var ctent ='';
+          $("#test tr").each(function(trindex,tritem){
+                  tableData[trindex]=new Array();
+                  $(tritem).find("td").each(function(tdindex,tditem){
+                      tableData[trindex][tdindex]=$(tditem).text();
+                      content += tableData[trindex][tdindex]+',';
+                  });
+            });
+              console.log(content);
+      })
+    </script>
+</body>
+</html>

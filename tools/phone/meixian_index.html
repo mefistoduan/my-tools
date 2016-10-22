@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="dist/css/sm.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/iconfont.css"/>
+    <link href="dist/css/sm-extend.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/meixian_index.css"/>
+</head>
+<body>
+<div class="page-group">
+    <!-- 单个page ,第一个.page默认被展示-->
+    <div class="page" id="page-news-scroll-bottom">
+        <!-- 工具栏 -->
+        <div class="content bg-white" data-distance="100">
+			<div class="cat-banner">
+                <div class=" native-scroll">
+                    <div class="swiper-container swiper-container-horizontal" data-space-between="10">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-active" ><img src="images/index/test_ad.png" alt="" style="width: 100%"></div>
+                            <div class="swiper-slide swiper-slide-next" ><img src="images/index/test_ad.png" alt="" style="width: 100%"></div>
+                            <div class="swiper-slide"><img src="images/index/test_ad.png" alt="" style="width: 100%"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+			</div>
+			<div class="search_div">
+                <div class="search_container">
+                    <img src="images/index/sou.png" alt="">
+                    <input type="text" class="search_input" placeholder="试试薯条+奶酪">
+                    <input type="button" value="搜索" class="search_btn">
+                </div>
+            </div>
+            <div class="row ss-nav">
+               
+                <div class="col-25">
+                  <a href="">
+                    <div><img src="images/index/fenlei.png"></div>
+                    <h1>商品分类</h1>
+                  </a>
+                </div>
+               
+                <div class="col-25">
+                    <a href="">
+                        <div><img src="images/index/huodong.png"></div>
+                        <h1>品牌专区</h1>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="">
+                        <div><img src="images/index/gerenzhongxin.png"></div>
+                        <h1>我的美鲜</h1>
+                    </a>
+                </div>
+                <div class="col-25">
+                    <a href="">
+                        <div><img src="images/index/xihuan.png"></div>
+                        <h1>猜你喜欢</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="tabs_index">
+                <ul>
+                    <li class="curr"><a href="#">为您推荐</a></li>
+                    <li><a href="#">秒杀专区</a></li>
+                    <li><a href="#">促销专区</a></li>
+                    <li><a href="#">预售专区</a></li>
+                </ul>
+            </div>
+            <div class="row list_container curr">
+                <p>20:46分为您推荐已更新</p>
+                <div class="banner list_bg infinite-scroll infinite-scroll-bottom ">
+                    <div class="m_two_col">
+                        <div class="mc">
+                            <div class="m_two_col">
+                                <ul class="m_two_col-t list-container">
+                                    <li>
+                                        <div class="module">
+                                            <a href="goods.php?id={$goods.goods_id}" class="">
+                                                <p class="img">
+                                                    <img src="images/index/test_goods1.gif" alt="{$goods.name|escape:html}"
+                                                         class="" width="100%">
+                                                </p>
+                                                <div class="goods_price">
+                                                    <em>￥74.50</em><s>/袋</s>
+                                                </div>
+                                                <p class="g_title">
+                                                    亨氏 番茄调味酱 小袋装 9g/袋 600袋/箱
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="module">
+                                            <a href="goods.php?id={$goods.goods_id}" class="">
+                                                <p class="img">
+                                                    <img src="images/index/test_goods2.gif" alt="{$goods.name|escape:html}"
+                                                         class="" width="100%">
+                                                </p>
+                                                <div class="goods_price">
+                                                    <em>￥4.50</em><s>/袋</s>
+                                                </div>
+                                                <p class="g_title">
+                                                    亨氏 番茄调味酱 小袋装 9g/袋 600袋/箱
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="scroll_more">
+                                <p>继续滑动加载更多</p>
+                            </div>
+                            <!-- 加载提示符 -->
+                            <div class="infinite-scroll-preloader">
+                                <div class="preloader"></div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <!--以下为重复行-->
+            <div class="row list_container">
+                <p>20:46分为您推荐已更新</p>
+                <div class="banner list_bg infinite-scroll infinite-scroll-bottom ">
+                    <div class="m_two_col">
+                        <div class="mc">
+                            <div class="m_two_col">
+                                <ul class="m_two_col-t list-container">
+                                    <li>
+                                        <div class="module">
+                                            <a href="goods.php?id={$goods.goods_id}" class="">
+                                                <p class="img">
+                                                    <img src="images/index/test_goods1.gif" alt="{$goods.name|escape:html}"
+                                                         class="" width="100%">
+                                                </p>
+                                                <div class="goods_price">
+                                                    <em>￥74.50</em><s>/袋</s>
+                                                </div>
+                                                <p class="g_title">
+                                                    亨氏 番茄调味酱 小袋装 9g/袋 600袋/箱
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="module">
+                                            <a href="goods.php?id={$goods.goods_id}" class="">
+                                                <p class="img">
+                                                    <img src="images/index/test_goods2.gif" alt="{$goods.name|escape:html}"
+                                                         class="" width="100%">
+                                                </p>
+                                                <div class="goods_price">
+                                                    <em>￥4.50</em><s>/袋</s>
+                                                </div>
+                                                <p class="g_title">
+                                                    亨氏 番茄调味酱 小袋装 9g/袋 600袋/箱
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="scroll_more">
+                                <p>继续滑动加载更多</p>
+                            </div>
+                            <!-- 加载提示符 -->
+                            <div class="infinite-scroll-preloader">
+                                <div class="preloader"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row list_container">
+                <p>20:46分为您推荐已更新</p>
+                <div class="banner list_bg infinite-scroll infinite-scroll-bottom ">
+                    <div class="m_two_col">
+                        <div class="mc">
+                            <div class="m_two_col">
+                                <ul class="m_two_col-t list-container">
+                                    <li>
+                                        <div class="module">
+                                            <a href="goods.php?id={$goods.goods_id}" class="">
+                                                <p class="img">
+                                                    <img src="images/index/test_goods1.gif" alt="{$goods.name|escape:html}"
+                                                         class="" width="100%">
+                                                </p>
+                                                <div class="goods_price">
+                                                    <em>￥74.50</em><s>/袋</s>
+                                                </div>
+                                                <p class="g_title">
+                                                    亨氏 番茄调味酱 小袋装 9g/袋 600袋/箱
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="module">
+                                            <a href="goods.php?id={$goods.goods_id}" class="">
+                                                <p class="img">
+                                                    <img src="images/index/test_goods2.gif" alt="{$goods.name|escape:html}"
+                                                         class="" width="100%">
+                                                </p>
+                                                <div class="goods_price">
+                                                    <em>￥4.50</em><s>/袋</s>
+                                                </div>
+                                                <p class="g_title">
+                                                    亨氏 番茄调味酱 小袋装 9g/袋 600袋/箱
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="scroll_more">
+                                <p>继续滑动加载更多</p>
+                            </div>
+                            <!-- 加载提示符 -->
+                            <div class="infinite-scroll-preloader">
+                                <div class="preloader"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row list_container">
+                <p>20:46分为您推荐已更新</p>
+                <div class="banner list_bg infinite-scroll infinite-scroll-bottom ">
+                    <div class="m_two_col">
+                        <div class="mc">
+                            <div class="m_two_col">
+                                <ul class="m_two_col-t list-container">
+                                    <li>
+                                        <div class="module">
+                                            <a href="goods.php?id={$goods.goods_id}" class="">
+                                                <p class="img">
+                                                    <img src="images/index/test_goods1.gif" alt="{$goods.name|escape:html}"
+                                                         class="" width="100%">
+                                                </p>
+                                                <div class="goods_price">
+                                                    <em>￥74.50</em><s>/袋</s>
+                                                </div>
+                                                <p class="g_title">
+                                                    亨氏 番茄调味酱 小袋装 9g/袋 600袋/箱
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="module">
+                                            <a href="goods.php?id={$goods.goods_id}" class="">
+                                                <p class="img">
+                                                    <img src="images/index/test_goods2.gif" alt="{$goods.name|escape:html}"
+                                                         class="" width="100%">
+                                                </p>
+                                                <div class="goods_price">
+                                                    <em>￥4.50</em><s>/袋</s>
+                                                </div>
+                                                <p class="g_title">
+                                                    亨氏 番茄调味酱 小袋装 9g/袋 600袋/箱
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="scroll_more">
+                                <p>继续滑动加载更多</p>
+                            </div>
+                            <!-- 加载提示符 -->
+                            <div class="infinite-scroll-preloader">
+                                <div class="preloader"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--重复行结束-->
+            <!--footer开始-->
+            <div class="footer">
+                <ul>
+                    <li class="curr">
+                        <a href="#">触屏版</a>
+                    </li>
+                    <li>
+                        <a href="#">电脑版</a>
+                    </li>
+                    <li>
+                        <a href="#">登录</a>
+                    </li>
+                    <li>
+                        <a href="#">注册</a>
+                    </li>
+                    <li>
+                        <a href="#">回顶部</a>
+                    </li>
+                </ul>
+                <p>
+                    Copyright © 2016 Emeixian.com
+                </p>
+            </div>
+            <!--footer 结束-->
+        </div>
+    </div>
+</div>
+<script type="text/html" id="newslist">
+    <li>
+        <div class="module">
+            <a href="goods.php?id={$goods.goods_id}" class="">
+                <p class="img">
+                    <img src="images/index/test_goods2.gif" alt="{$goods.name|escape:html}"
+                         class="" width="100%">
+                </p>
+                <div class="goods_price">
+                    <em>￥4.50</em><s>/袋</s>
+                </div>
+                <p class="g_title">
+                    亨氏 番茄调味酱 小袋装 9g/袋 600袋/箱
+                </p>
+            </a>
+        </div>
+    </li>
+</script>
+</body>
+</html>
+<script type="text/javascript" src="assets/js/zepto.js"></script>
+<script type="text/javascript" src="dist/js/sm.js"></script>
+<script src="dist/js/sm-extend.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/config.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/template.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/user_index.js" type="text/javascript" charset="utf-8"></script>
+

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calc</title>
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<style>
+    .banner3{width:100%;height:346px;top:470px;background-color: #ffd9b4;}
+    .timer  {width: 906px;min-width:906px;height: 70px;margin: 0 auto;font-size: 60px;line-height: 60px;position: relative;display: inline;}
+    .white { width: 932px;min-width:932px;height: 70px;color: #fff;padding-top: 6px;margin: 0 auto;}
+    .red {height: 60px;color:#a40000;line-height: 70px;font-size: 20px;vertical-align:middle;font-family:"微软雅黑";}
+    .timer {height: 70px;}
+    .timer span {width: 66px;height: 70px;position: relative;display: inline-block;}
+    #show_total {width: 66px;height: 60px;background-color: #342a2c;vertical-align:middle;}
+    #show_hours {width: 66px;height: 60px;background-color: #342a2c; vertical-align:middle;}
+    #show_min {width: 66px;height: 60px;background-color: #342a2c;vertical-align:middle;}
+    #show_sec {width: 66px;height: 60px;background-color: #342a2c;vertical-align:middle;}
+    #show_mill {width: 66px;height: 60px;background-color: #342a2c;vertical-align:middle;}
+    .text {width: 451px;height: 70px;line-height: 70px;;color: #eb6100;font-size: 20px;font-weight: bold;font-family:"微软雅黑" ;margin: 0 auto;overflow: visible;text-align: center;}
+</style>
+<div class="banner3">
+    <div class="text">
+        距本期结束还有
+    </div>
+    <div class="white">
+        <div class="timer">
+            <span id="show_total"></span><span class="red">天</span>
+            <span id="show_hours"></span><span class="red">时</span>
+            <span id="show_min"></span><span class="red">分</span>
+            <span id="show_sec"></span><span class="red">秒</span>
+            <span id="show_mill"></span><span class="red">毫秒</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<script>
+    var i = 99;
+    function countdown(){
+        var show_time = document.getElementById("show_time");
+        endtime = new Date("8/1/2016 17:00:00");//结束时间
+        today = new Date();//当前时间
+        delta_T = endtime.getTime() - today.getTime();//时间间隔
+        if(delta_T < 0){
+            clearInterval(auto);
+            show_time.innerHTML = "倒计时已经结束";
+        }
+        window.setTimeout(countdown,1);
+        total_days = delta_T/(24*60*60*1000);//总天数
+        total_show = Math.floor(total_days);//实际显示的天数
+        total_hours = (total_days - total_show)*24;//剩余小时
+        hours_show = Math.floor(total_hours);//实际显示的小时数
+        total_minutes = (total_hours - hours_show)*60;//剩余的分钟数
+        minutes_show = Math.floor(total_minutes);//实际显示的分钟数
+        total_seconds = (total_minutes - minutes_show)*60;//剩余的分钟数
+        seconds_show = Math.floor(total_seconds);//实际显示的秒数
+        if(i==0){
+            i = 99
+        }else {
+            i = --i
+        }
+
+        show_total.innerHTML =  total_show ;
+        show_hours.innerHTML =  hours_show ;
+        show_min.innerHTML =  minutes_show ;
+        show_sec.innerHTML =  seconds_show ;
+        show_mill.innerHTML =  i ;
+
+    }
+    countdown();
+
+</script>
+</body>
+</html>

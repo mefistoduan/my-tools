@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-width: 320px;
+            font-size: 12px;
+        }
+
+        h1 {
+            font-size: 18px;
+        }
+
+        h2 {
+            font-size: 14px
+        }
+
+        h4 {
+            font-size: 12px;
+        }
+
+        p {
+            word-break: break-all;
+            line-height: 24px;
+        }
+
+        ul, ul li, ol, ol li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .clearfix:after {
+            display: block;
+            clear: both;
+            content: ".";
+            visibility: hidden;
+            height: 0px;
+        }
+
+        #pic_carousel {
+            position: relative;
+            width: 400px;
+            height: 350px;
+            overflow: hidden;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .lunbo_pic {
+            position: absolute;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .lunbo_pic li {
+            float: left;
+            overflow: hidden;
+        }
+
+        .lunbo_pic li a img {
+            width: 400px;
+            display: block;
+            vertical-align: bottom;
+            border: none;
+        }
+
+        .lunbo_curso {
+            position: absolute;
+            left: 50%;
+            width: 125px;
+            margin-left: -64px;
+            bottom: 0;
+        }
+
+        .lunbo_curso a {
+            background: url(../images/will_yuan.png) no-repeat center;
+            float: left;
+            color: #00bcd4;
+            width: 25px;
+            cursor: pointer;
+            height: 25px;
+            line-height: 25px;
+            display: block;
+            text-align: center;
+        }
+
+        .lunbo_curso .small_xz {
+            color: #F0F;
+        }
+
+        .arr {
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
+            width: 30px;
+            height: 50px;
+        }
+
+        #arr_l {
+            left: 0;
+            background: #CCC;
+        }
+
+        #arr_r {
+            right: 0;
+            background: #CCC;
+        }
+
+        .tc_kuan {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -25px;
+            margin-left: -100px;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            background: #CCC;
+            color: #000;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<div id="pic_carousel">
+    <ul id="lunbo_pic" class="clearfix lunbo_pic">
+        <li><a href="#"><img src="images/1.jpg"/></a></li>
+        <li><a href="#"><img src="images/2.jpg"/></a></li>
+        <li><a href="#"><img src="images/3.jpg"/></a></li>
+        <li><a href="#"><img src="images/1.jpg"/></a></li>
+        <li><a href="#"><img src="images/2.jpg"/></a></li>
+    </ul>
+    <div id="lunbo_curso" class="lunbo_curso">
+        <a href="#" class="small_xz">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+    </div>
+    <span id="arr_l" class="arr"></span>
+    <span id="arr_r" class="arr"></span>
+</div>
+<script>
+    var b_width = 400; // 大图的宽度
+    var speed = 500; // 图片向左移动速度
+    var s_time = 3000; //图片自动滚动速度
+    var pic_li = $("#lunbo_pic").children("li");
+    $(document).ready(function (e) {
+        var $ul_width = pic_li.width() * pic_li.length; //轮播图的宽度
+        $("#lunbo_pic").width($ul_width);
+        var small_width = $(".lunbo_curso>a").width() * $(".lunbo_curso>a").length;
+        $(".lunbo_curso").width(small_width);
+        $(".lunbo_curso").css("margin-left", -small_width / 2);
+    });
+
+
+    $(document).live("click", function (e) {
+        $target = $(e.target);
+        var id = $target.attr('id');
+        if ($target.is("a") && $target.parent($("#lunbo_curso"))) {
+            $target.addClass("small_xz").siblings().removeClass('small_xz');
+            var mar_lf = parseInt($target.index() * b_width);
+            $("#lunbo_pic").animate({
+                left: -mar_lf
+            }, speed);
+        }
+        if (id == "arr_l") {
+            prePage();
+        }
+        if (id == "arr_r") {
+            nextPage();
+        }
+    });
+    //上一个
+    function prePage() {
+        if ($(".small_xz").index() == 0) {
+            $("#lunbo_pic").css("left", -4000);
+            $("#lunbo_pic").animate({
+                "left": -parseInt(pic_li.length * b_width - b_width)
+            }, speed);
+            $("#lunbo_curso>a").eq(pic_li.length - 1).addClass("small_xz").siblings().removeClass("small_xz");
+            $(".small_xz").index() == pic_li.length - 1;
+        } else {
+            $("#lunbo_curso>a").eq($(".small_xz").index() - 1).addClass("small_xz").siblings().removeClass("small_xz");
+            var mar_lf2 = parseInt($("#lunbo_pic").css("left")) + b_width;
+            $("#lunbo_pic").animate({
+                "left": mar_lf2
+            }, speed);
+        }
+    }
+    //下一个
+    function nextPage() {
+        if ($(".small_xz").index() == pic_li.length - 1) {
+            $("#lunbo_pic").css("left", 0);
+            $("#lunbo_curso>a").eq(0).addClass("small_xz").siblings().removeClass("small_xz");
+            $(".small_xz").index() == 0;
+
+        } else {
+
+            $("#lunbo_curso>a").eq($(".small_xz").index() + 1).addClass("small_xz").siblings().removeClass("small_xz");
+            var mar_lf2 = parseInt($("#lunbo_pic").css("left")) - b_width;
+            $("#lunbo_pic").animate({
+                "left": mar_lf2
+            }, speed);
+        }
+    }
+
+    function picRun() {
+        nextPage();
+    }
+    intervalTime = setInterval(picRun, s_time);
+
+    $("#pic_carousel").on("mouseover", function () {
+        clearInterval(intervalTime);
+    });
+    $("#pic_carousel").on("mouseout", function () {
+        intervalTime = setInterval(picRun, s_time);
+        ;
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo_list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="dist/css/sm.css">
+    <link rel="stylesheet" href="dist/css/sm-extend.css">
+    <link rel="stylesheet" href="css/demo_user.css">
+</head>
+<style>
+    a {
+        color: #0894ec;
+    }
+    .popup-about {
+        position: fixed;
+        top: 50%;
+        z-index: 99999;
+    }
+</style>
+<body>
+<!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+<div class="page-group">
+    <!-- 单个page ,第一个.page默认被展示-->
+    <div class="page">
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <div class="content native-scroll">
+                <div class="content-block">
+                    <p><a href="#" class="open-about">Open About Popup </a></p>
+                </div>
+            </div>
+                <div class="popup popup-about" style="display: none;">
+                    <div class="content-block">
+                        <p>About</p>
+                        <p><a href="#" class="close-popup">Close popup</a></p>
+                        <p>Lorem ipsum dolor ...</p>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 其他的单个page内联页（如果有） -->
+</div>
+<script type="text/javascript" src="assets/js/zepto.js"></script>
+<script src="dist/js/sm.js" type="text/javascript" charset="utf-8"></script>
+<script src="dist/js/sm-extend.js" type="text/javascript" charset="utf-8"></script>
+<script src="dist/js/sm-city-picker.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/config.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="assets/js/common.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="assets/js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(document).on('click','.open-about', function () {
+        $.popup('.popup-about');
+        $('.modal-overlay-visible').hide();
+    });
+
+    $(document).on('click','.open-close-popup', function () {
+        $.closeModal('.popup-about');
+    });
+</script>
+</body>
+</html>

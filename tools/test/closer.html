@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>closer</title>
+</head>
+<body>
+<script src="../jquery-1.7.2.js"></script>
+<script>
+    function f1(){
+        var n=999;
+        nAdd=function(){n+=1};
+        function f2(){
+            alert(n);
+        }
+        return f2;
+    }
+    var result=f1();
+    result(); // 999
+    nAdd();
+    result(); // 1000
+</script>
+</body>
+</html>

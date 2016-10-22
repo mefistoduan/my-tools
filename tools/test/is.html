@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>is</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<div class="abc ddd"></div>
+<p>检测是否具有这个class或Id,用is来检测即可</p>
+<script>
+    $(function(){
+        if($('.abc').is('.ddd')==true){
+            console.log(123);
+        }
+    })
+</script>
+</body>
+</html>

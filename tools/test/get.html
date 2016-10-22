@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get</title>
+    <script src="../jquery-1.7.2.js"></script>
+
+</head>
+<body>
+<ul>
+    <li>01</li>
+    <li>02</li>
+    <li>03</li>
+    <li>04</li>
+    <li>05</li>
+</ul>
+<h5>
+
+</h5>
+<p>get方法只能获取dom</p>
+<s>取出并拿走？</s>
+<script>
+    $(function(){
+        var li_first = $('ul li').get(0);
+        $('h5').append(li_first);
+    })
+</script>
+</body>
+</html>

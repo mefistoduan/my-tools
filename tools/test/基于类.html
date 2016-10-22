@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<script>
+$(function(){
+    var prisoner = {
+        sentence :4,
+        probation : 2,
+        name :'joey',
+        id: 1234
+
+    };
+    console.log(prisoner.name);
+
+    var firstPrusiber = Object.create( prisoner );
+    firstPrusiber.name = 'kenny';
+    firstPrusiber.id = '12a';
+
+    console.log(firstPrusiber.sentence);
+//    可以继承其父类的方法
+//    感觉又面向对象前进了一步呢
+
+//    为了兼容万恶的IE6，7 需要自己去定义object
+
+    var objectCreat = function( arg ){
+        if (! arg ) {return {};}
+        function obj(){
+            obj.prototype = arg;
+            return new obj;
+        };
+
+        object.create = object.create||objecetCreate;
+
+    }
+})
+</script>
+</body>
+</html>

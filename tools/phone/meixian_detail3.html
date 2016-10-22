@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo_list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/demo_user.css">
+    <link rel="stylesheet" href="dist/css/sm.css">
+    <link rel="stylesheet" href="dist/css/sm-extend.min.css">
+    <link rel="stylesheet" href="css/meixian_detail.css">
+    <script src="js/zepto.js"></script>
+</head>
+<body>
+<!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+<div class="page-group">
+    <!-- 单个page ,第一个.page默认被展示-->
+    <div class="page">
+        <nav class="bar bar-tab foot-nav">
+            <a class=" external tab_item_small" href="#">
+                <img class="icon icon_attention" src="images/detail/shoucang.png">
+                <span class="tab-label">关注</span>
+            </a>
+            <a class=" external tab_item_small" href="#">
+                <img class="icon icon_cart" src="images/detail/gouwuche.png">
+                <span class="tab-label">购物车</span>
+            </a>
+            <a class="tab-item external orange_btn open-about" href="#">
+                <span class="tab-label">立即购买</span>
+            </a>
+            <a class="tab-item external green_btn open-about" href="#">
+                <span class="tab-label">加入购物车</span>
+            </a>
+        </nav>
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <div class="detail_taps">
+                <ul>
+                    <li>
+                        <a href="#">基本信息</a>
+                    </li>
+                    <li >
+                        <a href="#">图文详情</a>
+                    </li>
+                    <li class="curr">
+                        <a href="#">评价<em>(240)</em></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="comm_container">
+                <div class="cent">
+                    <p>98%</p>
+                    <span>好评度</span>
+                </div>
+                <ul class="comm_list">
+                    <li>
+                        <span>
+                            非常满意，大平台，好价格，原装进口！迫不及待的推荐更多朋友来这里，真的是省太多事了！
+互联网就该这样，能正儿八经的干点有用的事情，才会有真正的粘性用户，继续发展壮大下去！
+                        </span>
+                        <div class="comm_img">
+                            <img src="images/detail/test_goods6.gif" alt="">
+                            <img src="images/detail/test_goods6.gif" alt="">
+                            <img src="images/detail/test_goods6.gif" alt="">
+                            <img src="images/detail/test_goods6.gif" alt="">
+                            <img src="images/detail/test_goods6.gif" alt="">
+                            <img src="images/detail/test_goods6.gif" alt="">
+                        </div>
+                        <div class="auther_time">
+                            <s>lemncoffe</s>
+                            <em>2016-07-23</em>
+                        </div>
+                    </li>
+                    <li>
+                        <span>
+                            非常满意，大平台，好价格，原装进口！迫不及待的推荐更多朋友来这里，真的是省太多事了！
+互联网就该这样，能正儿八经的干点有用的事情，才会有真正的粘性用户，继续发展壮大下去！
+                        </span>
+                        <div class="auther_time">
+                            <s>lemncoffe</s>
+                            <em>2016-07-23</em>
+                        </div>
+                    </li>
+                    <li>
+                        <span>
+                            非常满意，大平台，好价格，原装进口！迫不及待的推荐更多朋友来这里，真的是省太多事了！
+互联网就该这样，能正儿八经的干点有用的事情，才会有真正的粘性用户，继续发展壮大下去！
+                        </span>
+                        <div class="comm_img">
+                            <img src="images/detail/test_goods6.gif" alt="">
+                            <img src="images/detail/test_goods6.gif" alt="">
+                            <img src="images/detail/test_goods6.gif" alt="">
+                            <img src="images/detail/test_goods6.gif" alt="">
+                            <img src="images/detail/test_goods6.gif" alt="">
+                            <img src="images/detail/test_goods6.gif" alt="">
+                        </div>
+                        <div class="auther_time">
+                            <s>lemncoffe</s>
+                            <em>2016-07-23</em>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    <!--footer开始-->
+    <div class="footer">
+        <ul>
+            <li class="curr">
+                <a href="#">触屏版</a>
+            </li>
+            <li>
+                <a href="#">电脑版</a>
+            </li>
+            <li>
+                <a href="#">登录</a>
+            </li>
+            <li>
+                <a href="#">注册</a>
+            </li>
+            <li>
+                <a href="#">回顶部</a>
+            </li>
+        </ul>
+        <p>
+            Copyright © 2016 Emeixian.com
+        </p>
+    </div>
+    <!--footer 结束-->
+</div>
+</div>
+    <!--popup-->
+<div class="popup popup-about" style="display: none;">
+    <div class="content-block">
+        <a href="#" class="close-popup">
+            <img src="images/detail/close.png" alt="">
+        </a>
+        <div class="choice_popup">
+            <h5>选择仓库</h5>
+            <!--价格form表单提交即可-->
+            <ul class="choic_city">
+                <li class="curr">[济南仓]剩余1024 <input type="hidden" class="jn_city" value="1"></li>
+                <li>[青岛仓]剩余1024 <input type="hidden" class="qd_city" value="2"></li>
+            </ul>
+            <h5>选择规格</h5>
+            <ul>
+                <li>[济南仓]剩余1024 <input type="hidden" class="big_unite" value="3"></li>
+                <li>[青岛仓]剩余1024 <input type="hidden" class="sl_unite" value="4"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="form_submite">
+        <input type="button" value="立即购买" class="immdia">
+        <input type="button" value="加入购物车" class="add_cart">
+    </div>
+</div>
+
+</div>
+</div>
+    <!-- 其他的单个page内联页（如果有） -->
+</div>
+<script src="dist/js/sm-extend.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="dist/js/sm.js"></script>
+<script type="text/javascript" src="dist/js/sm-extend.js"></script>
+<script src="js/meixian_detail.js"></script>
+</body>
+</html>
