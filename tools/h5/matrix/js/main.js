@@ -50,16 +50,6 @@ $(function(){
         var draw = function () {
             $('.layer2').fadeIn(600);
         };
-        function closeFont(){
-            $('.layer2 h1 em').each(function(i){
-                $(this).eq(0).animate({right:'250px'},800);
-                $(this).eq(1).animate({right:'250px'},1000);
-                $(this).eq(2).animate({right:'250px'},1200);
-                $(this).eq(3).animate({left:'250px'},1200);
-                $(this).eq(4).animate({left:'250px'},1000);
-                $(this).eq(5).animate({left:'250px'},800);
-            });
-        }
         setTimeout(draw,800);
         setTimeout(closeFont,1800);
     }
