@@ -4,3 +4,55 @@
 
 /* Import lib-rem.less if supportREM opened. */
 @import "lib-rem";
+
+.screen-arrow {
+  position:relative;
+  bottom:2em;
+  width:50%;
+  height:1em;
+  display:block;
+  margin:0 auto;
+  text-align:center;
+  color:#fff;
+  font-family:Verdana;
+  font-size:30px;
+  opacity:0.3;
+  animation:mymove 2s infinite;
+  -moz-animation:mymove 2s infinite; /* Firefox */
+  -webkit-animation:mymove 2s infinite; /* Safari and Chrome */
+  -o-animation:mymove 2s infinite; /* Opera */
+}
+
+@keyframes mymove{
+  from{margin-top:0.5em;opacity:0.1;}
+  to{margin-top:1em;opacity:0.3;}
+}
+@-webkit-keyframes mymove{
+  from{margin-top:0.5em;opacity:0.1;}
+  to{margin-top:1em;opacity:0.3;}
+}
+
+
+#galaxy {
+  display:block;
+  background: #090909;
+  overflow: hidden;
+   #start {
+     position: relative;
+     .start_item {
+       position: relative;
+       width:9px;
+       height:9px;
+       background-color:#fff;
+       border-radius:360px;
+       -moz-border-radius:360px;
+       -webkit-border-radius:360px;
+       -webkit-animation-duration:2s;
+       -moz-animation-duration:2s;
+       -o-animation-duration:2s;
+       -ms-animation-duration:2s;
+       animation-duration:2s;
+       text-shadow: 0 0 4px #fff;
+     }
+   }
+}
