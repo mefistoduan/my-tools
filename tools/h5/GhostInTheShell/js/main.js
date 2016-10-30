@@ -12,6 +12,7 @@ function init(){
 
     w = can.width;
     h = can.height;
+    gameloop();
 };
 
 $(function(){
@@ -19,10 +20,5 @@ $(function(){
 });
 
 function  gameloop(){
-    drawBackground();
 };
 
-function  drawBackground(){
-    ctx.fillStyle = '#393550';
-
-}
