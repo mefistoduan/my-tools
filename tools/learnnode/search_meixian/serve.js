@@ -5,6 +5,10 @@
 var express = require('express');
 var cheerio = require('cheerio');
 var superagent = require('superagent');
+
+var fs = require('fs');
+
+
 var app = express();
 
 app.get('/',function(req,res,next){
@@ -25,6 +29,14 @@ app.get('/',function(req,res,next){
             })
 
             res.send(items);
+
+            //不知道为啥object解析的不对
+            var resultTitle = items.toString();
+            fs.writeFile('./test.txt',resultTitle,function(err){
+                if(err) throw err;
+                console.log('it is ok!');
+            });
+
         })
 });
 
