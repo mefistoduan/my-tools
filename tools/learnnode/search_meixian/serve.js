@@ -29,12 +29,10 @@ app.get('/',function(req,res,next){
             })
 
             res.send(items);
-
-            //不知道为啥object解析的不对
-            var resultTitle = items.toString();
-            fs.writeFile('./test.txt',resultTitle,function(err){
+            //解析大成功
+            var resultTitle = JSON.stringify(items);
+            fs.writeFile('./test.html',resultTitle,function(err){
                 if(err) throw err;
-                console.log('it is ok!');
             });
 
         })
