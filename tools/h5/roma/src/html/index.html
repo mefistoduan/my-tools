@@ -10,14 +10,12 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
     <script src="//wximg.qq.com/wxp/libs/wxmoment/0.0.4/wxmoment.min.js"></script>
-    <script src="../js/main.js"></script>
 </head>
 
 <div class="wrap">
     <section class="screen screen1">
-        <div id="galaxy">
-            <div id="start"></div>
-        </div>
+        <canvas id="galaxy">
+        </canvas>
         <div class="screen-arrow">v</div>
     </section>
     <section class="screen screen2">
@@ -27,6 +25,9 @@
         <div class="screen-arrow">v</div>
     </section>
 </div>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/html5_3d_animation.js"></script>
 <script>
 
     //    启用滑屏
@@ -35,7 +36,14 @@
     });
 
     //    动画部分
-
+    $("#galaxy").html5_3d_animation({
+        window_width: $(window).width(),
+        window_height: $(window).height(),
+        window_background: '#333333',
+        star_count: '1000',
+        star_color: '#fff',
+        star_depth: '100'
+    });
 </script>
 <body>
 </body>
