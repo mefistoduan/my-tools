@@ -1,1 +1,1 @@
-$(function(){$(window).on("load resize",function(){var n=window.innerHeight||document.body.clientHeight||document.documentElement.clientHeight;$("#galaxy").css("height",n)})});
+$(function(){function n(){$("#start").append('<div class="start_item"></div>');t()}function t(){10*parseInt(50*Math.random()),10*parseInt(80*Math.random())}$(window).on("load resize",function(){var n=window.innerHeight||document.body.clientHeight||document.documentElement.clientHeight;$("#galaxy").css("height",n)}),n()});
