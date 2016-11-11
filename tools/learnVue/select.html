@@ -1,0 +1,51 @@
+
+<!--https://www.zhihu.com/question/38832411?sort=created-->
+<!--小北哥哥 https://www.zhihu.com/people/buyzhi-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="selected">
+<select v-model="selected" >
+    <option v-for="option in options" v-bind:value="option.value">
+        {{ option.text }}
+    </option>
+</select>
+<span>Selected: {{ selected }}</span>
+<span>content: {{ content }}</span>
+</div>
+
+<script>
+    new Vue({
+        el: '#selected',
+        data: {
+            selected: '123',
+            content:'123',
+            options: [
+                { text: 'One', value: 'A' },
+                { text: 'Two', value: 'B' },
+                { text: 'Three', value: 'C' }
+            ]
+        }
+    });
+
+</script>
+
+<h5>
+    mefisto 笔记
+</h5>
+<p>
+    v-for 是循环 bind的value直接绑定到option上，点击即可触发
+    不是很理解selected的值是怎么双向数据绑定上的~
+    ┑(￣Д ￣)┍
+
+    然后我试了下价格content，似乎是只能渲染第一次，不能动态绑定的~困惑脸
+</p>
+
+</body>
+</html>
