@@ -1,0 +1,68 @@
+
+<!--http://blog.csdn.net/fungleo/article/details/51649074-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-1.7.2.js"></script>
+    <script src="vue.js"></script>
+</head>
+<body>
+<header class="header">
+    <h1 class="logo">
+        <a href="index.html" title="cnNodeJs.Org Home By FungLeo">cnNodeJs.Org Home By FungLeo</a>
+    </h1>
+    <nav class="nav">
+        <ul>
+            <li>导航列表</li>
+        </ul>
+    </nav>
+</header>
+<section class="home">
+    <section class="main">
+        <ul class="list">
+            <li>
+                <i class="user_ico">
+                    <img src="#头像url" alt="用户名">
+                    <span>用户名</span>
+                </i>
+                <time class="time">发表于 5 天前</time>
+                <a class="talk" href="content.html?链接ID">帖子标题</a>
+            </li>
+        </ul>
+        <div class="page"></div>
+    </section>
+    <aside class="bar">
+        <h3>本页说明</h3>
+        ...
+    </aside>
+</section>
+<footer class="copy">
+    版权说明
+</footer>
+<div class="go_top"></div>
+
+<script>
+$(function(){
+    $.ajax({
+        type:'get',
+        url:"http://cnodejs.org/api/v1/topics",
+        dataType:'json',
+        success:function(data){
+            if(data.success){
+                console.log(data);
+            }else{
+                console.log(JSON.stringify(data));
+            }
+        },error:function(data){
+            console.log(JSON.stringify(data));
+        }
+    })
+});
+</script>
+
+
+</body>
+</html>
