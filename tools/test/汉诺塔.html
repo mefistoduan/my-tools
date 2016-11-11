@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<h5>
+    汉诺塔
+</h5>
+<p>
+    汉诺塔：汉诺塔（又称河内塔）问题是源于印度一个古老传说的益智玩具。大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。并且规定，在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。
+</p>
+<span>
+    看CONSOLE
+</span>
+<script>
+$(function(){
+    function movePanle(x,y,z,n){
+        if(n=='1'){
+            console.log('move  '+n+'  from  '+x+'  to  '+z);
+        }else{
+            hanoi(n-1,x,z,y);
+            console.log('move  '+n+'  from  '+x+'  to  '+z);
+            hanoi(n-1,y,x,z);
+        }
+    }
+    movePanle(1,2,3,1);
+});
+
+//    摊手完全没搞明白应该怎么写，周一问问大神去
+</script>
+</body>
+</html>
