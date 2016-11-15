@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>classToggle</title>
+    <script src="jquery-1.7.2.js"></script>
+    <script src="vue.js"></script>
+</head>
+<body>
+<style>
+    .top_cell {
+        width:400px;
+        height:400px;
+        display:block;
+        margin:0 auto;
+        background-color:#1eaa39;
+    }
+    .active {
+        border:2px solid deepskyblue;
+    }
+    .text-danger {
+        border:2px solid red;
+    }
+</style>
+ <li class="top_cell" v-bind:class="{ 'active': cell === selected }" @click="choose(cell)"> {{cell}} </li>
+<script>
+    new Vue({ el:'.top_cell', data:{ selected: null }, methods:{ choose:function (index) { this.selected = index }}});
+
+
+</script>
+</body>
+</html>
