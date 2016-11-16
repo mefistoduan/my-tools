@@ -22,12 +22,18 @@
         border:2px solid red;
     }
 </style>
- <li class="top_cell" v-bind:class="{ 'active': cell === selected }" @click="choose(cell)"></li>
+<h5>123</h5>
+<span class="top_cell"  v-bind:class="{cur:item.iscur}" @click="setCur($index)"></span>
 <script>
     new Vue({
         el:'.top_cell',
-        data:{ selected: null },
-        methods:{ choose:function (index) { this.selected = index}}
+        methods:{
+            setCur: function (index) {
+                this.data.map(function (v,i) {
+                    i==index? v.iscur=true: v.iscur=false;
+                });
+            }
+        }
     });
 
 //当点击的时候触发choose事件，传递cell参数，加上selected事件，当cell===selected的时候，active的classname被添加
