@@ -36,8 +36,17 @@
         },
         methods:{
             change:function(){
-                this.blue=false;
-                this.red=true;
+                var x=this.blue;
+                var y=this.red;
+               function swap(a,b){
+                   var temp = new Array(2);
+                   temp[0]=b;
+                   temp[1]=a;
+                   return temp;
+               }
+                var c = swap(x,y);
+                this.blue = c[0];
+                this.red = c[1];
             }
         }
     });
