@@ -27,7 +27,7 @@
     </template>
 </div>
 <script>
-    var count = 100;
+    var count = 3;
     var vue = new Vue({
         el: '#display',
         data: {
@@ -39,9 +39,15 @@
             setInterval(function () {
                 for (var i = 0; i < _this.list.length; i++) {
                     Vue.set(_this.list[i],'time',count);
+//                    小于0则写死数值
+                    if(count<'0'){
+                        Vue.set(_this.list[i],'time',0);
+                    }
                 }
                 count--;
-            }, 1000)
+
+            }, 1000);
+
         }
     })
 
