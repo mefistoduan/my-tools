@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>classToggle</title>
+    <script src="jquery-1.7.2.js"></script>
+    <script src="vue.js"></script>
+</head>
+<body>
+<style>
+    #display {
+        width:200px;
+        height:40px;
+        float:left;
+        margin:0 auto;
+        background-color:#dcff93;
+        color:#333;
+        font-size:16px;
+        font-weight:bold;
+        font-family:Verdana, "simsun";
+    }
+
+</style>
+<div id="display">
+    <template v-for="l in list">
+        <div>{{ l.time }}</div>
+    </template>
+</div>
+<script>
+    var count = 100;
+    var vue = new Vue({
+        el: '#display',
+        data: {
+            "list": [{
+            }]
+        },
+        "created": function () {
+            var _this = this;
+            setInterval(function () {
+                for (var i = 0; i < _this.list.length; i++) {
+                    Vue.set(_this.list[i],'time',count);
+                }
+                count--;
+            }, 1000)
+        }
+    })
+
+</script>
+</body>
+</html>
