@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<h5>每个都加10</h5>
+<p>也能遍历元素也能遍历数组</p>
+<script>
+$(function(){
+    var arr=[5,6,7,8,9];
+    var fn=function(a){
+        return a+10;
+    };
+    console.log(arr.map(fn));
+})
+</script>
+</body>
+</html>
