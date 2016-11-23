@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<h5>reduce() 方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终为一个值</h5>
+<script>
+$(function(){
+    var arr=["小","明","喜","欢","学","习"];
+    var arr1=[1,2,3,4,5];
+    function fn(arr){
+        return arr.reduce(function(a,b){
+            return a+b;
+        })
+    }
+    console.log(fn(arr));//小明喜欢学习
+    console.log(fn(arr1));//15
+})
+</script>
+</body>
+</html>
