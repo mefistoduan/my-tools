@@ -39,7 +39,6 @@
                     c.strokeStyle = s_color;
                     c.beginPath();
 
-                    c.arc(i * 25, i * 25, i * 10, 0, Math.PI * 2, true);
                     c.closePath();
 
                     c.moveTo(x2d,y2d);
