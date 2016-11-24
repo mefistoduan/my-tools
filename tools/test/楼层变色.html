@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    ul {
+        width: 690px;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+    }
+    ul li {
+        width: 100%;
+        height: 300px;
+        background-color: #00a2ea;
+        border: 2px solid #fff;
+        display: block;
+    }
+    #floating-right {
+        width: 100px;
+        height: 200px;
+        position: fixed;
+    }
+    .float-item {
+        width: 100px;
+        height: 20px;
+        background-color: #2C3E50;
+        display: block;
+    }
+    .current-item {
+        background-color: red;
+    }
+</style>
+<div id="floating-right">
+    <div class="float-item"></div>
+    <div class="float-item"></div>
+    <div class="float-item"></div>
+    <div class="float-item"></div>
+</div>
+<ul class="">
+    <li class="floor jytitleTab"></li>
+    <li class="floor "></li>
+    <li class="floor "></li>
+    <li class="floor "></li>
+    <li class="floor "></li>
+    <li class="floor "></li>
+    <li class="floor "></li>
+    <li class="floor "></li>
+    <li class="floor "></li>
+    <li class="floor "></li>
+    <li class="floor "></li>
+    <li class="floor "></li>
+    <li class="floor "></li>
+</ul>
+
+<script>
+$(function(){
+    /*右侧floating*/
+    $(function(){
+        var _floor = $('.jytitleTab');
+        var _float_wrap = $('#floating-right');
+        var _item = $('.float-item',_float_wrap);
+        $(window, document).bind('scroll', function(e){
+            var current_top = document.body.scrollTop || document.documentElement.scrollTop;
+
+            if(_floor.eq(0).offset().top <= current_top){
+                _float_wrap.fadeIn(300);
+            }
+            else{
+                _float_wrap.fadeOut(300);
+            }
+            $.each(_floor,function(i){
+                var _this = $(this);
+                var floor_top =_this.offset().top;
+                if(floor_top <= current_top){
+                    _item.eq(i).addClass('current-item').siblings().removeClass('current-item');
+                }
+            });
+        }).trigger('scroll');
+
+        _item.each(function(i){
+            $(this).click(function(){
+                $('html, body').stop().animate({
+                    scrollTop: _floor.eq(i).offset().top
+                });
+            });
+        });
+    });
+})
+</script>
+</body>
+</html>

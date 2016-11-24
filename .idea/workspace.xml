@@ -1,133 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae0fc4db-ca5e-456e-8b13-29d27c9a205c" name="Default" comment="have a look wxMonentent">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/h5/roma/src/html/PageSlider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/h5/roma/src/html/Video.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/h5/roma/src/js/wxmoment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/h5/roma/src/js/zepto.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/css/style-doc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/css/style-index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/html/doc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/html/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/img/bg-body.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/img/mod-sticker/1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/img/mod-sticker/2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/img/mod-sticker/3.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/img/mod-sticker/4.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/img/weflow-logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/js/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/js/lib/prism.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/media/bgm.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-bottle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-bottle@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-game.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-game@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-jd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-jd@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-locaitonservice.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-locaitonservice@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-moment.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-moment@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-qrcode.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-qrcode@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-shake.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-discovery/icon-shake@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-copy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-copy@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-copy@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-favadd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-favadd@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-favadd@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-moment.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-moment@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-moment@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-refresh@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-refresh@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-share.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-share@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dev/slice/mod-social-media/icon-share@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/css/style-doc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/css/style-index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/html/doc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/html/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/img/bg-body.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/img/mod-sticker/1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/img/mod-sticker/2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/img/mod-sticker/3.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/img/mod-sticker/4.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/img/weflow-logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/js/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/js/lib/prism.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/media/bgm.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/sprite/style-doc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/sprite/style-doc@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/sprite/style-index.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/sprite/style-index@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/dist/sprite/style-index@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/lib/lib-mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/lib/lib-rem.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/lib/lib-reset.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/lib/prism-github-theme.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/lib/prism.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/mod-discovery.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/mod-example.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/mod-footer.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/mod-header.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/mod-social-media.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/mod-sticker.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/style-doc.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/css/style-index.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/html/doc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/html/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/img/bg-body.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/img/mod-sticker/1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/img/mod-sticker/2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/img/mod-sticker/3.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/img/mod-sticker/4.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/img/weflow-logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/js/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/js/lib/prism.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/media/bgm.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-bottle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-bottle@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-game.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-game@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-jd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-jd@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-locaitonservice.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-locaitonservice@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-moment.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-moment@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-qrcode.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-qrcode@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-shake.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-discovery/icon-shake@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-copy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-copy@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-copy@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-favadd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-favadd@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-favadd@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-moment.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-moment@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-moment@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-refresh@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-refresh@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-share.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-share@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tools/h5/weflow-example/src/slice/mod-social-media/icon-share@3x.png" afterPath="" />
+    <list default="true" id="ae0fc4db-ca5e-456e-8b13-29d27c9a205c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/h5/roma/dev/html/index.html" afterPath="$PROJECT_DIR$/tools/h5/roma/dev/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/h5/roma/dev/js/main.js" afterPath="$PROJECT_DIR$/tools/h5/roma/dev/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/h5/roma/dist/css/style-index.css" afterPath="$PROJECT_DIR$/tools/h5/roma/dist/css/style-index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/h5/roma/src/css/style-index.less" afterPath="$PROJECT_DIR$/tools/h5/roma/src/css/style-index.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/h5/roma/src/html/index.html" afterPath="$PROJECT_DIR$/tools/h5/roma/src/html/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/h5/roma/src/js/html5_3d_animation.js" afterPath="$PROJECT_DIR$/tools/h5/roma/src/js/html5_3d_animation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/h5/roma/src/js/main.js" afterPath="$PROJECT_DIR$/tools/h5/roma/src/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/.idea/workspace.xml" afterPath="$PROJECT_DIR$/tools/.idea/workspace.xml" />
     </list>
     <ignored path="my-tools.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -148,31 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PageSlider.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/h5/roma/src/html/PageSlider.html">
+      <file leaf-file-name="timepicker.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools/learnVue/timepicker.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.125">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/h5/roma/src/html/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.730769">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Video.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tools/h5/roma/src/html/Video.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2563791">
-              <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.8308458">
+              <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -200,57 +56,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/style/settle.css" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/templates/cart_checkout.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_pot.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/js/settle.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/js/cart_checkout_package.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/style/detail.css" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/css/floating_r.css" />
+        <option value="I:/201611/restruant/js/resturant_buy_setting.js" />
+        <option value="I:/201611/restruant/resturant_buy_setting.html" />
+        <option value="$PROJECT_DIR$/tools/learnVue/FungLeo.html" />
+        <option value="I:/201611/1115restruant/js/resturant_buy_setting.js" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_supplier_buy.dwt" />
+        <option value="I:/emeixian/mobile/templates/user.dwt" />
+        <option value="I:/emeixian/mobile/css/meixian_user.css" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/library/footer_new_index.lbi" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/css/footer_2016.css" />
+        <option value="$PROJECT_DIR$/tools/learnVue/table.html" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_miao.dwt" />
+        <option value="I:/emeixian/mobile/style/settle.css" />
+        <option value="I:/emeixian/mobile/templates/cart_checkout.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_pot.dwt" />
+        <option value="I:/emeixian/mobile/js/settle.js" />
+        <option value="I:/emeixian/mobile/js/cart_checkout_package.js" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/css/cart_checkout.css" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/style/detail.css" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/css/floating_r.css" />
         <option value="//192.168.10.214/php/phptest/emeixian/mobile/js/settle.js" />
-        <option value="$PROJECT_DIR$/../../201611/topic_model/teach.html" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_woodpecker.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/shopping_cartV.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/library/footer_new.lbi" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/cart_package.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_idea_chips.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_thanksgiving.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/templates/topic_thanksgiving.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_cheap_chicken.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/templates/topic_pasta.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/cart_checkout_min.js" />
+        <option value="I:/201611/topic_model/teach.html" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_woodpecker.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/js/shopping_cartV.js" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/library/footer_new.lbi" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/js/cart_package.js" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_idea_chips.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_thanksgiving.dwt" />
+        <option value="I:/emeixian/mobile/templates/topic_thanksgiving.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_cheap_chicken.dwt" />
+        <option value="I:/emeixian/mobile/templates/topic_pasta.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/js/cart_checkout_min.js" />
         <option value="$PROJECT_DIR$/tools/learnVue/classtoggle2.html" />
         <option value="$PROJECT_DIR$/tools/learnVue/toggleClass.html" />
         <option value="//192.168.10.214/php/phptest/emeixian/themes/68ecshopcom_360buy/addOwnGoods.dwt" />
         <option value="//192.168.10.214/php/phptest/emeixian/themes/68ecshopcom_360buy/js/cart_checkout.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_pasta.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_pasta.dwt" />
         <option value="$PROJECT_DIR$/tools/test/TEST1.html" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_saves_money.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/cart_checkout.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/exchange_list.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/cart_checkout.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/includes/cls_mysql.php" />
-        <option value="$PROJECT_DIR$/../../emeixian/user.php" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/category.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_saves_money.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/js/cart_checkout.js" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/exchange_list.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/cart_checkout.dwt" />
+        <option value="I:/emeixian/includes/cls_mysql.php" />
+        <option value="I:/emeixian/user.php" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/category.dwt" />
         <option value="$USER_HOME$/Desktop/pic/goodsstyle.html" />
-        <option value="$PROJECT_DIR$/../../201611/pic/goodsstyle.html" />
+        <option value="I:/201611/pic/goodsstyle.html" />
+        <option value="I:/201611/pic/floating.html" />
         <option value="$PROJECT_DIR$/tools/learnVue/classtoggle.html" />
         <option value="$PROJECT_DIR$/tools/learnVue/empty_module.html" />
         <option value="$PROJECT_DIR$/tools/learnVue/calc.html" />
         <option value="$PROJECT_DIR$/tools/learnVue/timepicker.html" />
-        <option value="$PROJECT_DIR$/../../201611/pic/floating.html" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/css/cart_checkout.css" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_1122pot.dwt" />
-        <option value="$PROJECT_DIR$/tools/test/reduce.html" />
-        <option value="$PROJECT_DIR$/tools/test/autoscroll_ul.html" />
-        <option value="$PROJECT_DIR$/tools/h5/roma/src/js/html5_3d_animation.js" />
-        <option value="$PROJECT_DIR$/tools/h5/roma/dist/css/style-index.css" />
-        <option value="$PROJECT_DIR$/tools/h5/roma/src/js/main.js" />
-        <option value="$PROJECT_DIR$/tools/h5/roma/src/css/style-index.less" />
-        <option value="$PROJECT_DIR$/../WxMoment/example/PageSlider.html" />
-        <option value="$PROJECT_DIR$/tools/h5/roma/src/html/PageSlider.html" />
-        <option value="$PROJECT_DIR$/tools/h5/roma/src/html/index.html" />
-        <option value="$PROJECT_DIR$/tools/h5/roma/src/html/Video.html" />
       </list>
     </option>
   </component>
@@ -264,10 +120,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1034" />
+    <option name="x" value="952" />
+    <option name="width" value="974" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -341,7 +196,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="h5" />
+              <option name="myItemId" value="learnVue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,130 +216,10 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\wamp\www\github\my-tools\tools\test" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\wamp\www\github\my-tools\tools\h5\roma\src\js" />
-      <recent name="F:\wamp\www\github\my-tools\tools\h5\roma\src\html" />
-      <recent name="F:\wamp\www\github\my-tools\tools\test" />
       <recent name="F:\wamp\www\github\my-tools\tools\learnVue" />
+      <recent name="F:\wamp\www\github\my-tools\tools\test" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tools/.idea/workspace.xml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gitignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tools/learnVue/main.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tools/learnVue/package.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tools/test/map(3).html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/tools/特效/空模板 - 副本.html</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Node.js.index.js">
     <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="server.js" working-dir="F:/test/nodetest">
@@ -617,51 +352,33 @@
       <option name="project" value="LOCAL" />
       <updated>1479787108812</updated>
     </task>
-    <task id="LOCAL-00010" summary="keep learn vue">
-      <created>1479787418579</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1479787418579</updated>
-    </task>
-    <task id="LOCAL-00011" summary="about reduce">
-      <created>1479866824516</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1479866824516</updated>
-    </task>
-    <task id="LOCAL-00012" summary="about reduce">
-      <created>1479866986939</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1479866986939</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1034" extended-state="6" />
-    <editor active="true" />
+    <frame x="952" y="0" width="974" height="1026" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13277134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.330076" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.251606" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494577" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.330076" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -680,9 +397,7 @@
     <MESSAGE value="rewire roma 08-11 is coming~" />
     <MESSAGE value="想试试写个前端的VR demo" />
     <MESSAGE value="keep learn vue" />
-    <MESSAGE value="about reduce" />
-    <MESSAGE value="have a look wxMonentent" />
-    <option name="LAST_COMMIT_MESSAGE" value="have a look wxMonentent" />
+    <option name="LAST_COMMIT_MESSAGE" value="keep learn vue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -691,66 +406,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/library/footer_new.lbi">
+    <entry file="file://$PROJECT_DIR$/tools/learnVue/timepicker.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.321429">
-          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cart_checkout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02">
-          <caret line="350" column="0" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cart_package.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.38">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_hallowmas_devil.dwt">
+    <entry file="file://$PROJECT_DIR$/tools/learnVue/table.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5403023">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_potato_11ready.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5891089">
-          <caret line="969" column="33" selection-start-line="965" selection-start-column="29" selection-end-line="969" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_idea_chips.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7763496">
-          <caret line="355" column="5" selection-start-line="197" selection-start-column="0" selection-end-line="355" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/mobile/templates/topic_thanksgiving.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8073048">
-          <caret line="324" column="7" selection-start-line="324" selection-start-column="7" selection-end-line="324" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_thanksgiving.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82281554">
-          <caret line="483" column="33" selection-start-line="479" selection-start-column="27" selection-end-line="483" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_cheap_chicken.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3446602">
-          <caret line="746" column="22" selection-start-line="746" selection-start-column="22" selection-end-line="746" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.020631067">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -768,127 +435,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_pot.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.050971">
-          <caret line="570" column="40" selection-start-line="570" selection-start-column="40" selection-end-line="570" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:////192.168.10.214/php/phptest/emeixian/chain_restaurant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7916666">
-          <caret line="1292" column="34" selection-start-line="1292" selection-start-column="18" selection-end-line="1292" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:////192.168.10.214/php/phptest/emeixian/themes/68ecshopcom_360buy/addOwnGoods.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50377834">
-          <caret line="376" column="0" selection-start-line="376" selection-start-column="0" selection-end-line="376" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/mobile/templates/topic_pasta.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64320385">
-          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:////192.168.10.214/php/phptest/emeixian/themes/68ecshopcom_360buy/js/cart_checkout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4987805">
-          <caret line="661" column="25" selection-start-line="658" selection-start-column="22" selection-end-line="661" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/cart_package_back.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6666665">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/cart_checkout_back.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9666667">
-          <caret line="1443" column="56" selection-start-line="1443" selection-start-column="56" selection-end-line="1443" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/test/TEST1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3287153">
           <caret line="1393" column="68" selection-start-line="1393" selection-start-column="63" selection-end-line="1393" selection-end-column="68" />
-          <folding>
-            <marker date="1479707133581" expanded="true" signature="348606:348658" placeholder="..." />
-            <marker date="1479707133581" expanded="true" signature="354170:354215" placeholder="..." />
-            <marker date="1479707133581" expanded="true" signature="354239:354250" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_saves_money.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
-          <caret line="223" column="7" selection-start-line="223" selection-start-column="7" selection-end-line="223" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/exchange_list.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6851385">
-          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/cart_checkout.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="573" column="0" selection-start-line="573" selection-start-column="0" selection-end-line="574" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/includes/cls_mysql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.107142">
-          <caret line="541" column="0" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/includes/lib_common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49873737">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5719697">
-          <caret line="13383" column="4" selection-start-line="13383" selection-start-column="4" selection-end-line="13383" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/cart_checkout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="883" column="19" selection-start-line="883" selection-start-column="19" selection-end-line="883" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/category.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_westfocus_11ready.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33291298">
-          <caret line="832" column="29" selection-start-line="832" selection-start-column="20" selection-end-line="832" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -896,7 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4131227">
           <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -904,173 +453,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2891859">
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/learnVue/timepicker.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49574727">
-          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/css/cart_checkout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29003784">
-          <caret line="1043" column="16" selection-start-line="1043" selection-start-column="16" selection-end-line="1043" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_1122pot.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7002427">
-          <caret line="574" column="49" selection-start-line="574" selection-start-column="49" selection-end-line="574" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_pasta.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.020631067">
-          <caret line="328" column="17" selection-start-line="326" selection-start-column="12" selection-end-line="328" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/test/reduce.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47509113">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/test/json.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10328068">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/test/autoscroll_ul.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43377885">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/frontendVR/parallax/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24787363">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/h5/roma/src/js/html5_3d_animation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7008245">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/h5/roma/src/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12014134">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/h5/roma/src/js/wxmoment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.53846157">
-          <caret line="2919" column="20" selection-start-line="2919" selection-start-column="16" selection-end-line="2919" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/h5/roma/dist/css/style-index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06196841">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/h5/roma/src/css/style-index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2307692">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/h5/roma/dev/css/style-index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87606317">
-          <caret line="629" column="1" selection-start-line="629" selection-start-column="1" selection-end-line="629" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../WxMoment/example/PageSlider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1652491">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/h5/roma/src/js/zepto.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../WxMoment/example/Video.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../WxMoment/example/WxVideo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39246657">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/h5/roma/src/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/h5/roma/src/html/PageSlider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.125">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tools/h5/roma/src/html/Video.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2563791">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.8308458">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
           <folding />
         </state>
       </provider>
