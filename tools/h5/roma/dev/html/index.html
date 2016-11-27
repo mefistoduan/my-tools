@@ -1,50 +1,26 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
-<head>
+<!DOCTYPE html>
+<html>
+<head lang="en">
     <meta charset="UTF-8">
-    <title>Roma</title>
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="apple-mobile-web-app-capable" content="no" />
-    <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
-    <script src="//wximg.qq.com/wxp/libs/wxmoment/0.0.4/wxmoment.min.js"></script>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>滑屏</title>
+    <!--<script src="../build/wxmoment.js"></script>-->
+    <script src="//wximg.qq.com/wxp/libs/wxmoment/0.0.4/wxmoment.js"></script>
+    <style>
+
+    </style>
 </head>
-
-<div class="wrap">
-    <section class="screen screen1">
-        <canvas id="galaxy">
-        </canvas>
-        <div class="screen-arrow">v</div>
-    </section>
-    <section class="screen screen2">
-        <div class="screen-arrow">v</div>
-    </section>
-    <section class="screen screen3">
-        <div class="screen-arrow">v</div>
-    </section>
-</div>
-<script src="../js/jquery-1.7.2.min.js"></script>
-<script src="../js/main.js"></script>
-<script src="../js/html5_3d_animation.js"></script>
-<script>
-
-    //    启用滑屏
-    var pageSlider = new WxMoment.PageSlider({
-        pages: $('.screen')
-    });
-
-    //    动画部分
-    $("#galaxy").html5_3d_animation({
-        window_width: $(window).width(),
-        window_height: $(window).height(),
-        window_background: '#333333',
-        star_count: '1000',
-        star_color: '#fff',
-        star_depth: '100'
-    });
-</script>
 <body>
+<div class="wrap">
+   <ul>
+       <li>
+           <a href="pageslider.html">pageslider滚屏</a>
+       </li>
+       <li>
+           <a href="video.html">pageslider滚屏</a>
+       </li>
+   </ul>
+</div>
+
 </body>
 </html>
