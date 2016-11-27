@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae0fc4db-ca5e-456e-8b13-29d27c9a205c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/test/冒泡排序.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tools/learnVue/timepicker.html" afterPath="$PROJECT_DIR$/tools/learnVue/timepicker.html" />
     </list>
     <ignored path="my-tools.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,35 +20,18 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
+    <favorites_list name="VUE">
+      <favorite_root url="file://$PROJECT_DIR$/../vue/learnVue/first" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+    </favorites_list>
     <favorites_list name="my-tools" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="goodsstyle.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../201611/pic/goodsstyle.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="冒泡排序.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools/test/冒泡排序.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="floating.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../201611/pic/floating.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5">
-              <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="timepicker.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tools/learnVue/timepicker.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8055893">
-              <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.6063961">
+              <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -76,57 +59,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../201611/restruant/js/resturant_buy_setting.js" />
-        <option value="$PROJECT_DIR$/../../201611/restruant/resturant_buy_setting.html" />
         <option value="$PROJECT_DIR$/tools/learnVue/FungLeo.html" />
-        <option value="$PROJECT_DIR$/../../201611/1115restruant/js/resturant_buy_setting.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_supplier_buy.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/templates/user.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/css/meixian_user.css" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/library/footer_new_index.lbi" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/css/footer_2016.css" />
+        <option value="I:/201611/1115restruant/js/resturant_buy_setting.js" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_supplier_buy.dwt" />
+        <option value="I:/emeixian/mobile/templates/user.dwt" />
+        <option value="I:/emeixian/mobile/css/meixian_user.css" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/library/footer_new_index.lbi" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/css/footer_2016.css" />
         <option value="$PROJECT_DIR$/tools/learnVue/table.html" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_miao.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/style/settle.css" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/templates/cart_checkout.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_pot.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/js/settle.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/js/cart_checkout_package.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/css/cart_checkout.css" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/style/detail.css" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/css/floating_r.css" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_miao.dwt" />
+        <option value="I:/emeixian/mobile/style/settle.css" />
+        <option value="I:/emeixian/mobile/templates/cart_checkout.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_pot.dwt" />
+        <option value="I:/emeixian/mobile/js/settle.js" />
+        <option value="I:/emeixian/mobile/js/cart_checkout_package.js" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/css/cart_checkout.css" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/style/detail.css" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/css/floating_r.css" />
         <option value="//192.168.10.214/php/phptest/emeixian/mobile/js/settle.js" />
-        <option value="$PROJECT_DIR$/../../201611/topic_model/teach.html" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_woodpecker.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/shopping_cartV.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/library/footer_new.lbi" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/cart_package.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_idea_chips.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_thanksgiving.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/templates/topic_thanksgiving.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_cheap_chicken.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/mobile/templates/topic_pasta.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/cart_checkout_min.js" />
+        <option value="I:/201611/topic_model/teach.html" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_woodpecker.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/js/shopping_cartV.js" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/library/footer_new.lbi" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/js/cart_package.js" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_idea_chips.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_thanksgiving.dwt" />
+        <option value="I:/emeixian/mobile/templates/topic_thanksgiving.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_cheap_chicken.dwt" />
+        <option value="I:/emeixian/mobile/templates/topic_pasta.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/js/cart_checkout_min.js" />
         <option value="$PROJECT_DIR$/tools/learnVue/classtoggle2.html" />
         <option value="$PROJECT_DIR$/tools/learnVue/toggleClass.html" />
         <option value="//192.168.10.214/php/phptest/emeixian/themes/68ecshopcom_360buy/addOwnGoods.dwt" />
         <option value="//192.168.10.214/php/phptest/emeixian/themes/68ecshopcom_360buy/js/cart_checkout.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_pasta.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_pasta.dwt" />
         <option value="$PROJECT_DIR$/tools/test/TEST1.html" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_saves_money.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/cart_checkout.js" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/exchange_list.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/cart_checkout.dwt" />
-        <option value="$PROJECT_DIR$/../../emeixian/includes/cls_mysql.php" />
-        <option value="$PROJECT_DIR$/../../emeixian/user.php" />
-        <option value="$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/category.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/topic_saves_money.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/js/cart_checkout.js" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/exchange_list.dwt" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/cart_checkout.dwt" />
+        <option value="I:/emeixian/includes/cls_mysql.php" />
+        <option value="I:/emeixian/user.php" />
+        <option value="I:/emeixian/themes/68ecshopcom_360buy/category.dwt" />
         <option value="$USER_HOME$/Desktop/pic/goodsstyle.html" />
-        <option value="$PROJECT_DIR$/../../201611/pic/goodsstyle.html" />
-        <option value="$PROJECT_DIR$/../../201611/pic/floating.html" />
+        <option value="I:/201611/pic/goodsstyle.html" />
+        <option value="I:/201611/pic/floating.html" />
         <option value="$PROJECT_DIR$/tools/learnVue/classtoggle.html" />
         <option value="$PROJECT_DIR$/tools/learnVue/empty_module.html" />
         <option value="$PROJECT_DIR$/tools/learnVue/calc.html" />
         <option value="$PROJECT_DIR$/tools/learnVue/timepicker.html" />
+        <option value="$PROJECT_DIR$/../vue/learnVue/first/src/components/Hello.vue" />
+        <option value="$PROJECT_DIR$/tools/test/冒泡排序.html" />
       </list>
     </option>
   </component>
@@ -143,7 +126,7 @@
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1034" />
+    <option name="height" value="1035" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -216,7 +199,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="learnVue" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -229,15 +212,17 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tools/h5/matrix" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vue/learnVue/first" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="editor.config.accepted" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\work\my-tools\tools\test" />
       <recent name="F:\wamp\www\github\my-tools\tools\learnVue" />
       <recent name="F:\wamp\www\github\my-tools\tools\test" />
     </key>
@@ -377,19 +362,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1034" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1035" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13277134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26529536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32945284" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494577" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.248394" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -427,38 +412,42 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../emeixian/mobile/css/meixian_user.css">
+    <entry file="file://$PROJECT_DIR$/../vue/learnVue/132.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08575031">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/css/footer_2016.css">
+    <entry file="file://$PROJECT_DIR$/../vue/learnVue/first/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.696428">
-          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/library/footer_new_index.lbi">
+    <entry file="file://$PROJECT_DIR$/../vue/learnVue/first/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5164034">
-          <caret line="25" column="43" selection-start-line="24" selection-start-column="18" selection-end-line="25" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/mobile/style/settle.css">
+    <entry file="file://$PROJECT_DIR$/../vue/learnVue/first/src/components/Hello.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.321429">
-          <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_miao.dwt">
+    <entry file="file://$PROJECT_DIR$/tools/learnVue/timepicker.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33289817">
-          <caret line="333" column="29" selection-start-line="333" selection-start-column="29" selection-end-line="333" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -466,139 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.020631067">
           <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/mobile/templates/cart_checkout.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="363" column="56" selection-start-line="363" selection-start-column="41" selection-end-line="363" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/css/cart_checkout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41813603">
-          <caret line="916" column="19" selection-start-line="916" selection-start-column="19" selection-end-line="916" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/mobile/js/cart_checkout_package.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/mobile/js/settle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="466" column="52" selection-start-line="466" selection-start-column="32" selection-end-line="466" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/css/floating_r.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17128463">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/style/detail.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43954659">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:////192.168.10.214/php/phptest/emeixian/mobile/js/settle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.833334">
-          <caret line="349" column="22" selection-start-line="349" selection-start-column="22" selection-end-line="349" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../201611/topic_model/teach.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6395631">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_woodpecker.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42961165">
-          <caret line="326" column="65" selection-start-line="326" selection-start-column="65" selection-end-line="326" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/shopping_cartV.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54">
-          <caret line="952" column="53" selection-start-line="952" selection-start-column="53" selection-end-line="952" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/library/footer_new.lbi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.321429">
-          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cart_checkout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02">
-          <caret line="350" column="0" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/cart_package.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.38">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_hallowmas_devil.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5403023">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_potato_11ready.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5891089">
-          <caret line="969" column="33" selection-start-line="965" selection-start-column="29" selection-end-line="969" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_idea_chips.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7763496">
-          <caret line="355" column="5" selection-start-line="197" selection-start-column="0" selection-end-line="355" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/mobile/templates/topic_thanksgiving.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8073048">
-          <caret line="324" column="7" selection-start-line="324" selection-start-column="7" selection-end-line="324" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_thanksgiving.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82281554">
-          <caret line="483" column="33" selection-start-line="479" selection-start-column="27" selection-end-line="483" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_cheap_chicken.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3446602">
-          <caret line="746" column="22" selection-start-line="746" selection-start-column="22" selection-end-line="746" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -616,151 +472,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_pot.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.050971">
-          <caret line="570" column="40" selection-start-line="570" selection-start-column="40" selection-end-line="570" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:////192.168.10.214/php/phptest/emeixian/chain_restaurant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7916666">
-          <caret line="1292" column="34" selection-start-line="1292" selection-start-column="18" selection-end-line="1292" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:////192.168.10.214/php/phptest/emeixian/themes/68ecshopcom_360buy/addOwnGoods.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50377834">
-          <caret line="376" column="0" selection-start-line="376" selection-start-column="0" selection-end-line="376" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/mobile/templates/topic_pasta.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64320385">
-          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:////192.168.10.214/php/phptest/emeixian/themes/68ecshopcom_360buy/js/cart_checkout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4987805">
-          <caret line="661" column="25" selection-start-line="658" selection-start-column="22" selection-end-line="661" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_pasta.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43954659">
-          <caret line="281" column="83" selection-start-line="281" selection-start-column="83" selection-end-line="281" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/cart_package_back.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6666665">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/cart_checkout_back.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9666667">
-          <caret line="1443" column="56" selection-start-line="1443" selection-start-column="56" selection-end-line="1443" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/test/TEST1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3287153">
           <caret line="1393" column="68" selection-start-line="1393" selection-start-column="63" selection-end-line="1393" selection-end-column="68" />
-          <folding>
-            <marker date="1479707133581" expanded="true" signature="348606:348658" placeholder="..." />
-            <marker date="1479707133581" expanded="true" signature="354170:354215" placeholder="..." />
-            <marker date="1479707133581" expanded="true" signature="354239:354250" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_saves_money.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
-          <caret line="223" column="7" selection-start-line="223" selection-start-column="7" selection-end-line="223" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/exchange_list.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6851385">
-          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/cart_checkout.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="573" column="0" selection-start-line="573" selection-start-column="0" selection-end-line="574" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/includes/cls_mysql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.107142">
-          <caret line="541" column="0" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/includes/lib_common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49873737">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5719697">
-          <caret line="13383" column="4" selection-start-line="13383" selection-start-column="4" selection-end-line="13383" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/js/cart_checkout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="883" column="19" selection-start-line="883" selection-start-column="19" selection-end-line="883" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/category.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/pic/goodsstyle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56872636">
-          <caret line="108" column="21" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../emeixian/themes/68ecshopcom_360buy/topic_westfocus_11ready.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33291298">
-          <caret line="832" column="29" selection-start-line="832" selection-start-column="20" selection-end-line="832" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../201611/pic/goodsstyle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -768,7 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4131227">
           <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -776,22 +490,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2891859">
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../201611/pic/floating.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5">
-          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/learnVue/timepicker.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8055893">
+        <state vertical-scroll-proportion="0.8782288">
           <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vue/learnVue/first/src/components/Hello.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vue/learnVue/first/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1625239">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vue/learnVue/first/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vue/learnVue/132.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/test/冒泡排序.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6063961">
+          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
           <folding />
         </state>
       </provider>
