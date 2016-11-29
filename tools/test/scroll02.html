@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="ecy.cc">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>评论页面</title>
+    <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="js/calcBaseRem.js"></script>
+</head>
+<style>
+
+    @charset "utf-8";
+
+    html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6,
+    form, fieldset, legend, img, blockquote {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        -webkit-font-smoothing: antialiased;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+
+    fieldset, img {
+        border: none;
+    }
+
+    a:hover,
+    a:active {
+        text-decoration: none;
+    }
+
+    button, input, textarea, select {
+    }
+
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    button {
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-appearance: none;
+    }
+
+    input, select, textarea {
+
+    }
+
+    button[disabled],
+    input[disabled],
+    textarea[disabled],
+    select[disabled] {
+        cursor: default;
+        color: #B3B3B3;
+        background-color: #EFEFEF;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    input {
+        vertical-align: middle;
+    }
+
+    textarea {
+        resize: none;
+        overflow: auto;
+        vertical-align: top;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    small {
+        font-size: 12px;
+    }
+
+    sub, sup {
+        position: relative;
+        font-size: 75%;
+    }
+
+    sub {
+        top: -0.5em;
+    }
+
+    sup {
+        bottom: -0.25em;
+    }
+
+    nav, header, footer, aside, section, article, details,
+    figure, figcaption, hgroup, summary {
+        display: block;
+    }
+
+    canvas, audio, video {
+        display: inline-block;
+    }
+
+    mark {
+        background: #ff0;
+        color: #000;
+    }
+
+    img {
+        max-width: 100%;
+        vertical-align: top;
+    }
+
+    /**
+     * 去除(iOS黑色遮罩)和(Android下的边框虚线)及下划线
+     * @see http://stackoverflow.com/questions/5210481/disable-orange-outline-highlight-on-focus
+     */
+    * {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+        text-decoration: none;
+    }
+
+    .clearfix:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+    .clearfix {
+        *zoom: 1;
+    }
+    .comment_body {
+        background: #f4f4f7;
+        font-family: 'SimHei';
+    }
+
+    .comment_head {
+        position: relative;
+        background: #fff;
+        width: 100%;
+    }
+
+    .comment_head_con {
+        width: 84%;
+        position: relative;
+        margin-left: 4%;
+        overflow: hidden;
+    }
+    .comment_head_ul{
+        width: 9999px;
+    }
+    .comment_head_li {
+        float: left;
+    }
+
+    .comment_head_li a {
+        height: 2.2rem;
+        line-height: 2.2rem;
+        display: block;
+        color: #666666;
+        font-size: .8rem;
+        padding: 0 1.1rem;
+    }
+    .comment_head_li a.curr{
+        color: #20a23a;
+    }
+</style>
+
+<body class="comment_body">
+<div class="comment_head">
+    <div class="comment_head_con">
+        <!--不适用clearfix清楚浮动则会导致无法滑动-->
+        <ul class="comment_head_ul clearfix" id="comment_head_ul">
+            <li class="comment_head_li"><a href="#" class="curr">批次一</a></li>
+            <li class="comment_head_li"><a href="#">批次二</a></li>
+            <li class="comment_head_li"><a href="#">批次三</a></li>
+            <li class="comment_head_li"><a href="#">批次四</a></li>
+            <li class="comment_head_li"><a href="#">批次五</a></li>
+            <li class="comment_head_li"><a href="#">批次六</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    var obj = document.getElementById('comment_head_ul');
+    var startLeft = 0,endLeft = 0,moveLeft = 0;
+    var singleWidth = parseFloat($('.comment_head_li').css('width'));
+    var allWidth = (document.getElementsByClassName('comment_head_li').length)*singleWidth; //所有列表的宽度
+    var currWidth = parseFloat($('.comment_head_con').css('width')); //当前可视区域的宽度
+    var difference = currWidth-allWidth;
+    function setTransform(sum){
+        obj.style.transition="-webkit-transform 500ms ease-out";
+        obj.style.webkitTransform="translate("+sum+"px,0px) scale(1) translateZ(0px)";
+    }
+    $(function(){
+        obj.addEventListener('touchstart',function(event){
+            event.preventDefault();
+            var touch = event.targetTouches[0];
+            startLeft = touch.pageX;
+        });
+        obj.addEventListener('touchmove',function(event){
+            event.preventDefault();
+            var touch = event.targetTouches[0];
+            endLeft = touch.pageX;
+            moveLeft += endLeft- startLeft;
+            if(moveLeft >=0){
+                moveLeft = 0;
+            }else if(moveLeft <= difference){
+                moveLeft = difference;
+            }
+            setTransform(moveLeft);
+        })
+    })
+</script>
+</body>
+</html>
