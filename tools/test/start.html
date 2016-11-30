@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    ul,li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        width: 40px;
+        height: 40px;
+        float: left;
+        background-color: orangered;
+        margin-right: 10px;
+    }
+    li.curr {
+        background-color: silver;
+    }
+</style>
+<div>
+    <ul>
+        <li class="comment_driver_li curr"></li>
+        <li class="comment_driver_li"></li>
+        <li class="comment_driver_li"></li>
+        <li class="comment_driver_li"></li>
+        <li class="comment_driver_li"></li>
+    </ul>
+</div>
+<script>
+$(function(){
+    //评价星星效果
+    $('.comment_driver_li').on('click',function(){
+        var obj = $(this).parent();
+        $(obj).find('.comment_driver_li').removeClass('curr');
+        var i = $(this).attr('ovalue');
+        for(var j=0;j<i;j++){
+            $(obj).find('.comment_driver_li').eq(j).addClass('curr');
+        }
+        $(obj).find('.evaluate_num').val(i);
+    });
+    $('.comment_dirver_desc').on('touchend',function(){
+        var oclass = $(this).attr('class');
+        if(oclass.indexOf('curr') > -1){
+            $(this).removeClass('curr');
+        }else{
+            $(this).addClass('curr');
+        }
+    })
+})
+</script>
+</body>
+</html>
