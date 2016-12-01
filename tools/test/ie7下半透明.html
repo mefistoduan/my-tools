@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    span {
+        width:200px;
+        height:40px;
+        display:block;
+        background: rgba(0,0,0,0.3)
+    }
+</style>
+<span>
+
+</span>
+<script>
+$(function(){
+    $('span').hover(function(){
+        $(this).animate({opacity:.8},500).css({flter:"Alpha(Opacity=80)"});
+    },function(){
+        $(this).animate({opacity:.3},500).css({flter:"Alpha(Opacity=30)"});
+    })
+})
+</script>
+</body>
+</html>
