@@ -7,30 +7,55 @@
 </head>
 <body>
 <style>
-    ul,li {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    .comment_driver_ul{
+        position: absolute;
+        z-index: 10;
+        left: 5.6%;
+        top:.54rem;
+        height: 1.12rem;
     }
-    li {
-        width: 40px;
-        height: 40px;
+    .comment_driver_li{
+        height: 1.12rem;
+        width: 1.12rem;
         float: left;
-        background-color: orangered;
-        margin-right: 10px;
+        background-color:blueviolet;
+        /*background: url("../images/comment_start.png") no-repeat;*/
+        background-size: 100% 100%;
+        margin-left: 8px;
     }
-    li.curr {
-        background-color: silver;
+    .comment_driver_li.curr{
+        background-color:salmon;
+        /*background: url("../images/comment_start1.png") no-repeat;*/
+        background-size: 100% 100%;
+    }
+    .comment_driver_tit{
+        padding-top: 0.88rem;
+        padding-bottom: 0.28rem;
+        margin-left: 4%;
+    }
+    .comment_dirver_desc{
+        display: block;
+        float: left;
+        color: #666666;
+        font-size: .77rem;
+        padding: .32rem 1.06rem .36rem 1.06rem;
+        border: #dddddd 1px solid;
+        border-radius: 20px;
+        margin-bottom: .6rem;
+        margin-right: 1.22rem;
+    }
+    .comment_dirver_desc.curr{
+        border: #20a23a 1px solid;
+        color: #20a23a;
     }
 </style>
-<div>
-    <ul>
-        <li class="comment_driver_li curr"></li>
-        <li class="comment_driver_li"></li>
-        <li class="comment_driver_li"></li>
-        <li class="comment_driver_li"></li>
-        <li class="comment_driver_li"></li>
-    </ul>
+<div class="comment_driver_ul">
+    <input type="hidden" class="evaluate_num" value="5">
+    <span class="comment_driver_li curr" ovalue="1"></span>
+    <span class="comment_driver_li curr" ovalue="2"></span>
+    <span class="comment_driver_li curr" ovalue="3"></span>
+    <span class="comment_driver_li curr" ovalue="4"></span>
+    <span class="comment_driver_li curr" ovalue="5"></span>
 </div>
 <script>
 $(function(){
