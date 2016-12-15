@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<h5>
+    将匹配元素集合缩减为匹配选择器或匹配函数返回值的新元素。
+</h5>
+<ul>
+    <li>list item 1</li>
+    <li>list item 2</li>
+    <li>list item 3</li>
+    <li>list item 4</li>
+    <li>list item 5</li>
+    <li>list item 6</li>
+</ul>
+<script>
+$(function(){
+    $('li').filter(':even').css('background-color', 'red');
+    var info = new Array();
+    var info[1] = 1;
+    var info[2] = 2;
+    var info[3] = 3;
+})
+</script>
+</body>
+</html>
