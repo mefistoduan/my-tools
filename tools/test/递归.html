@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<h5>递归</h5>
+<script>
+$(function() {
+    function factorial(n){
+        if(n===1){
+            return n
+        }
+        else {
+            return n*factorial(n-1)
+        }
+    }
+    console.log(factorial(5));//120
+})
+</script>
+</body>
+</html>
