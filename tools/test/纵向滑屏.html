@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+</head>
+<body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .section {
+        text-align:center;
+        font-size: 3em;
+        /* This is important to make the button position relative to the section*/
+        position:relative;
+    }
+    #moveRight{
+        top: 20px;
+        left: 20px;
+        position:absolute;
+        z-index:999;
+        font-size: 1em;
+        cursor:pointer;
+    }
+    .slide {
+        background-color: #fff;
+    }
+</style>
+<div id="fullpage">
+    <div class="section">One</div>
+    <div class="section">
+        <button id="moveRight">Slide right</button>
+
+        <div class="slide" data-anchor="slide1">Two 1</div>
+        <div class="slide" data-anchor="slide2">Two 2</div>
+    </div>
+    <div class="section">Three</div>
+    <div class="section">Four</div>
+</div>
+<script>
+    $(function(){
+        $('#fullpage').fullpage({
+            anchors: ['page1', 'page2', 'page3', 'page4'],
+            sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6'],
+        });
+
+//adding the action to the button
+        $(document).on('click', '#moveRight', function(){
+            $.fn.fullpage.moveSlideRight();
+        });
+    });
+</script>
+</body>
+</html>

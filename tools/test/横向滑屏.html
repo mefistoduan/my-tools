@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/onepage-scroll.css">
+    <script src="../jquery-1.7.2.js"></script>
+    <script src="js/jquery.onepage-scroll.min.js"></script>
+</head>
+<body>
+<div class="main">
+    <section>第一屏</section>
+    <section>第二屏</section>
+    <section>第三屏</section>
+    <section>第四屏</section>
+</div>
+<script>
+$(function(){
+    $('.main').onepage_scroll({
+        direction:'horizontal'//vertical(垂直/竖向)
+    });
+});
+</script>
+</body>
+</html>
