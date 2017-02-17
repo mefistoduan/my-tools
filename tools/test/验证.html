@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<form action="#" method="post" onsubmit="return validCarNum()">
+    <input type="text" class="car_num">
+    <input type="submit" value="下一步">
+</form>
+<script>
+    //    valid 车牌号
+    function validCarNum(){
+        var carNumItem = $('.car_num').length;
+        if(carNumItem>0){
+            var re = /^[\u4e00-\u9fa5]{1}[A-Z]{1}[A-Z_0-9]{5}$/;
+            var carNum = $('.car_num').val();
+            if(re.test(carNum)==false){
+                console.log ('请输入正确的车牌号码');
+                return false;
+            }
+        }
+    }
+</script>
+</body>
+</html>
