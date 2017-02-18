@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<script>
+    $(function(){
+        var f = function(document){
+            var viewport;
+            var obj = {
+                init: function (id) {
+                    viewport = document.querySelector('#'+id);
+                },
+                addChild:function(child){
+                    viewport.appendChild(child);
+                },
+                removeChild:function(child){
+                    viewport.removeChild(child);
+                }
+            };
+        window.jView = obj;
+      };
+        f(document);
+    });
+</script>
+</body>
+</html>

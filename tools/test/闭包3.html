@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+<script>
+$(function(){
+
+    function A(){
+        function B(){
+            console.log("Hello Closure!");
+        }
+        return B;
+    }
+    var b = A();
+    b();//Hello Closure!
+
+});
+
+//上面代码翻译成自然语言如下：
+//
+//（1）定义了一个普通函数A
+//
+//（2）在A中定义了普通函数B
+//
+//（3）在A中返回B
+//
+//（4）执行A(),把A的返回结果赋值给变量b
+//
+//（5）执行b()
+</script>
+</body>
+</html>
