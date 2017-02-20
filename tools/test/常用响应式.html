@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+    <div class="part">
+        <ul>
+            <li>
+                123
+            </li>
+        </ul>
+    </div>
+<style>
+    /*响应式兼容*/
+    /*iPhone 5*/
+    @media only screen and (max-width: 320px) {
+        .part ul li {
+            width: 32%;
+            margin-right: 5px;
+        }
+    }
+    /*iPhone 6*/
+    @media only screen and  (min-width: 321px)  and (max-width: 375px) {
+        .part ul li {
+            margin-right: 6px;
+        }
+    }
+    /*iPhone 6P*/
+    @media only screen  and (max-width: 376px) and (min-width: 414px) {
+        .part ul li {
+            margin-right: 7px;
+        }
+    }
+</style>
+<script>
+$(function(){
+
+});
+
+</script>
+</body>
+</html>
