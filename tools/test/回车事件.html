@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+<input type="text" placeholder="Your name" onkeydown="return disableEnter(event)">
+
+<script>
+    function disableEnter(event){
+        var keyCode = event.keyCode?event.keyCode:event.which?event.which:event.charCode;
+        if (keyCode ==13){
+            alert(123);
+        }
+    }
+</script>
+</body>
+</html>
