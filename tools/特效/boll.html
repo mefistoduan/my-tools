@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <link rel="stylesheet" href="css/all-animation.css">
+</head>
+<body>
+<style>
+    h5 {
+        width:70px;
+        height: 60px;
+        background-color: #00a1d6;
+        color: #fff;
+    }
+    #menu {
+        width: 70px;
+        height: 80px;
+        float: left;
+        background-color: #00AA00;
+        color: #fff;
+        display: none;
+    }
+    .shade_in {
+        animation:bilibili 1s  alternate;
+        -webkit-animation:bilibili 1s  alternate;
+    }
+    @keyframes bilibili{
+        from{
+            width:0px;
+            opacity: .4;
+        }
+        to{
+            width:70px;
+            opacity: 1;
+        }
+    }
+    .shade_out {
+        animation:acfun 1s;
+        -webkit-animation:acfun 1s;
+        display: none;
+    }
+    @keyframes acfun{
+        from{
+            width:70px;
+            opacity: 1;
+        }
+        to{
+            width:10px;
+            opacity: 0;
+        }
+    }
+</style>
+
+    <h5 state="0">abc</h5>
+    <div id="menu">123</div>
+<script>
+    $(function() {
+        $('h5').on('click', function () {
+            $this = $(this);
+            var state = $this.attr('state');
+            $('#menu').removeClass('shade_in');
+            $('#menu').removeClass('shade_out');
+            if (state == 0) {
+                $('#menu').show().addClass('shade_in');
+                $this.attr('state', 1);
+            } else {
+                $('#menu').addClass('shade_out');
+                setTimeout(function(){
+                    $('#menu').hide()
+                },1000);
+                $this.attr('state', 0);
+            }
+        });
+    });
+</script>
+</body>
+</html>
