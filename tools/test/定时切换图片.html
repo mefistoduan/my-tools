@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<div id="full">
+    123
+</div>
+
+<script>
+$(function(){
+
+    setInterval(function() {
+        if (changeflag < 8) { //这儿是最大图片值
+            changeImg(changeflag);
+            changeflag++;
+        } else {
+            changeflag = 0;
+            changeImg(changeflag);
+        }
+    }, 20000); //定时切换图片
+
+    function changeImg(flag) {
+        if(flag%2==0){
+            nowflag=0;
+            beforeflag=1;
+        }
+        else{
+            nowflag=1;
+            beforeflag=0;
+        }
+        imgflag=flag+2;
+        zindex=7-flag;
+        if (flag == 6) {
+            imgflag = 0;
+        }
+        if (flag == 7) {
+            imgflag = 1;
+        }
+        $("#full"+nowflag+"").fadeOut(7000,function(){$("#full"+nowflag+"").attr("style", " background-image:url(img/bg_img" + imgflag + ".jpg); background-size:contain; height:720px; width:1280px; margin:0 auto;position: absolute;z-index:"+zindex+";  ");});
+        $("#full"+beforeflag+"").fadeIn(1000);
+        if (flag == 7) {
+            setTimeout('$("#full0").css("z-index","9")',7200);
+            setTimeout('$("#full1").css("z-index","8")',7400);
+        }
+    }
+});
+
+</script>
+</body>
+</html>
