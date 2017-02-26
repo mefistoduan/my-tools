@@ -6,12 +6,59 @@
     <script src="../jquery-1.7.2.js"></script>
 </head>
 <body>
-
+<style>
+    ul,li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+</style>
+    <ul class="list" bw-container="list">
+    </ul>
 
 <script>
 $(function(){
-
+    init();
 });
+function init(){
+    var url = 'api/test_ajax.php';
+    $.post(url,{},function(result)
+    {
+        if(result < 1){
+            console.log('no data');
+        }
+        else
+        {
+            var JSON = eval("("+result+")");
+            var recordsTotal = JSON.recordsTotal;
+            var item =' <li class="item specil_item">'+
+                    '<div class="name" bw-name="alid"></div>'+
+                '<div class="tel" bw-name="contactphone"></div>'+
+                '<div class="info" bw-name="shoploc"></div>'+
+                '</li>';
+            for(var i = 0; i < recordsTotal; i++ )
+            {
+                $("ul[bw-container='list']").append(item);
+
+            }
+            writeTemplate(JSON);
+        }
+    });
+
+    function writeTemplate(JSON){
+        var bwAttr;
+        for (var i = 0; i < JSON.recordsTotal;i++)
+        {
+            $('.list div').each(function(e)
+            {
+                bwAttr = $(this).attr('bw-name');
+                $("div[bw-name=" + bwAttr + "]").eq(i).html(JSON.data[i][bwAttr]);
+
+            });
+
+        }
+    }
+}
 
 </script>
 </body>
