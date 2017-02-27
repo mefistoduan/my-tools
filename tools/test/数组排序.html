@@ -46,7 +46,30 @@ $(function(){
                 templateItem.eq(i).find("span[bw_name="+bwAttr+"]").html(JSON.data[i][bwAttr]);
             });
         }
-    })
+        sortInfo(JSON,length);
+    });
+
+//    排序
+    function sortInfo(JSON,length){
+        $('#costnum').click(function(){
+            var sidCciprice = JSON.data.sort(
+                    function(a,b){
+                        if(a.costnum < b.costnum) return -1;
+                        if(a.costnum > b.costnum) return 1;
+                        return 0;
+                    }
+            );
+            for(var i = 0;i < length ; i++){
+                container.append(item);
+                var templateItem = $("li.item");
+                $("li.item span").each(function(e){
+                    var bwAttr = $(this).attr('bw_name');
+                    templateItem.eq(i).find("span[bw_name="+bwAttr+"]").html(sidCciprice[i][bwAttr]);
+                });
+            }
+        });
+
+    }
 });
 </script>
 </body>
