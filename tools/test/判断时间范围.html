@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+    var curr = "2:01";
+    var begin = "8:02";
+    var end = "23:03";
+    var currd = new Date("2000","1","1",curr.split(":")[0],curr.split(":")[1]);
+    var begind = new Date("2000","1","1",begin.split(":")[0],begin.split(":")[1]);
+    var endd = new Date("2000","1","1",end.split(":")[0],end.split(":")[1]);
+
+    if(currd>=begind && currd<=endd)
+    {
+        console.log('在范围内');
+    }
+
+    else
+    {
+        console.log('不在范围内');
+    }
+});
+
+</script>
+</body>
+</html>
