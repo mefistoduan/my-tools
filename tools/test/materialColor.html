@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    em {
+        width: 80px;
+        height: 40px;
+        display: block;
+        color: #fff;
+        font-size: 12px;
+        line-height: 40px;
+        text-align: center;
+        font-style: normal;
+        border-radius: 24px;
+    }
+</style>
+<h5>UI调色板</h5>
+<table>
+    <!--red-->
+    <tr>
+        <td><em bw_attr="#e51c23">#e51c23</em></td>
+        <td><em bw_attr="#fde0dc">#fde0dc</em></td>
+        <td><em bw_attr="#e84e40">#e84e40</em></td>
+        <td><em bw_attr="#d01716">#d01716</em></td>
+        <td><em bw_attr="#ff7997">#ff7997</em></td>
+        <td><em bw_attr="#ff2d6f">#ff2d6f</em></td>
+    </tr>
+    <!--pink-->
+    <tr>
+        <td><em bw_attr="#e91e63">#e91e63</em></td>
+        <td><em bw_attr="#f48fb1">#f48fb1</em></td>
+        <td><em bw_attr="#d81b60">#d81b60</em></td>
+        <td><em bw_attr="#AD1457">#AD1457</em></td>
+        <td><em bw_attr="#880E4F">#880E4F</em></td>
+        <td><em bw_attr="#F50057">#F50057</em></td>
+    </tr>
+    <tr>
+        <td><em bw_attr="#9C27B0">#9C27B0</em></td>
+        <td><em bw_attr="#BA68C8">#BA68C8</em></td>
+        <td><em bw_attr="#8E24AA">#8E24AA</em></td>
+        <td><em bw_attr="#4A148C">#4A148C</em></td>
+        <td><em bw_attr="#E040FB">#E040FB</em></td>
+        <td><em bw_attr="#AA00FF">#AA00FF</em></td>
+    </tr>
+    <tr>
+        <td><em bw_attr="#673AB7">#673AB7</em></td>
+        <td><em bw_attr="#7E57C2">#7E57C2</em></td>
+        <td><em bw_attr="#4527A0">#4527A0</em></td>
+        <td><em bw_attr="#651FFF">#651FFF</em></td>
+        <td><em bw_attr="#B388FF">#B388FF</em></td>
+        <td><em bw_attr="#7C4DFF">#7C4DFF</em></td>
+    </tr>
+    <tr>
+        <td><em bw_attr="#7C4DFF">#7C4DFF</em></td>
+        <td><em bw_attr="#738FFE">#738FFE</em></td>
+        <td><em bw_attr="#2A36B1">#2A36B1</em></td>
+        <td><em bw_attr="#6889FF">#6889FF</em></td>
+        <td><em bw_attr="#4D69FF">#4D69FF</em></td>
+        <td><em bw_attr="#4D73FF">#4D73FF</em></td>
+    </tr>
+    <tr>
+        <td><em bw_attr="#03A9F4">#03A9F4</em></td>
+        <td><em bw_attr="#81D4FA">#81D4FA</em></td>
+        <td><em bw_attr="#29B6F6">#29B6F6</em></td>
+        <td><em bw_attr="#0277BD">#0277BD</em></td>
+        <td><em bw_attr="#80D8FF">#80D8FF</em></td>
+        <td><em bw_attr="#0091EA">#0091EA</em></td>
+    </tr>
+
+</table>
+<script>
+    $(function() {
+
+        var length = $('table td').length;
+        var container = $('table');
+        writeData(length,container);
+
+        function writeData(length,container)
+        {
+            $("table em").each(function () {
+                var bwAttr = $(this).attr('bw_attr');
+                $(this).css('background-color',bwAttr);
+            });
+        }
+    })
+</script>
+
+</body>
+</html>
