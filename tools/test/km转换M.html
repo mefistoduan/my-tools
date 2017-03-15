@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+<input type="text" value="120km" class="distance">
+<input type="text" value="120m" class="distance">
+<input type="text" value="120km" class="distance">
+<input type="text" value="120m" class="distance">
+<input type="text" value="120km" class="distance">
+<script>
+$(function(){
+    //km/m 统一转换
+    var distance ;
+    $('.distance').each(function(){
+        distance = $(this).val();
+        var distance_m;
+        distance.indexOf('km')== -1? distance_m = distance.replace('m',""): distance_m = distance.replace('km',"")*1000;
+        console.log(distance_m);
+    });
+});
+
+</script>
+</body>
+</html>
