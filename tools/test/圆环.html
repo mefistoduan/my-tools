@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+    <script src="js/circle-progress.min.js"></script>
+</head>
+<body>
+<div id="circle"></div>
+
+<script>
+$(function(){
+    $('#circle').circleProgress({
+        value: 1,
+        size: 80,
+        fill: {
+            gradient: [ ["#ffff00", .5],["#ffa500", .2],["#00ff00", .9]]
+        }
+    });
+});
+
+</script>
+</body>
+</html>
