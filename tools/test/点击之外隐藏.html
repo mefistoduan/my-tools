@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style type="text/css">
+    .pop { width:200px; height:130px; background:#080;}
+</style>
+
+<div class="pop"></div>
+
+<script>
+$(function(){
+    $(document).bind("click",function(e){
+        var target = $(e.target);
+        if(target.closest(".pop").length == 0){
+            $(".pop").hide();
+        }
+    })
+
+});
+
+</script>
+</body>
+</html>
