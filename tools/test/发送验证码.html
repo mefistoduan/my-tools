@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<div class="item-input">
+    <input type="text" class="phone" id="new_phone_input" placeholder="130****1234">
+    <input class="valid_btn" id="new_phone" type="button" value="发送验证码" />                                 </div>
+</div>
+
+<script>
+    //发送验证码
+    $(".valid_btn").click(function(){
+        var reg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+        var phone = $(this).closest('.item-input').find('.phone');
+        if(!reg.test(phone.val())){
+            alert('手机号不正确');
+            return false;
+        }else{
+            //do nothing
+        }
+        var countdown = 6;
+        var _this = $(this);
+        //设置button效果，开始计时
+        _this.attr("disabled", "true");
+        _this.val(countdown + "秒后重新获取");
+        //启动计时器，1秒执行一次
+        var timer = setInterval(function(){
+            if (countdown == 0) {
+                clearInterval(timer);//停止计时器
+                _this.removeAttr("disabled");//启用按钮
+                _this.val("重新发送");
+            }
+            else {
+                countdown--;
+                _this.val(countdown + "秒后重新获取");
+            }
+        }, 1000);
+        //$.ajax({
+        //    type : 'POST',
+        //    url : '<%=path%>/user/sendCaptchas',
+        //    dataType : 'json',
+        //    data : {'stype':'3','ctype':'1','mobile':$("#mobile").val()},
+        //    success : function(data) {
+        //        if(data.errorInfo.errorCode==''){
+        //            /* alert("短信发送成功"); */
+        //        }else{
+        //            alert(data.errorInfo.errorCode);
+        //        }
+        //    }
+        //});
+        return false;
+    });
+</script>
+</body>
+</html>
