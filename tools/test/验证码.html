@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+    <script src="js/dialog.js"></script>
+    <link rel="stylesheet" href="css/dialog.css">
+</head>
+<body>
+
+<ul>
+    <li>
+        <span class="register_title">填写注册信息</span>
+        <em class="back_login">返回</em>
+    </li>
+    <li>
+        <input type="text" id="register_name" placeholder="用户名">
+    </li>
+    <li  class="form-group white">
+        <input type="text" class=" form-control form-control-short" id="register_aliance" placeholder="联盟ID">
+        <button id="btnGetAlid" class="btn btn-default" type="button">随机获取</button>
+        <i class="glyphicon glyphicon-question-sign" id="question_icon"></i>
+    </li>
+    <li  class="form-group">
+        <input type="email" id="register_mail" placeholder="邮箱">
+    </li>
+    <li  class="form-group">
+        <input type="password" id="register_pwd" placeholder="密码">
+    </li>
+    <li  class="form-group">
+        <input type="password" id="register_again" placeholder="确认密码">
+    </li>
+    <li>
+        <button type="submit" class="btn btn-default register_btn">注册</button>
+    </li>
+</ul>
+<script>
+$(function(){
+    //注册
+    $('.register_btn').click(function(){
+        valid('#register_name',5,16,'用户名');
+        valid('#register_aliance',3,5,'联盟ID');
+        valid('#register_mail',6,16,'邮箱');
+        checkMail('#register_mail');
+        valid('#register_pwd',6,16,'密码');
+        valid('#register_again',6,16,'确认密码');
+        valid('#uservalid',3,5,'验证码');
+        var pwdFirst = $('#register_pwd').val();
+        var pwdSec = $('#register_again').val();
+        if(pwdFirst != pwdSec) {
+            warning('两次密码不一致')
+        }
+
+        //ajax todo
+    });
+    //联盟ID
+    $('#question_icon').click(function(){
+      alert('联盟ID由4位数字构成，此ID<br>是您店铺的专属会员号，用户<br>消费时需输入联盟ID进行确认。');
+    });
+
+    //验证
+    function valid(container,min,max,tips)
+    {
+        var thisVal = $(container).val();
+        var thisLeng = thisVal.length;
+        var min = parseInt(min);
+        var max = parseInt(max);
+        if(thisVal==''){
+            warning(tips+'不能为空！');
+            return false;
+        }else {
+            if(thisLeng<=min){
+                warning(tips+'最少'+min+'字符！');
+            }
+            if(thisLeng>=max){
+                warning(tips+'超出限制数量！');
+            }
+        }
+    }
+
+//提示
+    function warning(tips)
+    {
+        var dialog_length = $('.ui-popup').length;
+        if(dialog_length == 0) {
+            var d = dialog({
+                content: tips,
+                okValue: '确定',
+                ok: function () {
+                    d.close().remove();
+                    return false;
+                }
+            });
+            d.showModal();
+        }
+    }
+
+//验证邮箱
+    function checkMail(container)
+    {
+        var thisVal = $(container).val();
+        var reg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+        if(!reg.test(thisVal)){
+            warning('邮箱格式不正确');
+            return false;
+        }else{
+            //do nothing
+        }
+    }
+
+
+});
+
+</script>
+</body>
+</html>
