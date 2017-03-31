@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<h5>距离为:<em></em></h5>
+
+<script>
+$(function(){
+
+    var distance = getFlatternDistance(33.22,117.54,33.22,117.53);
+    $('h5 em').text(distance);
+
+    //经纬度计算公式
+
+
+
+
+    function getFlatternDistance(lat1,lng1,lat2,lng2){
+        var PI = Math.PI;
+        var EARTH_RADIUS = 6378137.0;//单位M
+        function getRad(d)
+        {
+            return d*PI/180.0;
+
+        }
+        var x1 = parseFloat(lat1);
+        var x2 = parseFloat(lat2);
+        var y1 = parseFloat(lng1);
+        var y2 = parseFloat(lng2);
+
+
+        var radLat1 = parseFloat(getRad(x1));
+        var radLat2 = parseFloat(getRad(x2));
+
+        var a = parseFloat(radLat1) - parseFloat(radLat2);
+        var b = getRad(y1) - getRad(y2);
+
+        var s = 2*Math.asin(Math.sqrt(Math.pow(Math.sin(a/2),2) + Math.cos(radLat1)*Math.cos(radLat2)*Math.pow(Math.sin(b/2),2)));
+        s = s*EARTH_RADIUS;
+        s = Math.round(s)/100.0;
+        return s;
+    }
+
+});
+
+</script>
+</body>
+</html>
