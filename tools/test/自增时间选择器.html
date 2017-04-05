@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+<div class="time_container"></div>
+<script>
+$(function(){
+    writeTimePicker();
+//时间选择器
+    function writeTimePicker()
+    {
+        var timeItem,min,hour;
+        var container = $('.time_container');//接收容器
+        var thisId = new Array;
+        var thisText = new Array;
+        var x = "2017-04-01 08:00:00"; // 取得的开始时间
+        var b = 10; //跨度分钟数
+        var time = new Date(x.replace("-","/"));
+
+        for(var i = 0;i < 60 ;i++){
+            time.setMinutes(time.getMinutes() + b);
+            min = new Date(time).getMinutes();
+            hour = new Date(time).getHours();
+            if(min == 0){ min = '00' }//补位
+            if(hour <= 9){ hour = '0'+hour }//补位
+            thisText[i] = hour+':'+min;
+            thisId[i] =  'time'+ thisId[i];
+        }
+        var length = thisId.length;
+        for(var t = 0; t< length; t++) {
+            timeItem = '<label for="'+thisId[t]+'"><input id="'+thisId[t]+'" type="checkbox">'+thisText[t]+'</label>';
+            container.append(timeItem);
+        }
+    };
+});
+
+</script>
+</body>
+</html>
