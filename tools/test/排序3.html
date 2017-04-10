@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<!--<ul id="collect_list">-->
+    <!--<li class="s"><em class="dis_container">122</em></li>-->
+    <!--<li class="s"><em class="dis_container">123</em></li>-->
+    <!--<li class="s"><em class="dis_container">121</em></li>-->
+    <!--<li class="s"><em class="dis_container">124</em></li>-->
+    <!--<li class="s"><em class="dis_container">125</em></li>-->
+<!--</ul>-->
+<ul id="collect_list">
+    <li><div>ab2c</div><em class="dis_container">3</em></li>
+    <li><div>ab3c</div><em class="dis_container">1</em></li>
+    <li><div>a4bc</div><em class="dis_container">2</em></li>
+    <li><div>a5bc</div><em class="dis_container">4</em></li>
+</ul>
+
+<!--<ul id='collect_list'>-->
+<!--</ul>-->
+<script>
+    $(function(){
+        Sort();
+        function Sort(bo)
+        {
+            var arr = document.getElementById("collect_list").innerHTML.match(/<li>[\s\S]+?<\/li>/g);
+            arr.sort(function(a,b){
+                a = parseInt(/<em class=\"dis_container\">(\d+)/.exec(a)[1], 10);
+                b = parseInt(/<em class=\"dis_container\">(\d+)/.exec(b)[1], 10);
+                return bo?b-a:a-b;
+            });
+            $('#collect_list').html(arr.join(""))
+        }
+
+
+
+    })
+
+</script>
+</body>
+</html>
