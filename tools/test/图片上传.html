@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    .shop_img_container {
+        width: 100%;
+        height: 97px;
+    }
+    .shop_img_container ul {
+        width: 100%;
+        height: 97px;
+    }
+    .shop_img_container li {
+        width: 97px;
+        height: 97px;
+        float: left;
+    }
+</style>
+<input type="file" multiple="multiple">
+<div class="shop_img_container">
+    <ul></ul>
+</div>
+<script>
+$(function(){
+    //选择按钮样式修改后修复功能
+    var photo_temp =  document.getElementById("display_img"); //获取显示图片的div元素
+    var input = document.getElementById("uploading_img_hidden"); //获取选择图片的input元素
+
+    //这边是判断本浏览器是否支持这个API。
+    if(typeof FileReader==='undefined') {
+        aaa.innerHTML = "抱歉，你的浏览器不支持 FileReader";
+        input.setAttribute('disabled','disabled');
+    }
+    else {
+        input.addEventListener('change',readFile,false); //如果支持就监听改变事件，一旦改变了就运行readFile函数。
+    }
+    function readFile()
+    {
+        var length = this.files.length;
+        for(var i = 0;i < length ;i++ ){
+            var file = this.files[i];//获取file对象
+            //判断file的类型是不是图片类型。
+            if(!/image\/\w+/.test(file.type)){
+                alert("文件必须为图片！");
+                return false;
+            }
+            var reader = new FileReader(); //声明一个FileReader实例
+            reader.readAsDataURL(file); //调用readAsDataURL方法来读取选中的图像文件
+            //最后在onload事件中，获取到成功读取的文件内容，并以插入一个img节点的方式显示选中的图片
+            reader.onload = function(e){
+                var img = '<li><div class="display_img"><img src="'+this.result+'" alt=""/></div><i class="close_icon"></i></li>';
+                $('.shop_img_container ul').append(img);
+                $('.close_icon').bind('click',function(){
+                    $(this).closest('li').remove();
+                    $('uploading_img_hidden').val('');
+                });
+            }
+        }
+    };
+});
+
+</script>
+</body>
+</html>
