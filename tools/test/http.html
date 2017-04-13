@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<p>
+    header("Access-Control-Allow-Origin:*"); <br>
+    /*星号表示所有的域都可以接受，*/ <br>
+    header("Access-Control-Allow-Methods:GET,POST");
+</p>
+<h5></h5>
+<script>
+$(function(){
+    var url = 'http://192.168.0.105/DuanChangPeng/washCar/api/test.m.php';
+    $.post(url,{},function(result) {
+        var JSON = eval('('+result+')');
+        var length = JSON.recordsTotal;
+      $('h5').html(JSON.data[0]['usercode']);
+    });
+
+});
+
+</script>
+</body>
+</html>
