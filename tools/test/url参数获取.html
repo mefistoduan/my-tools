@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<h5>访问下列网址，前缀路径改成你的本地的环境啊</h5>
+<p>
+    file:///D:/wwwroot/my-tools/tools/test/get%E8%8E%B7%E5%8F%96.html?shop_l=123shop_d=345
+</p>
+<script>
+$(function(){
+    $.getUrlParam = function(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) return unescape(r[2]); return null;
+    };
+    var location = [];
+    location = $.getUrlParam('shop_l');//参数名1
+    var t = location.indexOf('shop_d=');//参数名2
+    var l = parseFloat(location.substr(0,t));
+    var d = parseFloat(location.substr(t+7,11));
+
+    console.log(l+'mefisto'+d);
+
+})
+
+
+</script>
+</body>
+</html>
