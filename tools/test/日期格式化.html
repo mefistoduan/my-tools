@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<P>当前时间：</P>
+<h5></h5>
+<script>
+$(function(){
+    function getNowFormatDate() {
+        var date = new Date();
+        var seperator1 = "-";
+        var seperator2 = ":";
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        if( min < 10) {
+             min = '0'+ min;
+        }
+        if( sec < 10) {
+            sec = '0'+ sec;
+        }
+        var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+                + " " + date.getHours() + seperator2 + min
+                + seperator2 + date.getSeconds();
+        return currentdate;
+    }
+    var display = getNowFormatDate();
+    $('h5').text(display);
+});
+
+</script>
+</body>
+</html>
