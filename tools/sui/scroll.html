@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--<link rel="stylesheet" href="assert/sm.min.css">-->
+    <!--<script type='text/javascript' src='assert/zepto.min.js' charset='utf-8'></script>-->
+    <!--<script type='text/javascript' src='assert/sm.min.js' charset='utf-8'></script>-->
+    <!--<script type='text/javascript' src='assert/sm-extend.min.js' charset='utf-8'></script>-->
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type="text/javascript" src="//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js" charset="utf-8"></script>
+
+</head>
+<body>
+<!-- 添加 class infinite-scroll 和 data-distance  向下无限滚动可不加infinite-scroll-bottom类，这里加上是为了和下面的向上无限滚动区分-->
+<div class="page-group">
+    <div class="page">
+        <header class="bar bar-nav">
+            <h1 class="title">底部无限滚动</h1>
+        </header>
+        <div class="content">
+            <div class="infinite-scroll infinite-scroll-bottom" data-distance="20">
+                <div class="list-block">
+                    <ul class="list-container">
+                    </ul>
+                </div>
+                <!-- 加载提示符 -->
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='scroll.js' charset='utf-8'></script>
+<!--<script type='text/javascript' src='demos.js' charset='utf-8'></script>-->
+</body>
+</html>
