@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h5>
+    <em>您当前</em><span id="state"></span>
+</h5>
+
+<script>
+    if(window.navigator.onLine==true){
+       document.getElementById('state').innerText = '在线';
+    }
+    else{
+        document.getElementById('state').innerText = '离线';
+    }
+</script>
+</body>
+</html>
