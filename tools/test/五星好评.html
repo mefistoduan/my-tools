@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<h5 style="color:red"></h5>
+
+<script>
+$(function(){
+    $('h5').text(getRating(3));
+});
+function getRating(rating) {
+    if(rating > 5 || rating < 0) throw new Error('数字不在范围内');
+    return '★★★★★☆☆☆☆☆'.substring(5 - rating, 10 - rating );
+}
+
+</script>
+</body>
+</html>
