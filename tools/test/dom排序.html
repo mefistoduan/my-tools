@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<ul id='collect_list'>
+    <li >
+        <div class='number'><em class="distance">13.5</em>km</div>
+    </li>
+    <li>
+        <div class='number'><em class="distance">13.1</em>km</div>
+    </li>
+    <li>
+        <div class='number'><em class="distance">33.5</em>km</div>
+    </li>
+</ul>
+
+<button id="asc">从小到大</button>
+<script>
+    var sortThread = {};
+    $(function () {
+        var asc = function(a, b) {
+            return $(a).find('em.distance').text() > $(b).find('em.distance').text() ? 1 : -1;
+        }
+
+        var sortByInput = function(sortBy) {
+            var sortEle = $('#collect_list>li').sort(sortBy);
+            $('#collect_list').empty().append(sortEle);
+        }
+
+        $('#asc').click(function() {
+            sortByInput(asc);
+        });
+});
+
+</script>
+</body>
+</html>
