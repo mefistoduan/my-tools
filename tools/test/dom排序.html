@@ -20,15 +20,15 @@
 
 <button id="asc">从小到大</button>
 <script>
-    var sortThread = {};
+
     $(function () {
-        var asc = function(a, b) {
-            return $(a).find('em.distance').text() > $(b).find('em.distance').text() ? 1 : -1;
-        }
 
         var sortByInput = function(sortBy) {
             var sortEle = $('#collect_list>li').sort(sortBy);
             $('#collect_list').empty().append(sortEle);
+        }
+        var asc = function(a, b) {
+            return $(a).find('em.distance').text() > $(b).find('em.distance').text() ? 1 : -1;
         }
 
         $('#asc').click(function() {
