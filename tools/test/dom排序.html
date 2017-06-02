@@ -28,7 +28,10 @@
             $('#collect_list').empty().append(sortEle);
         }
         var asc = function(a, b) {
-            return $(a).find('em.distance').text() > $(b).find('em.distance').text() ? 1 : -1;
+            console.log($(a).find('em.distance').text());
+            var x =  parseFloat($(a).find('em.distance').text());
+            var y =  parseFloat($(b).find('em.distance').text());
+            return x > y ? 1 : -1;
         }
 
         $('#asc').click(function() {
