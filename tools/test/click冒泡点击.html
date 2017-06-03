@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<table id="tbRsList">
+    <tr>
+        <td>
+            <em>111111</em>
+        </td>
+        <td>
+            <s class="img_style">222</s>
+        </td>
+    </tr>
+</table>
+<script>
+$(function(){
+    $("#tbRsList").on('click', "tr", function (e) {
+        var elem = e.srcElement||e.target
+        if(elem.className == 'img_style')
+        {
+           console.log(123);
+        }
+    });
+});
+
+</script>
+</body>
+</html>
