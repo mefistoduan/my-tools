@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+<h5></h5>
+<script>
+$(function(){
+    $('h5').text('2017-06-02是'+showTime('2017-06-02'));
+    /* 获取当前日期 */
+    function showTime(day){
+        var show_day=new Array('周日','周一','周二','周三','周四','周五','周六');
+        var time= new Date(day);
+        var year=time.getFullYear();
+        var month=time.getMonth()+1;
+        var date=time.getDate();
+        var day=time.getDay();
+        var hour=time.getHours();
+        var minutes=time.getMinutes();
+        var second=time.getSeconds();
+        /*  month<10?month='0'+month:month;  */
+        hour<10?hour='0'+hour:hour;
+        minutes<10?minutes='0'+minutes:minutes;
+        second<10?second='0'+second:second;
+        return show_day[day];
+        /* setTimeout("showTime();",1000);  */
+    }
+});
+
+</script>
+</body>
+</html>
