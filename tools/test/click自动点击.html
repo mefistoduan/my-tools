@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+<button id="ctl00_ContentPlaceHolder1_HyperLink2">123</button>
+<script>
+$(function(){
+    $('#ctl00_ContentPlaceHolder1_HyperLink2').click(function(){
+        console.log(123);
+    });
+    setInterval( clickthis, 5); //开始时钟
+    function clickthis()
+    {
+        document.getElementById('ctl00_ContentPlaceHolder1_HyperLink2').click()
+    }
+});
+
+</script>
+</body>
+</html>
