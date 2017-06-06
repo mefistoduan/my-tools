@@ -40,38 +40,7 @@ function writeDate()
             for (var i = 0; i < count; i++) {
                 row = data.data[i];
                 score  = parseInt(data.data[i]['score']);
-                html +=  '<li>' +
-                    '<div class="appraise_title">' +data.data[i]['cmtid']+
-                    '<a class="external now_appoint" bw_attr="shopid"  shopid='+row['shopid']+' >' +
-                    '<img src="../../../sys2/tpl/res/images/mine_icon02.fw.png" alt="" class="icon_car">' +
-                    '<em bw_name="deptname">' + row['deptname'] + '</em>' +
-                    '<img src="../../../sys2/tpl/res/images/mine_icon01.fw.png" alt="" class="jump_to">' +
-                    '</a>' +
-                    '</div>' +
-                    '<div class="appraise_text">' +
-                    '<div class="tiem_info">' +
-                    '<img src="../../../sys2/tpl/res/images/mine_icon.png" alt="" class="head_logo">' +
-                    '<em class="username" bw_name="usercode">' + row['usercode'] + '</em>' +
-                    '<span class="time">' + row['commenttime'] + '</span>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div class="appraise_detail">' +
-                    '<em>打分</em>' +
-                    '<img src="../../../sys2/tpl/res/images/star'+score+'.png" bw_img="score" alt="" class="appraise_start">' +
-                    '<p bw_name="comment">' + row['comment'] + '</p>' +
-                    '<ul class="photo_list pb-standalone">' +
-                    '<li><img src="" bw_src="'+row['picup']+'" >'+
-                    '</ul>' +
-                    '<div class="idea">' +
-                    '<em>商家回复:</em>' +
-                    '<i class="replytime" bw_name="replytime">' + row['replytime'] + '</i>' +
-                    '<p bw_name="reply"></p>' +
-                    '<input type="hidden" class="ccorderstate"  bw_attr="ccorderstate" ccorderstate="'+row['ccorderstate']+'">' +
-                    '<input type="hidden" class="state"  bw_attr="state" state="'+row['state']+'" >' +
-                    '<input type="hidden" class="todayRemain"  bw_attr="todayRemain" todayRemain="'+row['todayRemain']+'">' +
-                    '</div>' +
-                    '</div>' +
-                    '</li>';
+                html +=  '<li>' + i +'</li>';
             }
             $('.infinite-scroll-preloader').hide();
             // 添加新条目
