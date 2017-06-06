@@ -34,6 +34,10 @@ function writeDate()
         $('.infinite-scroll-preloader').show();
         $.post(url,postdata,function(result){
             var data = eval('('+result+')');
+            if(data.data.length == 0 && $('.toast').length < 1){
+                $.toast("暂无更多记录");
+                $('.infinite-scroll-preloader').hide();
+            }
             var count = (data.data.length < itemsPerLoad) ? data.data.length : itemsPerLoad;
             // 生成新条目的HTML
             var html = '';
@@ -50,12 +54,10 @@ function writeDate()
             lilength = $('.infinite-scroll-bottom>ul>li').length;
             $('#pagesize').val(lilength/itemsPerLoad);
             if (data.length < itemsPerLoad) {
-                if ((pagenum == 1) && (!(data.length > 0)))
-                    $.toast("暂无记录");
-                else
-                    $.toast("无更多记录");
-            }
-            else {
+                if (data.data.length == 0 && $('.toast').length < 1){
+                    $.toast("暂无更多记录");
+                    $('.infinite-scroll-preloader').hide();
+                }
             }
             loading = false;    //重置加载flag
         });
