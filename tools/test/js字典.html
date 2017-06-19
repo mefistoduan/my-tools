@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+    var dic3 = { "济南": "鲁A", "青岛": "鲁B", " 淄博": "鲁C","枣庄": "鲁D", "烟台": "鲁F", " 淄博": "鲁C","潍坊": "鲁A", "青岛": "鲁B", " 淄博": "鲁C","济南": "鲁A", "青岛": "鲁B", " 淄博": "鲁C","济南": "鲁A", "青岛": "鲁B", " 淄博": "鲁C" };
+    var output = "";
+    var key = ''
+    for (var key in dic3) {
+        if (output == "") {
+            output = dic3[key];
+        }
+    }
+
+    console.log(output);
+
+
+});
+
+</script>
+</body>
+</html>
