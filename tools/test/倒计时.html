@@ -16,8 +16,14 @@ $(function(){
     {
         var show_time = document.getElementById("show_time");
         gmt_create = $("input[bw_hidden='gmt_create']").val();
-        endtime = new Date(gmt_create);//结束时间
+        endtime = newDate(gmt_create);//结束时间
         today = new Date();//当前时间
+        //兼容APPLE
+        function newDate(strdate) {
+            var arr = strdate.split(/[- : \/]/);
+            date = new Date(arr[0], arr[1]-1, arr[2], arr[3], arr[4], arr[5]);
+            return date;
+        }
         timeSpace = endtime.getTime() - today.getTime();//时间间隔
         delta_T = parseInt(timeSpace)+900000;//15分钟付款时限
         if(delta_T < 0) {
