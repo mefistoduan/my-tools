@@ -37,6 +37,7 @@ function writeDate()
             if(data.data.length == 0 && $('.toast').length < 1){
                 $.toast("暂无更多记录");
                 $('.infinite-scroll-preloader').hide();
+                return false
             }
             var count = (data.data.length < itemsPerLoad) ? data.data.length : itemsPerLoad;
             // 生成新条目的HTML
