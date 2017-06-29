@@ -17,8 +17,9 @@ function writeDate()
     var score  = '';
     var isrent = '';
     var lilength = '';
-    var pagesize = 1;
+    var pagenumber = 1;
     var url = $('#Query').data('url');
+    $('#pagenumber').val(0);
 
     addItems();    //预先加载记录
 
@@ -26,10 +27,10 @@ function writeDate()
         if (loading)
             return;    // 如果正在加载，则退出
         loading = true;
-        pagesize = $('#pagesize').val();
+        pagenumber = $('#pagenumber').val();
         var postdata = {
             itemsPerLoad:itemsPerLoad,
-            items:pagesize
+            items:pagenumber
         };
         $('.infinite-scroll-preloader').show();
         $.post(url,postdata,function(result){
@@ -53,7 +54,7 @@ function writeDate()
             //页面渲染
             drawList(data);
             lilength = $('.infinite-scroll-bottom>ul>li').length;
-            $('#pagesize').val(lilength/itemsPerLoad);
+            $('#pagenumber').val(lilength/itemsPerLoad);
             if (data.length < itemsPerLoad) {
                 if (data.data.length == 0 && $('.toast').length < 1){
                     $.toast("暂无更多记录");
