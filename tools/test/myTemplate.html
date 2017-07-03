@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<h5  id="Query" data-url="../tools/test/api/test_ajax.php">标题</h5>
+<table id="collect_list">
+</table>
+
+<script>
+$(function(){
+    writeTemplate();
+});
+function writeTemplate()
+{
+    var url = $('#Query').data('url');
+    var container =  $('#collect_list');
+    var shopid = '123';
+        var postdata = {
+            shopid:shopid
+        };
+        $.post(url,postdata,function(result){
+            var JSON = eval('('+result+')');
+            var length = JSON.recordsTotal;
+            var item = '';
+            var row;
+            for (var i = 0; i < length ; i++) {
+                row = JSON.data[i];
+                item += ' <tr> <td><span class="tips">'+row['zhe']+'</span></td></tr>'
+            };
+            $(container).append(item);
+        });
+}
+</script>
+</body>
+</html>
