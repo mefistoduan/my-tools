@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>write</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+<style>
+    .container tr {
+        height: 40px;
+    }
+    h5 {
+        text-align: center;
+    }
+    table {
+        width: 300px;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+    }
+    #sub_btn {
+        width: 100px;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+<div class="container">
+    <h5>write</h5>
+    <form action="write.php" method="post">
+    <table>
+    <tr>
+        <td>title</td>
+        <td><input type="text" name="title"></td>
+    </tr>
+    <tr>
+        <td>content</td>
+        <td><input type="text" name="content"></td>
+    </tr>
+    </table>
+        <input type="submit" id="sub_btn" class="btn btn-success">
+    </form>
+</div>
+</body>
+</html>

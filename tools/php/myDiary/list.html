@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+<h5>list</h5>
+    <ul>
+    </ul>
+</body>
+<style>
+    h5 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    ul {
+        width: 200px;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+    }
+    li {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        border-bottom: 1px solid #1add39;
+        text-align: center;
+    }
+    li s {
+        width: 40px;
+        height: 100%;
+        float: right;
+        text-decoration: none;
+        color: #00a8e6;
+        cursor: pointer;
+    }
+</style>
+<script>
+    $(function(){
+         var url = 'list.php'//获取
+         var postdata = {
+             shopid:1
+         };
+             $.post(url,postdata,function(result){
+                 var length = result.recordsTotal;
+                 var container = 'ul';
+                 var item = '';
+                 var row;
+                 if(length > 1){
+                     for (var i = 0; i < length ; i++) {
+                         row = result.data[i];
+                         item += '<li id="'+row['id']+'">'+row['user_name']+'<s>删除</s> </li>';
+                     };
+                 }
+                 else
+                 {
+                     item = '<p>it is nothing</p>'
+                 }
+                 $(container).append(item);
+             });
+
+        $('ul').on('click','s',function(){
+            confirm('do you want delete it?');
+            $this = $(this);
+            var url = 'delete.php';//获取
+            var listid = $this.closest('li').attr('id');
+            var postdata = {
+              listid:listid
+            };
+            $.post(url,postdata,function(result){
+                console.log(result);
+              if(result == 1){
+                  $this.closest('li').remove();
+              }
+                else {
+                  alert('删除失败，请重试！');
+              }
+            });
+        });
+    });
+</script>
+</html>
