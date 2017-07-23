@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+    //    //点击黑屏隐藏
+    $('.popup-overlay').bind("click",function(e){
+        var target = $(e.target);
+        if(target.closest(".half_page").length == 0){
+            resetAll();
+            $.closeModal('.popup_search');
+            $('.shop_page').addClass('page_default');
+            $('.search_page').addClass('page_default');
+            $('.popup_search').removeClass('half_page');
+        }
+    });
+});
+
+</script>
+</body>
+</html>
