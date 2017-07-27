@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+    var JSON =
+        [
+            {
+            'name':'mefisto',
+            'age':28,
+            'weight':'107kg'
+            },
+            {
+            'name':'nana',
+            'age':28,
+            'weight':'54kg'
+            },
+            {
+            'name':'sure',
+            'age':1,
+            'weight':'7kg'
+            }
+        ];
+    $.each(JSON,function(k,v){
+        console.log(v.name);
+    })
+});
+
+</script>
+</body>
+</html>
