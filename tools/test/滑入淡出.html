@@ -6,8 +6,159 @@
     <script src="../jquery-1.7.2.js"></script>
 </head>
 <body>
+<div class="showcase">
+<div class="showcase_img">
+    <a target="_self" href="http://www.g-cores.com/articles/26131">
 
+        <img alt="石头、剪刀、布：童年游戏里蕴藏的深度博弈平衡" src="http://image.g-cores.com/41ab59d4-10f8-4d3e-8953-fac65f6afbf8.jpg?x-oss-process=style/original_hs">
 
+        <div class="showcase_meta">
+            <p>
+                <img class="img-circle" src="http://alioss.g-cores.com/uploads/user/5aff26b1-3158-410e-aeff-ca8dacfdb31b_normal.jpg" alt="">
+            </p>
+            <p class="showcase_meta_nums">
+          <span>
+            <b class="fa fa-thumbs-up"></b> 18
+          </span>
+                <span>
+            39 Comments
+          </span>
+            </p>
+        </div>
+    </a>
+</div>
+</div>
+<style>
+    .showcase:hover {
+        text-decoration:none
+    }
+    .showcase:hover .showcase_img img {
+        -webkit-transform:scale(1.05, 1.05);
+        -ms-transform:scale(1.05, 1.05);
+        -o-transform:scale(1.05, 1.05);
+        transform:scale(1.05, 1.05)
+    }
+    .showcase:hover .showcase_img .showcase_meta {
+        opacity:1;
+        filter:alpha(opacity=100)
+    }
+    .showcase .showcase_time {
+        font-size:12px;
+        color:#909090
+    }
+    .showcase .showcase_time span {
+        float:right;
+        color:#686868;
+        font-weight:bold
+    }
+    .showcase .showcase_img {
+        position:relative;
+        overflow:hidden
+    }
+    .showcase .showcase_img img {
+        width:100%;
+        height:auto;
+        border:none;
+        -webkit-transition:-webkit-transform ease 0.8s;
+        -o-transition:-webkit-transform ease 0.8s;
+        transition:-webkit-transform ease 0.8s;
+        -webkit-transition:-ms-transform ease 0.8s;
+        -o-transition:-ms-transform ease 0.8s;
+        transition:-ms-transform ease 0.8s;
+        -webkit-transition:-o-transform ease 0.8s;
+        -o-transition:-o-transform ease 0.8s;
+        transition:-o-transform ease 0.8s;
+        -webkit-transition:transform ease 0.8s;
+        -o-transition:transform ease 0.8s;
+        transition:transform ease 0.8s
+    }
+    .showcase .showcase_img .showcase_type {
+        position:absolute;
+        z-index:1;
+        left:8px;
+        bottom:8px;
+        font-size:12px;
+        line-height:20px;
+        height:20px;
+        width:20px;
+        color:#333;
+        text-align:center;
+        background:#fff
+    }
+    .showcase .showcase_img .showcase_meta {
+        opacity:0;
+        filter:alpha(opacity=0);
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        padding:10% 0;
+        text-align:center;
+        color:#fff;
+        background:#f6695f;
+        background:rgba(246, 105, 95, 0.9);
+        -webkit-transition:opacity ease 0.8s;
+        -o-transition:opacity ease 0.8s;
+        transition:opacity ease 0.8s
+    }
+    .showcase .showcase_img .showcase_meta img {
+        width:30px;
+        height:30px
+    }
+    @media (min-width: 992px) {
+        .showcase .showcase_img .showcase_meta img {
+            width:50px;
+            height:50px
+        }
+    }
+    .showcase .showcase_img .showcase_meta p {
+        margin:0 0 10%
+    }
+    .showcase .showcase_img .showcase_meta p.showcase_meta_nums span {
+        margin:0 10px
+    }
+    .showcase .showcase_text {
+        height:130px;
+        overflow:hidden
+    }
+    .showcase.showcase-noInfo .showcase_text {
+        height:90px
+    }
+    .showcase h4 {
+        position:relative;
+        margin:10px 0;
+        font-size:14px;
+        color:#686868;
+        font-weight:bold;
+        max-height:40px;
+        overflow:hidden;
+        line-height:20px;
+        padding-left:15px
+    }
+    .showcase h4:after {
+        content:'';
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        width:5px;
+        height:20px;
+        background:#d9534f
+    }
+    .showcase.showcase-video h4:after {
+        background:#5cb85c
+    }
+    .showcase.showcase-audio h4:after {
+        background:#f0ad4e
+    }
+    .showcase .showcase_info {
+        color:#909090;
+        font-size:12px;
+        overflow:hidden;
+        max-height:57px
+    }
+</style>
 <script>
 $(function(){
 
