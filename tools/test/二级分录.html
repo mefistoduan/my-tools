@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<button id="type_btn">click it</button>
+<div class="page-group" >
+
+</div>
+<style>
+#type_btn {
+    width: 100px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #0a3191;
+}
+.page-group {
+    width: 600px;
+    overflow: hidden;
+    display: block;
+}
+.picker-modal {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 13rem;
+    z-index: 11500;
+    display: none;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    background: #cfd5da;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+.type_list {
+    position: absolute;
+    top: 4rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+.type_list .container {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+.type_list .lt {
+    width: 30%;
+    height: 13rem;
+    float: left;
+    border-bottom: 1px solid #ccc;
+    overflow-y: scroll;
+}
+.type_list .rt {
+    width: 70%;
+    height: 13rem;
+    float: right;
+    overflow-y: scroll;
+}
+.type_list .lt li {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.type_list .lt li.active {
+    color: #0b6aff;
+}
+.type_list .rt li {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-bottom: 0;
+    padding-top: 3px;
+    padding-left: 30px;
+    padding-bottom: 3px;
+}
+.type_list .rt li span {
+    color: #fff;
+    margin-right: 20px;
+}
+.type_list .rt li.active {
+    color: #0b6aff;
+}
+.type_list .rt li.active span {
+    color: #0b6aff;
+}
+</style>
+<script>
+$(function(){
+
+    $("#type_btn").click(function () {
+        var html = '<div class="picker-modal type_list  remove-on-close modal-in" style="display: block;">\n' +
+            '    <div class="container">\n' +
+            '        <div class="lt">\n' +
+            '            <ul>\n' +
+            '            </ul>\n' +
+            '        </div>\n' +
+            '        <div class="rt">\n' +
+            '            <ul>\n' +
+            '                <li><em>全部</em><span class="icon icon-check pull-right"></span></li>'+
+            '            </ul>\n' +
+            '        </div>\n' +
+            '    </div>\n' +
+            '</div>';
+
+        var liststate =  $('body').hasClass('with-picker-modal');
+        if(liststate == false){
+            $('body').addClass('with-picker-modal');
+            $('.page-group').after(html);
+            var items = '';
+            $.each(list,function (k,v) {
+                items += '  <li>'+k+'</li>';
+            })
+            $('.type_list .lt ul').html(items);
+        }
+        else
+        {
+            $('body').removeClass('with-picker-modal');
+            $('.picker-modal').remove();
+        }
+
+        $('.container .lt li').live('click',function () {
+            $(this).closest('ul').find('li').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        $('.container .rt li').live('click',function () {
+            $('.container .rt li').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+
+    // 切换
+    $('.type_list .lt li').live('click',function () {
+        var names = '';
+        var i = $(this).index();
+        var liText = $(this).text();
+        var jsonFirst = list[''+liText+''];
+        $.each(jsonFirst,function (k,v) {
+            names += '  <li><em>'+v+'</em><span class="icon icon-check pull-right"></span></li>';
+        });
+        $('.type_list .rt').empty().html(names);
+    });
+});
+
+var list =
+    {
+        "全部": {
+            "0": "全部.",
+        },
+        "婚庆": {
+            "0": "婚戒饰品.",
+            "1": "婚宴",
+            "2": "婚纱摄影",
+            "3": "婚介",
+            "4": "其他婚庆",
+            "5": "婚庆公司",
+            "6": "彩妆造型",
+            "7": "婚礼跟拍",
+            "8": "个性写真",
+        },
+        "美食": {
+            "0": "小吃快餐.",
+            "1": "面包甜点",
+            "2": "素菜",
+            "3": "川菜",
+            "4": "火锅",
+            "5": "粤菜",
+            "6": "湘菜",
+            "7": "日本料理",
+            "8": "烧烤",
+            "9": "东北菜",
+        },
+        "酒店": {
+            "0": "酒店旅馆.",
+        },
+        "休闲娱乐": {
+            "0": "美发",
+            "1": "咖啡馆",
+            "2": "足疗按摩",
+            "3": "会所",
+            "4": "洗浴",
+            "5": "美容/SPA",
+            "6": "茶楼",
+            "7": "瘦身纤体",
+            "8": "酒吧",
+            "9": "运动健身",
+        },
+        "生活服务": {
+            "0": "礼品",
+            "1": "服装",
+            "2": "日用品",
+            "3": "珠宝首饰",
+            "4": "烟酒茶水",
+            "5": "便利店",
+            "6": "宠物店/宠物医院",
+            "7": "干洗",
+            "8": "百货购物",
+            "9": "殡葬",
+        },
+    };
+</script>
+</body>
+</html>
