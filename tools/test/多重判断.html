@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+//    方法1
+    editor = {
+        "font" : function(){
+            console.log(123)
+        },
+        "code" : function(){
+            console.log(222)
+        },
+        "table" : function(){
+            console.log(333);
+        },
+    }
+      var target = 'code';
+    editor[target]();
+
+//    方法2
+    switch (target){
+        case 'font':
+            moredetail(this);
+            break;
+        case  'code':
+            moredetail(this);
+            break
+    }
+function   moredetail() {
+//        在函数里继续嵌套函数进行判断，每次传进上一层的数据进行判断，这样可以在保持逻辑清晰的情况下增加代码的可读性
+    if(!this){
+        console.log(123);
+    }
+    else {
+        console.log(222);
+    }
+}
+});
+
+</script>
+</body>
+</html>
