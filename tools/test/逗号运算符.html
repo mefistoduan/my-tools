@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+    var a = 0;
+    var b = ( a++, 99 );
+    console.log(a);  // a will be equal to 1
+    console.log(b);  // b is equal to 99
+});
+
+</script>
+</body>
+</html>
