@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+<input type="button" value="发送短信">
+<script>
+$(function(){
+    $("#forget_phone").click(function(){
+        var _this = $(this);
+        var url_phoneva = $('#register_tel').data('url');
+
+        var postdata = {
+            'tel':$('#for_phone').val()
+        };
+        $.post(url_phoneva,postdata,function(result) {
+            var JSON = eval('(' + result + ')');
+            var code = JSON['code'];
+            if( code == -1 ){//注册手机可以发送
+
+                $.toast("该手机号没有注册，无法重置密码");
+                return false;
+            }
+            else{
+                if(!checkPhoneComm('#for_phone')) return;
+                //var reg = /^\s*(15\d{9}|13[0-9]\d{8}|18\d{9}|17\d{9}|14\d{9})\s*$/;
+                var phone = $('#for_phone');
+                var countdown = 60;
+                //设置button效果，开始计时
+                _this.attr("disabled", "true");
+                _this.val(countdown + "秒后重新获取");
+                //启动计时器，1秒执行一次
+                var timer = setInterval(function(){
+                    if (countdown == 0) {
+                        clearInterval(timer);//停止计时器
+                        _this.removeAttr("disabled");//启用按钮
+                        _this.val("重新发送");
+                    }
+                    else {
+                        countdown--;
+                        _this.val(countdown + "秒后重新获取");
+                    }
+                }, 1000);
+
+                var url = $('#zc_validCode').data('url');//tpdp
+                var postdata = {
+                    'tel':phone.val(),
+                    'type':2//重置密码
+                };
+
+                $.post(url,postdata,function(result) {
+                    var JSON = eval('(' + result + ')');
+                    var succ = JSON['sendresp']['result']['success'];
+                    var code = JSON['code'];
+                    if(succ == true && code == 1 ){
+                        $.toast("短信已发送，请注意查收");
+                    }
+                    else
+                    {
+                        $.toast("短信发送，请注意查收");
+                    }
+                });
+                return false;
+            }
+        });
+    });
+});
+
+</script>
+</body>
+</html>
