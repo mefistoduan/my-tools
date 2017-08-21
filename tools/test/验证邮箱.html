@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+//验证邮箱
+    function checkMail(container)
+    {
+        var thisVal = $(container).val();
+        var reg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+        if(!reg.test(thisVal)){
+            $.alert('邮箱格式不正确');
+            return false;
+        }else{
+            return true;
+        }
+    }
+});
+
+</script>
+</body>
+</html>

@@ -12,7 +12,8 @@
 $(function(){
     var a = '中文';
     var b = btoa(encodeURIComponent(a));
-    console.log(a+'=='+b);
+    var c = encodeURIComponent(a);
+    console.log(a+'=='+b+'=='+c);
 });
 
 </script>
