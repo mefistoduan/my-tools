@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+
+});
+
+function delRepeat(arr) {
+    var newArray = new Array();
+    var len = arr.length();
+    for(var i = 0; i < len; i ++){
+        for (var j = i+1; j < len ;j++){
+            if(arr[i] == arr[j]){
+                ++i
+            }
+        }
+        newArray.push(arrp[i]);
+    }
+}
+
+</script>
+</body>
+</html>
