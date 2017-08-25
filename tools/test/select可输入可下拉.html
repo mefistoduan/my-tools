@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+    <script src="js/customComboBox.js"></script>
+</head>
+<body>
+<form style="margin-top:100px;">
+    <p><strong>jQuery Plugins</strong><br/>
+        <select name='Plugins'>
+            <option value="jQueryScript.Net">freejs.net</option>
+            <option value="jQuery.Com">jQuery.Com</option>
+            <option value="Google.com">Google.com</option>
+        </select>
+        <input type='button' value='Submit' />
+    </p>
+    <p><strong>Pizza Toppings</strong><br/>
+        <select name='pizza'>
+            <option value="pepperoni">Pepperoni</option>
+            <option value="extra cheese">Extra Cheese</option>
+            <option value="banana peppers">Banana Peppers</option>
+        </select>
+        <input type='button' value='Submit' />
+    </p>
+    <p><strong>price</strong><br/>
+        <select name='donation'>
+            <option value="10.00">10.00</option>
+            <option value="20.00">20.00</option>
+            <option value="30.00">30.00</option>
+        </select>
+        <input type='button' value='Submit' />
+    </p>
+</form>
+
+<script>
+$(function(){
+    $("select").customComboBox({
+
+        tipText : "Enter Your Value",
+
+        tipClass : "mytipclass",
+
+        allowed : /[A-Za-z0-9$.s]/,
+
+        notallowed : /[<>]/,
+
+        index : 'last',
+
+        isEditing : function(el, status, value) {
+            if (typeof window.console!='object') { return; }
+            console.info('Editing status changed to (', status, ') on ', el, ' combo box and the selected value is "', value, '"');
+        },
+        onKeyDown : function(el, character, fulltext) {
+            if (typeof window.console!='object') { return; }
+            console.info('The character (', character, ') was just typed into ', el, ' combo box and the complete text is now "', fulltext, '"');
+        },
+        onDelete : function(el, fulltext) {
+            if (typeof window.console!='object') { return; }
+            console.info('A character was deleted from ', el, ' combo box and the complete text is now "', fulltext, '"');
+        }
+    });
+
+    $("form p").find('input').on('click',function(e) {
+        var sel = $(e.currentTarget).prev('select');
+        var name = sel.attr('name').toUpperCase();
+        var val = sel.find('option:selected').val();
+        $("#result").text(name+" combo box value is " + val);
+    });
+});
+
+</script>
+</body>
+</html>
