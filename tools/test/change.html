@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<select name="" id="sel_container">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">4</option>
+</select>
+<h5></h5>
+<script>
+$(function(){
+    $('#sel_container').change(function () {
+        $('h5').text($(this).find('option:selected').val());
+    });
+});
+
+</script>
+</body>
+</html>
