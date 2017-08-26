@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onkeypress</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+<input type="text" id="input_write">
+<h5 id="container_text"></h5>
+<script>
+    $(function () {
+        $('#input_write').keyup(function () {
+            write();
+        })
+    })
+function write() {
+    $('#container_text').html($('#input_write').val());
+}
+</script>
+</body>
+</html>
