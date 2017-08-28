@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+    var getCurrDays = getCurrDay();
+    console.log(getCurrDays);
+});
+
+//获取当前日期
+function getCurrDay()
+{
+    var myDate = new Date();
+    var year =  myDate.getFullYear();
+    var month =  myDate.getMonth()+1;
+    var day =  myDate.getDate();
+    return [''+year+'-'+month+'-'+day+'']
+}
+
+</script>
+</body>
+</html>
