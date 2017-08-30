@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<select name="" id="cc_type_sel">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+</select>
+
+<script>
+$(function(){
+    $('#cc_type_sel option').prop("selected", false);
+    $('#cc_type_sel option[value=1]').prop("selected", true);//重置洗车类型
+});
+
+</script>
+</body>
+</html>
