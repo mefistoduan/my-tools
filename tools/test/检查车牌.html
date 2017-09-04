@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+
+});
+function checkPlate(val)
+{
+    //var re = /^[\u4e00-\u9fa5]{1}[a-zA-Z0]{1}[a-zA-Z0-9]{5}$/;
+    var re =  /^[\u4e00-\u9fa5]{1}[a-zA-Z0]{1}([a-zA-Z0-9]{5,6}|[a-zA-Z0-9]{4}[\u4e00-\u9fa5]{1})$/;//兼容新能源车牌
+    if(val.search(re) == -1) {
+        //alert("输入的车牌号格式不正确");
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+</script>
+</body>
+</html>
