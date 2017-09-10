@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+<input type="text" id="true_pay" value="asdf">
+<script>
+$(function(){
+    $('#true_pay').keyup(function () {
+        if(!checkPrice('#true_pay','洗车费用请填写正整数！'))return;
+    })
+});
+// 检查金额类型
+function checkPrice(container,warning) {
+    var reg = /^[1-9]\d*|0$/;
+    var thisVal = $(container).val();
+    if(!reg.test(thisVal)){
+        alert(warning);
+        $(container).val('0');
+        return false
+    }else{
+        return true
+    }
+}
+
+</script>
+</body>
+</html>
