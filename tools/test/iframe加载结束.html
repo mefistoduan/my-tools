@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+    var iframe = document.createElement("iframe");
+    if(iframe_url == 'http://app.beswell.cc'){
+        //     if(iframe_url == 'http://app/'){  //test
+        if(usercode != '' && usercode != 'undefined'){
+            iframe.src = 'http://app.beswell.cc/?&name='+usercode+'&dwp='+passwd+'&server=false';
+            // iframe.src  = 'http://app/?&name='+usercode+'&dwp='+passwd+'&server=false';  //test
+        }
+    }
+    $.showPreloader();
+    iframe.id = 'iframe_webview';
+    console.log(iframe);
+    if (iframe.attachEvent){
+        iframe.attachEvent("onload", function(){
+            setTimeout(function () {
+                $.hidePreloader();
+            }, 1000);
+        });
+    } else {
+        iframe.onload = function(){
+            setTimeout(function () {
+                $.hidePreloader();
+            }, 1000);
+        };
+    }
+    $('.content').append(iframe);
+});
+
+</script>
+</body>
+</html>
