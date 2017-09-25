@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery-1.7.2.js"></script>
+    <script src="FileSaver.js"></script>
+</head>
+<body>
+<h5>读取一个本地文件</h5>
+<input type="file" id="file" />
+<input type="button" onclick="readText()" value="File Button">
+<div id="tt">
+<script>
+    function readText() {
+        var file=document.getElementById("file").files[0];
+        var reader=new FileReader();
+        reader.readAsText(file);
+        reader.onload=function(data)
+        {
+            var tt=document.getElementById("tt")
+            tt.innerHTML=this.result;
+        }
+    }
+
+</script>
+</body>
+</html>
