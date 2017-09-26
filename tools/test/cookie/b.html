@@ -1,0 +1,22 @@
+
+<html>
+<head>
+    <title>jquery方式，访问iframe页面dom元素</title>
+    <meta name="Author" content="孙勤波">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <script type="text/javascript" src="http://s1.bdstatic.com/r/www/cache/static/jquery/jquery-1.10.2.min_f2fb5194.js"></script>
+    <script type="text/javascript">
+        function getIframeDom(){
+// 获取iframe的test元素
+            var test = $("#frame_1").contents().find("#test");
+            alert(test.html())
+        }
+    </script>
+</head>
+<body>
+<iframe src="http://a.com/my-tools/tools/test/cookie/a.html" id="frame_1"></iframe>
+<br />
+<a href="javascript:getIframeDom();">获取iframe 页面test元素内容</a>
+</body>
+</html>
+
