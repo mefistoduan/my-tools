@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/zepto.js"></script>
+</head>
+<body>
+<div class="page" id="upload">
+    <h2>UploadImg</h2>
+    <div id="dd" class="filePicker">点击选择文件</div>
+    <div id="preview"></div>
+
+</div>
+<script>
+$(function(){
+    $.fileUpload({ filebutton: "#dd", previewZoom: "#preview" });
+});
+(function ($) {
+    $.extend($, {
+        fileUpload: function (options) {
+            var para = {
+                multiple: true,
+                filebutton: ".filePicker",
+                uploadButton: null,
+                url: "/home/MUploadImg",
+                filebase: "mfile",//mvc后台需要对应的名称
+                auto: true,
+                previewZoom: null,
+                uploadComplete: function (res) {
+                    console.log("uploadComplete", res);
+                },
+                uploadError: function (err) {
+                    console.log("uploadError", err);
+                },
+                onProgress: function (percent) {  // 提供给外部获取单个文件的上传进度，供外部实现上传进度效果
+                    console.log(percent);
+                },
+            };
+            para = $.extend(para, options);
+
+            var $self = $(para.filebutton);
+            //先加入一个file元素
+            var multiple = "";  // 设置多选的参数
+            para.multiple ? multiple = "multiple" : multiple = "";
+            $self.css('position', 'relative');
+            $self.append('<input id="fileImage" style="opacity:0;position:absolute;top: 0;left: 0;width:100%;height:100%" type="file" size="30" name="fileselect[]" ' + multiple + '>');
+
+            var doms = {
+                "fileToUpload": $self.parent().find("#fileImage"),
+                // "thumb": $self.find(".thumb"),
+                // "progress": $self.find(".upload-progress")
+            };
+            var core = {
+                fileSelected: function () {
+                    var files = (doms.fileToUpload)[0].files;
+                    var count = files.length;
+                    console.log("共有" + count + "个文件");
+                    for (var i = 0; i < count; i++) {
+                        var item = files[i];
+                        console.log(item.size);
+                        if (para.auto) {
+                            core.uploadFile(item);
+                        }
+                        core.previewImage(item);
+                    }
+                },
+
+                uploadFile: function (file) {
+                    console.log("开始上传");
+                    var formdata = new FormData();
+
+                    formdata.append(para.filebase, file);//这个名字要和mvc后台配合
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.upload.addEventListener("progress", function (e) {
+
+                        var percentComplete = Math.round(e.loaded * 100 / e.total);
+                        para.onProgress(percentComplete.toString() + '%');
+                    });
+                    xhr.addEventListener("load", function (e) {
+                        para.uploadComplete(xhr.responseText);
+                    });
+                    xhr.addEventListener("error", function (e) {
+                        para.uploadError(e);
+                    });
+
+                    xhr.open("post", para.url, true);
+                    //xhr.setRequestHeader("X_FILENAME", file.name);
+                    xhr.send(formdata);
+                },
+                uploadFiles: function () {
+                    var files = (doms.fileToUpload)[0].files;
+                    for (var i = 0; i < files.length; i++) {
+                        core.uploadFile(files[i]);
+                    }
+                },
+                previewImage: function (file) {
+                    if (!para.previewZoom) return;
+                    var img = document.createElement("img");
+                    img.file = file;
+                    $(para.previewZoom).append(img);
+                    // 使用FileReader方法显示图片内容
+                    var reader = new FileReader();
+                    reader.onload = (function (aImg) {
+                        return function (e) {
+                            aImg.src = e.target.result;
+                        };
+                    })(img);
+                    reader.readAsDataURL(file);
+                }
+            }
+            doms.fileToUpload.on("change", function () {
+                //doms.progress.find("span").width("0");
+                console.log("选中了文件");
+                core.fileSelected();
+            });
+
+            console.log("初始化!");
+            //绑定事件
+
+            $(document).on("click", para.filebutton, function () {
+                console.log("clicked");
+                //doms.fileToUpload.click();
+            });
+            if (para.uploadButton) {
+                $(document).on("click", para.uploadButton, function () {
+                    core.uploadFiles();
+                });
+            }
+        }
+    });
+})(Zepto);
+</script>
+</body>
+</html>
