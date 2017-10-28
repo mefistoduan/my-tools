@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+</head>
+<body>
+<style>
+    /*涓婁笅鍒囨崲*/
+    .hide {display: none;}
+    .show {display: block;}
+    .pic_edit {position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 100;background:#e9e9e9; opacity:.8}
+    #clipArea {margin: 0 auto;background:#f2f2f2; width:100%; height:60%}
+    #clipBtn{margin-top: 5px;background-color: rgb(221, 39, 39);color: #fff;padding: 8px 20px;border-radius: 5px;width: 40%;}
+    #upload2{margin-top: 5px;background-color: rgb(221, 39, 39);color: #fff;padding: 8px 20px;border-radius: 5px;width: 40%;margin-left: 3%;}
+
+    #hit {position: fixed;top: 19%;left: 9.375%;background: gainsboro;}
+    .logo {position: absolute;bottom: 12%;z-index: 100;width: 46%;left: 27%;}
+
+    /*閫傚簲灏忓睆*/
+    @media screen and (max-height: 450px) {
+        .show_labour .show_img {width: 75%;margin-top: 22%;}
+        .show_labour .show5 {width: 80%;left: 10%;margin-top: 22%;}
+        .show_labour .show5_btn {width: 62%;}
+        #clipBtn, #upload2 {margin-top: 0px;padding: 5px 20px;}
+    }
+    .lazy_tip{position: absolute;margin-top: 35%;z-index: 1001;font-size: 25px;width: 100%;color: #4eaf7a;line-height: 30px;}
+    .lazy_cover {width: 100%;height: 100%;background-color: black;z-index: 1000;color: #4eaf7a;font-size: 25px;opacity: 0.7;position: fixed;top: 0;left: 0;}
+    #plan{ position:absolute;top:0;left:0; width:100%; clear:both; height:100%;display: none;
+        background: rgb(255, 255, 255);
+        vertical-align: baseline;
+        text-align: center;
+        line-height: 1.5;
+        padding-top: 25%;}
+    #plan canvas{clear:both;}
+</style>
+<!--加载资源-->
+<div class="lazy_tip" id="lazy_tip" style="display: none;">
+    <span>1%</span><br>	载入中......<div class="l">
+    <canvas class="sonic" height="100" width="100" style="margin-top: 0px;"></canvas></div></div>
+<div class="lazy_cover" style="display: none;"></div>
+<div class="resource_lazy hide"></div>
+<div class="pic_edit">
+    <h4 style="color:#4eaf7a;">双指旋转和双指缩放-www.bcty365.com</h4>
+    <div id="clipArea" style="user-select: none; overflow: hidden; position: relative;"><div class="photo-clip-view" style="position: absolute; left: 50%; top: 50%; width: 960px; height: 960px; margin-left: -480px; margin-top: -480px;"><div class="photo-clip-moveLayer" style="transform-origin: 0px 0px 0px; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) scale(1) translateZ(0px);"><div class="photo-clip-rotateLayer"></div></div></div><div class="photo-clip-mask" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; pointer-events: none;"><div class="photo-clip-mask-left" style="position: absolute; left: 0px; right: 50%; top: 50%; bottom: 50%; width: auto; height: 960px; margin-right: 480px; margin-top: -480px; margin-bottom: -480px; background-color: rgba(0, 0, 0, 0.5);"></div><div class="photo-clip-mask-right" style="position: absolute; left: 50%; right: 0px; top: 50%; bottom: 50%; margin-left: 480px; margin-top: -480px; margin-bottom: -480px; background-color: rgba(0, 0, 0, 0.5);"></div><div class="photo-clip-mask-top" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 50%; margin-bottom: 480px; background-color: rgba(0, 0, 0, 0.5);"></div><div class="photo-clip-mask-bottom" style="position: absolute; left: 0px; right: 0px; top: 50%; bottom: 0px; margin-top: 480px; background-color: rgba(0, 0, 0, 0.5);"></div><div class="photo-clip-area" style="border: 1px dashed rgb(221, 221, 221); position: absolute; left: 50%; top: 50%; width: 960px; height: 960px; margin-left: -481px; margin-top: -481px;"></div></div></div>
+    <button id="upload2">选择图片</button>
+    <button id="clipBtn">上传图片</button>
+    <input type="file" id="file" style="opacity: 0;position: fixed;" accept="image/*">
+
+</div>
+<img src="" filename="" id="hit" style="display: none; z-index: 9; background-color: rgb(102, 102, 102); background-repeat: no-repeat; background-position: center center; background-size: contain;">
+<input type="button" value="返回" style="display:none" id="close_img" onclick="close_img()">
+<div id="cover"></div>
+
+<script src="js/cut2/jquery-2.1.0.min.js"></script>
+<script src="js/cut2/sonic.js"></script>
+<script src="js/cut2/comm.js"></script>
+<script src="js/cut2/hammer.js"></script>
+<script src="js/cut2/iscroll-zoom.js"></script>
+<script src="js/cut2/jquery.photoClip.js?v=1"></script>
+<script>
+    function close_img()
+    {
+        $(".pic_edit").css({'display':"block"});
+        $('#hit').css({'display':"none"});
+        $('#close_img').css({'display':"none"});
+    }
+
+    var hammer = '';
+    var currentIndex = 0;
+    var body_width = $('body').width();
+    var body_height = $('body').height();
+
+    $("#clipArea").photoClip({
+        width: body_width * 0.5,
+        height: body_width * 0.5,
+        file: "#file",
+        view: "#hit",
+        ok: "#clipBtn",
+        loadStart: function () {
+            //console.log("照片读取中");
+            $('.lazy_tip span').text('');
+            $('.lazy_cover,.lazy_tip').show();
+        },
+        loadComplete: function () {
+            //console.log("照片读取完成");
+            $('.lazy_cover,.lazy_tip').hide();
+        },
+        clipFinish: function (dataURL) {
+            $('#hit').attr('src', dataURL);
+            saveImageInfo();
+            $("#clipArea img").remove();
+        }
+    });
+
+
+
+    //图片上传
+    function saveImageInfo() {
+        var filename = $('#hit').attr('fileName');
+        var img_data = $('#hit').attr('src');
+        if(img_data==""){alert('null');}
+        //alert(filename+'|'+img_data);
+        //var file = document.getElementById('file').files[0];
+        render(img_data);
+        $.post("upload.php", {image: img_data}, function (data) {
+            var json = eval("(" + data + ")");
+            if(json.ok==1)
+            {
+                $(".pic_edit").css({'display':"none"});
+                $('#hit').css({'display':"block"});
+                $('#close_img').css({'display':"block"});
+
+            }
+        });
+    }
+
+    // 获取blob对象的兼容性写法
+    function getBlob(buffer, format){
+        var Builder = window.WebKitBlobBuilder || window.MozBlobBuilder;
+        if(Builder){
+            var builder = new Builder;
+            builder.append(buffer);
+            return builder.getBlob(format);
+        } else {
+            return new window.Blob([ buffer ], {type: format});
+        }
+    }
+    /*获取文件拓展名*/
+    function getFileExt(str) {
+        var d = /\.[^\.]+$/.exec(str);
+        return d;
+    }
+
+    //图片上传结束
+    $(function () {
+        /*$('#upload2').on('touchstart', function () {
+            //图片上传按钮
+            $('#file').click();
+        });*/
+
+        $('#upload2').click(function(){
+            //图片上传按钮
+            $('#file').click();
+        });
+
+
+    })
+
+
+
+    // 渲染 Image 缩放尺寸
+    function render(src,image){
+        var MAX_HEIGHT = 256;  //Image 缩放尺寸
+        // 创建一个 Image 对象
+        var image = new Image();
+
+        // 绑定 load 事件处理器，加载完成后执行
+        image.onload = function(){
+            // 获取 canvas DOM 对象
+            var canvas = document.createElement("canvas");
+            // 如果高度超标
+            if(image.height > MAX_HEIGHT) {
+                // 宽度等比例缩放 *=
+                image.width *= MAX_HEIGHT / image.height;
+                image.height = MAX_HEIGHT;
+            }
+            // 获取 canvas的 2d 环境对象,
+            // 可以理解Context是管理员，canvas是房子
+            var ctx = canvas.getContext("2d");
+            // canvas清屏
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            canvas.width = image.width;        // 重置canvas宽高
+            canvas.height = image.height;
+            // 将图像绘制到canvas上
+            ctx.drawImage(image, 0, 0, image.width, image.height);
+            // !!! 注意，image 没有加入到 dom之中
+
+            var dataurl = canvas.toDataURL("image/jpeg");
+
+        };
+        // 设置src属性，浏览器会自动加载。
+        // 记住必须先绑定render()事件，才能设置src属性，否则会出同步问题。
+        image.src = src;
+    };
+</script>
+
+
+
+</body>
+
+
+</body>
+</html>

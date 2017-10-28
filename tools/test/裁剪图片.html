@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="js/cutphoto/sm.css">
+    <script src="js/cutphoto/zepto.js"></script>
+    <script type="text/javascript" src="js/cutphoto/zepto.cutphoto.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div id="container_node"></div>
+
+<script>
+$(function () {
+    $.cutPhoto(
+        {
+            container         : "container_node",
+            browse_button     : "browseFile",
+            save_button       : "saveimg",
+//            filters_background: "<%= locals.userInfo.photo_url %>"
+            filters_background: "../img/big_pic.jpg"
+        },
+        function (cutPhotoCacheData, initStatus) {
+            var imgData   = cutPhotoCacheData();
+            //todo
+        }
+    );
+
+})
+</script>
+</body>
+</html>
