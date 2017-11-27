@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+    var JSON = {
+        "result":[
+            {
+                "cid":1,
+                "name":"aaa",
+                "price":1000
+            },{
+                "cid":2,
+                "name":"bbb",
+                "price":150
+            },{
+                "cid":3,
+                "name":"ccc",
+                "price":200
+            }
+        ],
+        "totalCount":3
+    }
+$(function(){
+    var newJson = JSON.result;
+    function sortThis(a,b) {
+        return a.price -b.price
+    }
+    newJson.sort(sortThis);
+    console.log(newJson);
+
+});
+
+</script>
+</body>
+</html>
