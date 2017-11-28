@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<p>
+    什么时候使用工厂模式
+    <br>
+    <br>
+    以下几种情景下工厂模式特别有用：
+    <br>
+    对象的构建十分复杂
+    <br>
+    需要依赖具体环境创建不同实例
+    <br>
+    处理大量具有相同属性的小对象
+</p>
+
+<script>
+$(function(){
+    var Car = (function () {
+        var Car = function (model, year, miles) {
+            this.model = model;
+            this.year = year;
+            this.miles = miles;
+        };
+        return function (model, year, miles) {
+            return new Car(model, year, miles);
+        };
+    })();
+
+    var tom = new Car("Tom", 2009, 20000);
+    var dudu = new Car("Dudu", 2010, 5000);
+    console.log(tom);
+    console.log(dudu);
+});
+
+</script>
+</body>
+</html>
