@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <script src="../jquery-1.7.2.js"></script>
 </head>
 <body>
@@ -10,7 +13,7 @@
 <p></p>
 <script>
 $(function(){
-    var thisWidth = $('body').width();
+    var thisWidth = $('html').width();
     var thisHeight = $('body').height();
     $('h5').text('屏宽：'+thisWidth+'px');
     $('p').text('屏高：'+thisHeight+'px');
