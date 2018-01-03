@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+    // 过滤数组
+    var row = [1,2,4,5,7,1];
+    var stresult = $.grep(row,function(n,i){
+        return n == 1;
+    });
+
+    var vcode = stresult[1];
+    console.log(vcode);
+});
+
+</script>
+</body>
+</html>
