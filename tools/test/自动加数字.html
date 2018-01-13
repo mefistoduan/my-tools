@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style type="text/css">
+    .v_left {
+        font-size: 44px;
+    }
+</style>
+<h5 class="v_left">166</h5>
+
+<script>
+$(function(){
+    var num = 0;
+    var e = 1120;
+    // 调用计时函数
+    var t = setTimeout(timedCount(num,e),1);
+});
+
+// 循环计时函数, 多次调用自身函数, num为被传递的参数
+function timedCount(num,e){
+    num++;
+    $(".v_left").text(num);
+    // 设置条件使停止计时
+    if (num < 10) {
+        var t = setTimeout(function(){timedCount(num,e)},10);
+    }else{
+        $('.v_left').text(e);
+        if(e > 999){
+            $('.v_left').css('font-size','42px');
+        }
+    }
+}
+</script>
+</body>
+</html>
