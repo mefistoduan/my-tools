@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<big>23.56</big>
+<p class="x"></p>
+<p class="y"></p>
+
+<script>
+$(function(){
+    var a = "23.56";
+    var b = a.split(".");
+    var x=b[0];
+    var y=b[1];
+    $('.x').text(x);
+    $('.y').text(y);
+});
+
+</script>
+</body>
+</html>
