@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<style>
+    ul, li {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .screen {
+        width: 320px;
+        height: 568px;
+        background-color: white;
+        border: 1px solid #ccc;
+        overflow-x: hidden;
+    }
+    .list {
+        height: 400px;
+        position: relative;
+        transition: all 1s;
+    }
+    .list li {
+        width: 70%;
+        height: 100%;
+        position: absolute;
+        transition: all 1s;
+        top: 0;
+    }
+    .list li.pre {
+        transform: skewY(10deg) scale(0.9)
+    }
+    .list li.current {
+        transform: none
+    }
+    .list li.next {
+        transform: skewY(-10deg) scale(0.9)
+    }
+</style>
+<div class="screen">
+    <ul class="list">
+        <li style="background-color: red"></li>
+        <li style="background-color: green"></li>
+        <li style="background-color: blue"></li>
+        <li style="background-color: yellow"></li>
+        <li style="background-color: deepskyblue"></li>
+        <li style="background-color: orange"></li>
+    </ul>
+</div>
+
+<script>
+$(function(){
+    var wrapper = document.querySelector('.list')
+    var els = wrapper.querySelectorAll('li')
+    var defaultIndex = 0
+    var curIndex = 0
+    for (var i = 0;i < els.length; i++) {
+        els[i].style.left = (15 + (i - defaultIndex) * 70) + '%'
+        if (i === defaultIndex) {
+            els[i].className = 'current'
+        } else if (i === defaultIndex - 1) {
+            els[i].className = 'pre'
+        } else if (i === defaultIndex + 1) {
+            els[i].className = 'next'
+        }
+    }
+    function toNext () {
+        if (curIndex >= els.length - 1) {
+            return
+        }
+        curIndex++
+        change()
+    }
+
+    function toPre () {
+        if (curIndex <= 0) {
+            return
+        }
+        curIndex--
+        change()
+    }
+    function change () {
+        var translateX = -(curIndex - defaultIndex) * 70 + '%'
+        wrapper.style.transform = 'translate(' + translateX + ', 0)'
+        wrapper.webkitTransform = 'translate(' + translateX + ', 0)'
+        els[curIndex].className = 'current'
+        if (curIndex !== els.length - 1) {
+            els[curIndex + 1].className = 'next'
+        }
+        if (curIndex !== 0) {
+            els[curIndex - 1].className = 'pre'
+        }
+    }
+    var i = 0
+    var interval = setInterval(function () {
+        toNext()
+        if (i === 2) {
+            clearInterval(interval)
+            setInterval(function () {
+                toPre()
+            }, 1000)
+        }
+        i++
+    }, 1000)
+});
+
+</script>
+</body>
+</html>
