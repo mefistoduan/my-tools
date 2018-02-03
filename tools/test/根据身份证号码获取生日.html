@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+
+    console.log(GetBirthdayByIdNo(370104198907182222));
+});
+
+//根据身份证号码获取生日
+function GetBirthdayByIdNo(iIdNo)
+{
+    var tmpStr = "";
+    iIdNo = $.trim(iIdNo);
+    if(iIdNo.length == 15){
+        tmpStr = iIdNo.substring(6, 12);
+        tmpStr = "19" + tmpStr;
+        tmpStr = tmpStr.substring(0, 4) + "-" + tmpStr.substring(4, 6) + "-" + tmpStr.substring(6);
+        //sexStr = parseInt(iIdNo.substring(14, 1),10) % 2 ? "男" : "女";
+    }
+    else if(iIdNo.length == 18){
+        tmpStr = iIdNo.substring(6, 14);
+        tmpStr = tmpStr.substring(0, 4) + "-" + tmpStr.substring(4, 6) + "-" + tmpStr.substring(6);
+        //sexStr = parseInt(iIdNo.substring(17, 1),10) % 2 ? "男" : "女";
+    }
+    return tmpStr;
+}
+
+</script>
+</body>
+</html>
