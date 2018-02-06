@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+    console.log(checkEmail('838560574@qq.com'));
+});
+function checkEmail(val)
+{
+    var re = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$/;
+
+    if(val.search(re) == -1) {
+        //alert("输入的邮箱格式不正确");
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+</script>
+</body>
+</html>
