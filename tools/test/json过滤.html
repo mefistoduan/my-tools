@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+    var JSON = {
+        "data":[
+            {
+                "cid":1,
+                "name":"aaa",
+                "price":1000
+            },{
+                "cid":2,
+                "name":"bbb",
+                "price":150
+            },{
+                "cid":3,
+                "name":"ccc",
+                "price":200
+            }
+        ],
+        "totalCount":3
+    }
+$(function(){
+    var res = getTrue(JSON.data,0,180);
+    console.log(res);
+
+});
+    function getTrue (obj,min,max) {
+        var results = [];
+        for(var k in obj) {
+            if(parseInt(obj[k].price) < max && parseInt(obj[k].price) >= min ){
+                results.push(obj[k]);
+            }
+        }
+        return results;
+    }
+
+</script>
+</body>
+</html>
