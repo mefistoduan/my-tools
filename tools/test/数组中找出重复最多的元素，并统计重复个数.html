@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+    var arr = [1,4,5,6,3,4,6,6,6,4,6,6,4,3,2,3,4,5,3,4,7,8,9,7,8,6,5,4];
+    console.log(myMaxElement(arr));
+});
+
+function myMaxElement(arr){
+    var json = {};
+    for (var i=0; i<arr.length; i++) {
+        if(json[arr[i]]){ //这个思想很重要，在将数组中元素放入json中时判断json的键是否已经出现过，如果没有，那让这个键赋值1，如果已经出现，则让它的值自增1
+            json[arr[i]]++;
+        }else{
+            json[arr[i]] = 1;
+        }
+    }
+    var newArr = [];
+    for (var name in json){
+        var newJson = {};
+        newJson.a = name; //循环json，将每组数据的键传给新json的a,值传给新json的b
+        newJson.b = json[name];
+        newArr.push(newJson);//再将这个新json添加到新数组中，这样新数组中都是一个个小json，每个json都有2组元素,它们的键分别是a和b
+    }
+
+    newArr.sort(function(n1,n2){
+        return n1.b - n2.b; //通过比较函数，对比每个小json中b的大小将每个小json排序
+    });
+    return newArr[newArr.length-1].a + ':' + newArr[newArr.length-1].b; //得到出现最多的键，和它出现的次数
+}
+
+
+</script>
+</body>
+</html>

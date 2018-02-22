@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+
+});
+function countJson(json){
+    if("" == json){
+        return false;
+    }
+    var obj = eval("("+ json +")"), len=obj.length, result=new Array();
+    for(var i=0;i<len;i++){
+        var id = obj[i].id;
+        if(result[id]){
+            result[id] = result[id] + 1;
+        }else{
+            result[id] = 1;
+        }
+    }
+    if(result.length > 0){
+        return result;
+    }
+    return '统计无结果';
+}
+
+var a = '[{"id":1,"name":"1"},{"id":2,"name":"2"},{"id":1,"name":"1"}]',
+    o = countJson(a),
+    k = o.length,
+    html = "";
+for(var i in o){
+    html+="id为 "+i+" 的有 "+o[i]+"个 <p>";
+}
+console.log(html);
+</script>
+</body>
+</html>
