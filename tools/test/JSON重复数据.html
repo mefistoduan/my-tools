@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+<script>
+
+    var a = '[{"id":1,"name":"1"},{"id":2,"name":"2"},{"id":1,"name":"1"}]',
+        o = countJson(a);
+
+//    数出数量
+    function countJson(json){
+        var obj = eval("("+ json +")"), len=obj.length, result=new Array();
+        for(var i=0;i<len;i++){
+            var idx = obj[i].name;
+            if(result[idx]){
+                result[idx] = parseInt(result[idx]) + 1;
+            }else{
+                result[idx] = 1;
+            }
+
+            obj[i]['nums'] = result[idx];
+        }
+        return obj;
+    }
+
+    var newJson = o;
+    newJson.reverse(sortThis);
+    function sortThis(a,b) {
+        return a.id - b.id
+    }
+
+//去重
+    function uniqueArray(array, key){
+        var result = [array[0]];
+        for(var i = 1; i < array.length; i++){
+            var item = array[i];
+            var repeat = false;
+            for (var j = 0; j < result.length; j++) {
+                if (item[key] == result[j][key]) {
+                    repeat = true;
+                    break;
+                }
+            }
+            if (!repeat) {
+                result.push(item);
+            }
+        }
+        return result;
+    }
+
+
+
+    console.log(uniqueArray(newJson,'name'));
+</script>
+</body>
+</html>
