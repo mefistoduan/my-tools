@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+<p>测试网址</p>
+<span>
+
+</span>
+<script>
+$(function(){
+    console.log(getUrlParam('abc'));
+});
+
+function getUrlParam(name)
+{
+    var url = window.location.href;
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = url.substr(1).match(reg); //匹配目标参数
+    if (r!=null) return decodeURI(r[2]); return null; //返回参数值
+}
+
+</script>
+</body>
+</html>
