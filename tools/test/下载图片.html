@@ -1,0 +1,47 @@
+<head runat="server">
+    <title>文件下载</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<script type="text/javascript" >
+    // 使用JS实现下载.jpg、.doc、.txt、.rar、.zip等文件的方法(参数 imgOrURL 为需要下载的图片的URL地址)
+    // 使用该方法实现下载压缩文件时会有网页错误信息提示
+    // .doc、.rar、.zip 文件可以直接通过文件地址下载，
+    // 如：<a href="../Images/test.doc" >点击下载文件</a> <a href="../Images/test.zip" >点击下载文件</a>
+    function saveImageAs(imgOrURL) {
+        if (typeof imgOrURL == 'object')
+            imgOrURL = imgOrURL.src;
+        window.win = open (imgOrURL);
+        setTimeout('win.document.execCommand("SaveAs")', 500);
+    }
+    // 使用JS实现下载.txt、.doc、.txt、.rar、.zip等文件的方法(参数 fileURL 为需要下载的图片的URL地址)
+    // 使用该方法实现下载压缩文件时不会有网页错误信息，但是不能使用该方法下载.jpg图片文件
+    // .doc、.rar、.zip 文件可以直接通过文件地址下载，
+    // 如：<a href="../Images/test.doc" >点击下载文件</a> <a href="../Images/test.zip" >点击下载文件</a>
+    function savetxt(fileURL){
+        var fileURL=window.open (fileURL,"_blank","height=0,width=0,toolbar=no,menubar=no,scrollbars=no,resizable=on,location=no,status=no");
+        fileURL.document.execCommand("SaveAs");
+        fileURL.window.close();
+        fileURL.close();
+    }
+    // 功能类似savetxt方法，但是下载时初始文件名为code.txt，而不是跟目标文件名相同
+    function svcode(obj) {
+        var winname = window.open('', '_blank', 'height=1,width=1,top=200,left=300');
+        winname.document.open('text/html', 'replace');
+        winname.document.writeln(obj.value);
+        winname.document.execCommand('saveas','','code.txt');
+        winname.close();
+    }
+</script>
+<body>
+<div>
+    <br />
+    <a href="javascript: void 0" onclick="savetxt('../Images/test.txt'); return false">点击下载文件</a>
+    <br /><br />
+    <a href="javascript:savetxt('../Images/test.txt')" >点击下载文件</a>
+    <br /><br />
+    <!-- .doc、.rar、.zip 文件可以直接通过文件所在地址下载 -->
+    <a href="../Images/test.doc" >点击下载文件</a>
+    <br /><br />
+    <a href="../Images/test.zip" >点击下载文件</a>
+</div>
+</body>
