@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<H5>每天多存一块钱，一年能存多少钱？</H5>
+<p></p>
+
+<script>
+$(function(){
+    var t = 1;
+    for(var i = 1 ; i <= 365 ; i ++ ){
+        t += i;
+    }
+   $('p').text(t);
+});
+
+</script>
+</body>
+</html>
