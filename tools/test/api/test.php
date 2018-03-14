@@ -6,30 +6,19 @@
  * Time: 16:49
  */
 $data = array();
-echo 123;
 $data[0]=[
     'jian' =>'asd',//减免
     'zeng' =>'赠送轮胎检查一次',//赠送
 ];
-//$data[1]=[
-//    'jian' =>'dsa',//减免
-//    'zhe' =>'',//打折
-//    'zeng' =>'赠送轮胎检查一次',//赠送
-//    'dui' =>''//兑换
-//];
-//$data[2]=[
-//    'jian' =>'fas',//减免
-//    'zhe' =>'',//打折
-//    'zeng' =>'赠送轮胎检查一次',//赠送
-//    'dui' =>''//兑换
-//];
-//$data[3]=[
-//    'jian' =>'dfx',//减免
-//    'zhe' =>'',//打折
-//    'zeng' =>'赠送轮胎检查一次',//赠送
-//    'dui' =>''//兑换
-//];
+$data[1]=[
+    'jian' =>'wxf',//减免
+    'zeng' =>'赠次',//赠送
+];
+$data[2]=[
+    'jian' =>'tch',//减免
+    'zeng' =>'检查一次',//赠送
+];
 
 $count=count($data);
 
-echo json_encode(array("recordsTotal"=> $count,"data" => $data),JSON_UNESCAPED_UNICODE);
+echo json_encode(array("recordsTotal"=> $count,"data" => $data,"rs" => $data,"rtnCode" => 0),JSON_UNESCAPED_UNICODE);

@@ -6,12 +6,83 @@
     <script src="../jquery-1.7.2.js"></script>
 </head>
 <body>
+<style>
+    ul,li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        height: 30px;
+    }
+    li input {
+        width: 100%;
+        height: 24px;
+        line-height: 24px;
+        font-size: 16px;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+<ul>
+    <li>
+        <select name="BTYPE" id="sing_select" dir="rtl">
+            <option value="0">选择所属行业分类</option>
+            <option value="1">特色美食</option>
+            <option value="2">文化娱乐</option>
+            <option value="3">教育培训</option>
+            <option value="4">文化旅游</option>
+            <option value="5">书店书吧</option>
+            <option value="6">非遗商品服务</option>
+            <option value="7">其他</option>
+        </select>
+    </li>
+    <li class="detail_li">
 
+    </li>
+</ul>
 
 <script>
 $(function(){
-
+   $('#sing_select').change(function () {
+       activSel();
+   })
 });
+
+function activSel() {
+    var options = '';
+    var row = '';
+    var row = '';
+    var zeng = '';
+    var select = '';
+    var url = 'api/test.php';//获取
+    var choiced = $('#sing_select option:checked').val();
+    var postdata = {
+        choiced:choiced
+    };
+    $.post(url,postdata,function(result){
+        var JSON = eval('('+result+')');
+        var rtnCode = JSON.rtnCode;
+        if(rtnCode == 0){
+            for(var i = 0; i < JSON.rs.length; i++){
+                row = JSON.rs[i];
+                zeng = row.zeng;
+                options += '<option value="'+row.jian+'">' + zeng + '</option>'
+            }
+            if( options == ''){
+                select = '<select name="DTYPE" id="detail_select" dir="rtl"><option value="0">没有可用的项目分类</option> </select>';
+            }else{
+                select = '<select name="DTYPE" id="detail_select" dir="rtl">'+ options + '</select>';
+            }
+            $('.detail_li').empty().append(select);
+        }
+    });
+}
 
 </script>
 </body>
