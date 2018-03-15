@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.7.2.js"></script>
+</head>
+<body>
+
+
+<script>
+$(function(){
+    x=2;z=2;a=1;b=3;
+    while (z > 1e-15) {
+        z = z*a/b;
+        x += z;
+        a++;
+        b+=2;
+    }
+    console.log(x);
+});
+
+</script>
+</body>
+</html>
