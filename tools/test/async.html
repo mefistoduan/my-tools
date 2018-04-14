@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sleep = function (time) {
+        return new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                resolve();
+            }, time);
+        })
+    };
+
+    let howLongToSleep = async function () {
+        console.log('start');
+        await sleep(1000);  //sleep 为一个执行需要耗费 1s 的函数
+        console.log('end');
+    };
+    howLongToSleep();
+</script>
+</body>
+</html>
