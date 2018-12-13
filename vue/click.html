@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="(list,index) in lists" :class="" @click="changeClass(index)">
+            {{list.name}}
+        </li>
+    </ul>
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="js/vue.js"></script>
+<!-- import JavaScript -->
+<script src="js/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                visible: false,
+                lists:[
+                    {name:'this A'},
+                    {name:'this B'},
+                    {name:'this C'},
+                    {name:'this D'},
+                ]
+            }
+        },
+        methods:{
+            changeClass(index){
+                console.log(index);
+            },
+        }
+    })
+</script>
+<style scope>
+    li {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        background: #eee;
+        margin-bottom: 5px;
+    }
+    .active {
+        background: #0b6aff;
+    }
+</style>
+</html>
