@@ -7,11 +7,14 @@
 </head>
 <body>
 <div id="app">
-    <ul>
-        <li v-for="(list,index) in lists" :class="" @click="changeClass(index)">
-            {{list.name}}
-        </li>
-    </ul>
+    <div v-for="(cube,index)  in cubes">
+        <ul>
+            <li v-for="(list,j) in lists" :class="{ active: isActive[0] == j }" @click="changeClass(index,j)">
+                {{list.name}}
+            </li>
+        </ul>
+    </div>
+
 </div>
 </body>
 <!-- import Vue before Element -->
@@ -24,17 +27,26 @@
         data: function() {
             return {
                 visible: false,
+                isActive: [
+                    [0],
+                    [0],
+                    [0],
+                ],
                 lists:[
                     {name:'this A'},
                     {name:'this B'},
                     {name:'this C'},
-                    {name:'this D'},
+                ],
+                cubes:[
+                    {name:'this A'},
+                    {name:'this B'},
+                    {name:'this C'},
                 ]
             }
         },
         methods:{
-            changeClass(index){
-                console.log(index);
+            changeClass(index,j){
+
             },
         }
     })
