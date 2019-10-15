@@ -1,0 +1,184 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array</title>
+</head>
+<body>
+<h5>输入加选则框</h5>
+<div class="container">
+    <input type="text" id="justAnotherInputBox">
+</div>
+
+<script src="../jquery-1.7.2.js"></script>
+<script>
+</script>
+<script src="js/comboTreePlugin.js"></script>
+<script type="text/javascript">
+    var SampleJSONData = [
+        {
+            id: 0,
+            title: '分类 1  '
+        }, {
+            id: 1,
+            title: '分类 2',
+            subs: [
+                {
+                    id: 10,
+                    title: '分类 2 1'
+                }, {
+                    id: 11,
+                    title: '分类 2 2'
+                }, {
+                    id: 12,
+                    title: '分类 2 3'
+                }
+            ]
+        }, {
+            id: 2,
+            title: '分类 3'
+        }, {
+            id: 3,
+            title: '分类 4'
+        }, {
+            id: 4,
+            title: '分类 5'
+        }, {
+            id: 5,
+            title: '分类 6',
+            subs: [
+                {
+                    id: 50,
+                    title: '分类 6 1'
+                }, {
+                    id: 51,
+                    title: '分类 6 2',
+                    subs: [
+                        {
+                            id: 510,
+                            title: '分类 6 2 1'
+                        }, {
+                            id: 511,
+                            title: '分类 6 2 2'
+                        }, {
+                            id: 512,
+                            title: '分类 6 2 3'
+                        }
+                    ]
+                }
+            ]
+        }, {
+            id: 6,
+            title: '分类 7'
+        }
+    ];
+
+    $.expr[':'].icontains = function (obj, index, meta, stack) { return (obj.textContent || obj.innerText || jQuery(obj).text() || '').toLowerCase().indexOf(meta[3].toLowerCase()) >= 0; };
+
+    $(function () {
+        $('#justAnotherInputBox').comboTree({
+            source : SampleJSONData,
+            isMultiple: false
+        });
+    });
+</script>
+</body>
+<style>
+
+    .comboTreeWrapper{
+        position: relative;
+        text-align: left !important;
+    }
+
+    .comboTreeInputWrapper{
+        position: relative;
+    }
+
+    .comboTreeArrowBtn {
+        position: absolute;
+        right: 1px;
+        bottom: 1px;
+        top: 1px;
+        box-sizing: border-box;
+        border: none;
+        border-left: 1px solid #c7c7c7;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .comboTreeDropDownContainer {
+        display: none;
+        background: #fff;
+        border: 1px solid #aaa;
+        max-height: 250px;
+        overflow-y: auto;
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 999;
+    }
+
+    .comboTreeDropDownContainer ul{
+        padding: 0px;
+        margin: 0;
+    }
+
+    .comboTreeDropDownContainer li{
+        list-style-type: none;
+        padding-left: 15px;
+        cursor: pointer;
+    }
+
+    .comboTreeDropDownContainer li:hover{
+        background-color: #ddd;}
+    .comboTreeDropDownContainer li:hover ul{
+        background-color: #fff;}
+    .comboTreeDropDownContainer li span.comboTreeItemTitle.comboTreeItemHover{
+        background-color: #418EFF;
+        color: #fff;}
+
+    span.comboTreeItemTitle{
+        display: block;
+        padding: 2px 4px;
+    }
+    .comboTreeDropDownContainer label{
+        cursor: pointer;
+        width: 100%;
+        display: block;
+    }
+    .comboTreeDropDownContainer .comboTreeItemTitle input {
+        position: relative;
+        top: 2px;
+        margin: 0px 4px 0px 0px;
+    }
+    .comboTreeParentPlus{
+        position: relative;
+        left: -12px;
+        top: 4px;
+        width: 4px;
+        float: left;
+    }
+
+
+    .comboTreeInputBox {
+        padding: 5px;
+        border-radius: 3px;
+        border: 1px solid #999;
+        width: 100%;
+        box-sizing: border-box;
+        padding-right: 24px;
+    }
+
+    .comboTreeArrowBtnImg{
+        font-size: 10px;
+    }
+
+    .multiplesFilter{
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #999;
+    }
+</style>
+</html>
