@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select2</title>
+    <link rel="stylesheet" href="js/select2/select.css">
+    <link rel="stylesheet" href="js/select2/select2.css">
+    <link rel="stylesheet" href="js/select2/select2-bootstrap.css">
+    <script src="../jquery-1.7.2.js"></script>
+    <script src="js/select2/select2.js"></script>
+    <script src="js/select2/select2_locale_zh-CN.js"></script>
+</head>
+<body>
+<!--<select class="js-example-basic-single" name="state">-->
+<input class="js-example-basic-single" name="state">
+</input>
+<script>
+    $(function () {
+        var data = [{ id: 0, text: 'enhancement' }, { id: 1, text: 'bug' }, { id: 2, text: 'duplicate' }, { id: 3, text: 'invalid' }, { id: 4, text: 'wontfix' }];
+        $('.js-example-basic-single').select2(
+            {
+                data: data,
+                placeholder:'请选择',
+                allowClear:true
+            }
+        );
+        $('.js-example-basic-single').change(function () {
+           var res = $(this).val();
+           console.log(res);
+        })
+
+    })
+</script>
+</body>
+</html>
